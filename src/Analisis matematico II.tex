@@ -1,23 +1,18 @@
-\documentclass[twoside]{article}
-% Título y autor(es):
-\title{Resumen de Análisis Matemático II (61.03)}
-\author{Menéndez Martín}
-
-\usepackage[spanish]{babel}
+\documentclass[a4paper, twoside]{article}
+\usepackage[utf8]{inputenc} % Especifica la codificación de caracteres de los documentos.
+\usepackage[spanish]{babel} % Indica que el documento se escribirá en español.
+\usepackage[top=3cm, bottom=2.5cm, inner=1.5cm, outer=2.5cm]{geometry} % Márgenes personalizados
+\usepackage{subfiles} % Paquete para incluir el preambulo en los sub archivos.
+\usepackage{afterpage} % Permite añadir páginas despues de una página dada.
+\usepackage{hyperref} % Permite incluir enlaces en los archivos.
+\usepackage{lastpage} % Paquete para poder contabilizar el total de páginas del documento.
+\usepackage{fancyhdr} % Permite personalizar los header y footer del documento.
 \usepackage{amsmath,bm,times}
-\usepackage[a4paper,headheight=16pt,scale={0.7,0.8},hoffset=0.5cm]{geometry}
 \usepackage{pdfpages}
-\usepackage[utf8]{inputenc}
-\usepackage{lastpage}
 \usepackage{float}
 \usepackage{array}
 \usepackage{listings}
 \usepackage{anysize}
-\usepackage{pdfpages}
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
-\usepackage{fancyhdr}
 \usepackage[hang,bf]{caption}
 \usepackage{graphicx}
 \usepackage{svg}
@@ -27,12 +22,60 @@
 \usepackage{verbatim}
 \usepackage{booktabs}
 
+% Defino la ruta de los paquetes personalizados para el apunte
+\newcommand{\rutapaquetes}{./paquetes-apunte}
+
+\usepackage{\rutapaquetes/caratula} % Caratula personalizada (cargada desde caratula.sty)
+\usepackage[mostrarrevisores]{\rutapaquetes/colaboradores} % Seccion de colaboradores (cargada y creada con colaboradores.sty)
+\usepackage{\rutapaquetes/historial} % Seccion de historial de cambios (cargada y creada con historial.sty)
+
+% Define los estilos de los enlaces interpretados por el paquete hyperref
+\hypersetup{
+    colorlinks=true,   % false: boxed links; true: colored links
+    linkcolor=black,   % color of internal links (change box color with linkbordercolor)
+    citecolor=green,   % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=blue,     % color of external links
+}
+
+\newcommand{\imgdir}{../resources/images} % Ruta de las imágenes
+
+% Define los directorios de las imágenes y gráficos
+\graphicspath{ {\imgdir/} {\rutapaquetes/} }
+
+\newcommand{\nombremateria}{Análisis Matemático II (61.03 - 81.01)} % Defino el comando "\nombremateria" para no harcodear el nombre en varios lugares.
+
+% Define el pagestyle personalizado
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{}{\thesection\ \ #1}}
+% Define header para pagina par
+\fancyhead[ER]{\rightmark}
+% Define header para pagina impar
+\fancyhead[OL]{\rightmark}
+% Define footer para pagina par
+\fancyfoot[EL]{\nombremateria \hspace{0.1cm} - Resumen} % Nombre del apunte a la izquierda
+\fancyfoot[ER]{Página \thepage\ de \pageref{LastPage}} % Numero de pagina a la derecha
+% Define footer para pagina impar
+\fancyfoot[OL]{Página \thepage\ de \pageref{LastPage}} % Numero de pagina a la izquierda
+\fancyfoot[OR]{\nombremateria \hspace{0.1cm} - Resumen} % Nombre del apunte a la derecha
+
+\renewcommand{\footrulewidth}{0.4pt} % Agrego linea que separa el footer
+
+% Configura la caratula
+\materia{\nombremateria}
+\tipoapunte{Resumen}
+%\tema{Tema de la Materia}
+%\subtema{Subtema}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
 \includepdfset{pagecommand=\thispagestyle{plain}}
 \usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
 
 \pdfcompresslevel=9
-\newcommand{\imgdir}{../resources/images}
-\graphicspath{{\imgdir/}}
 
 \everymath{\displaystyle}
 \newcommand{\vect}[1]{\overline{\textbf{#1}}}
@@ -50,225 +93,238 @@
 %------------------------- Inicio del documento ---------------------------
 
 \begin{document}
-% Hago que en la cabecera de página se muestre a la derecha la sección, y en el pie, en número de página a la derecha:
-\pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\markboth{}{\thesection\ \ #1}}
-\lhead{}
-\chead{}
-\rhead{\rightmark}
-\lfoot{Análisis Matemático II (61.03)}
-\cfoot{}
-\rfoot{P\'agina \thepage\ de \pageref{LastPage}}
-% Carátula:
-\begin{titlepage}
 
-\thispagestyle{empty}
+\maketitle
 
-\begin{center}
-\includegraphics[scale=0.3]{fiuba}\\
-\large{\textsc{Universidad de Buenos Aires}}\\
-\large{\textsc{Facultad De Ingeniería}}\\
-\small{A\~no 2015 - 1\textsuperscript{er} Cuatrimestre}
-\end{center}
-
-\begin{center}
-\Large{\underline{\textsc{Análsis Matemático II A (61.03)}}}
-
-\vspace*{2cm}
-
-\textbf{\begin{LARGE}
-Resumen de Análisis Matemático\\
-\end{LARGE}}
-\end{center}
-
-\vspace*{3cm}
-
-\begin{tabbing}
-\hspace{2cm}\=\+
-\\
-	INTEGRANTE:\hspace{-1cm}\=\+\hspace{1cm}\=\hspace{6cm}\=\\
-		Maria Inés Parnisari	\>\>- \ 92235\\
-		$\langle$maineparnisari@gmail.com$\rangle$\\
-		\\
-		Menéndez, Martín Nicolás	\>\>- \ 92830\\
-		$\langle$menendez91@live.com.ar$\rangle$\\
-		\\
-\end{tabbing}
-\end{titlepage}
-% Hago que las páginas se comiencen a contar a partir de aquí:
-\setcounter{page}{1}
 % Pongo el índice en una página aparte:
 \tableofcontents
 %\listoffigures
 %\listoftables
-\newpage
-% Inicio del TP:
-\marginsize{1cm}{1cm}{1cm}{1cm}
-%\setcounter{chapter}{1}
 
-	\section{Introducción al espacio $R^n$}
-		\subsection{Coordenadas cilíndricas, esféricas y polares}
-			
-			\begin{table}[H]
-				\begin{tabular}{c|c|c}
-					\textbf{Cilíndricas} & \textbf{Esféricas} & \textbf{Polares} \\
-					\hline
-					\parbox{4cm}{\begin{center}	 $p \in R^3$, $p=(r,\theta,\bar{z})$ \\
-										con $r\geq0,\theta\in[0,2\pi]$ \end{center}} & 
-					\parbox{5cm}{\begin{center} $p\in R^3$, $p=(\rho,\theta,\varphi)$ \\
-										con $\rho\geq0,\varphi\in[0,\pi],\theta\in[0,2\pi]$ \end{center}} & 
-					\parbox{4cm}{\begin{center} 	$p\in R^2,\, p=(r,\theta)$ \\ 
-										con $r\geq0,\theta\in[0,2\pi]$ \end{center}} \\
-					\hline
-					\includegraphics[scale=0.4]{cilindricas} & \includegraphics[scale=0.4]{esfericas} & \noindent \includegraphics[scale=0.4]{polares} \\
-					\hline
-					\parbox{5cm}{\begin{center}
-										$r=c\Rightarrow$ cilindro vertical recto \\ 
-										$\theta=c\Rightarrow$ semiplano vertical \\
-										$\bar{z}=c\Rightarrow$ plano horizontal
-										\end{center}} & 
-					\parbox{5cm}{\begin{center}
-										$r=c\Rightarrow$ esfera concéntrica \\
-										$\varphi=c\Rightarrow$ semicono \\
-										$\theta=c\Rightarrow$ semiplano
-										\end{center}} &
-					\parbox{5cm}{\begin{center}
-										$r=c\Rightarrow$ circunferencia \\
-										$\theta=c\Rightarrow$ semirrecta
-										\end{center}} \\
-					\hline
-					\parbox{5cm}{\begin{center}De cilíndricas a cartesianas:
-										$\begin{cases}
-										x=r\cdot cos(\theta) \\
-										y=r\cdot sin(\theta) \\
-										z=\bar{z}\end{cases}$ \\
-										De cartesianas a cilíndricas:
-										$\begin{cases}
-										r=\sqrt{x^2+y^2} \\
-										\theta=arctan(\frac{y}{x}) \\
-										\bar{z}=z\end{cases}$
-										\end{center}}&
-					\parbox{5cm}{\begin{center}De esféricas a cartesianas:
-										$\begin{cases}
-										x=\rho\cdot sin(\varphi)cos(\theta) \\
-										y=\rho\cdot sin(\varphi)sin(\theta) \\
-										z=\rho\cdot cos(\varphi)\end{cases}$ \\
-										De cartesianas a esféricas:
-										$\begin{cases}
-										\rho=\sqrt{x^2+y^2+z^2} \\
-										\theta=arctan(\frac{y}{x}) \\
-										\varphi=arccos(\frac{z}{r})\end{cases}$
-										\end{center}} & 
-					\parbox{5cm}{\begin{center}De polares a cartesianas:
-										$\begin{cases}
-										x=r\cdot cos(\theta) \\
-										y=r\cdot sin(\theta)\end{cases}$ \\
-										De cartesianas a polares:
-										$\begin{cases}
-										r=\sqrt{x^2+y^2} \\
-										\theta=arctan(\frac{y}{x})\end{cases}$
-										\end{center}} \\
-				\end{tabular}
-			\end{table}
+\subfile{\rutapaquetes/sobre-el-proyecto.tex} % Inlcuye informacion sobre el proyecto FIUBA Apuntes
 
-		\subsection{Secciones cónicas}
-			
-			\begin{tabular}{c c c c}
-				\textbf{Circunferencia} & \textbf{Elipse} & \textbf{Parábola} & \textbf{Hipérbola} \\
-				$(x-x_0)^2+(y-y_0)^2=r^2$ & $\frac{(x-x_0)^2}{a^2}+\frac{(y-y_0)^2}{b^2}=1$ & $y=ax^2+bx+c$ & $\frac{(x-x_0)^2}{a^2}-\frac{(y-y_0)^2}{b^2}=1$ \\
-				\includegraphics[scale=0.3]{circulo} & \includegraphics[scale=0.35]{elipse} & \includegraphics[scale=0.35]{parabola} & \includegraphics[scale=0.4]{hiperbola}
-			\end{tabular}
-
-		\subsection{Superficies cuádricas}
-			
+\section{Introducción al espacio $R^n$}
+\subsection{Coordenadas cilíndricas, esféricas y polares}
+\begin{table}[H]
+	\begin{tabular}{c|c|c}
+		\textbf{Cilíndricas} & \textbf{Esféricas} & \textbf{Polares} \\
+		\hline
+		\parbox{4cm}{
 			\begin{center}
-					\begin{tabular}{c c c}
-						\multicolumn{3}{c}{\textbf{Cilindro}} \\ 
-						\toprule
-						Elíptico & Parabólico & Hiperbólico \\ 
-						
-						\parbox{5cm}{\begin{center}\includegraphics[scale=0.3]{cilindro_eliptico} \\
-											$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2=1$	\end{center}} &
-						\parbox{5cm}{\begin{center}	\includegraphics[scale=0.3]{cilindro_parabolico} \\
-											$x^2+2rz=0$\end{center}} &
-						\parbox{5cm}{\begin{center}	\includegraphics[scale=0.3]{cilindro_hiperbolico} \\
-											$\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2=1$\end{center}} \\
-							
-					\end{tabular} 
-				\end{center}				
-		
-				\begin{center}
-					\begin{tabular}{c | c c}
-						\textbf{Cono} & \multicolumn{2}{c}{\textbf{Hiperboloide}} \\ 
-						\hline
-						  & De una hoja & De dos hojas \\ 
-						
-						\parbox{5cm}{\begin{center}\includegraphics[scale=0.3]{cono}\\
-											$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=0$\end{center}} &
-						\parbox{5cm}{\begin{center}	\includegraphics[scale=0.3]{hiperboloide_1hoja} \\
-											$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=1$\end{center}} &
-						\parbox{5cm}{\begin{center}	\includegraphics[scale=0.3]{hiperboloide_2hojas} \\
-											$\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=1$\end{center}} \\
-							
-					\end{tabular} 
-				\end{center}		
-				
-				\begin{center}
-					\begin{tabular}{c | c c}
-						\textbf{Elipsoide} & \multicolumn{2}{c}{\textbf{Paraboloide}} \\ 
-						\hline
-						 & Elíptico & Hiperbólico \\ 
-						
-						\parbox{5cm}{\begin{center}\includegraphics[scale=0.3]{elipsoide}\\
-											$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2+\left(\frac{z}{c}\right)^2=1$\end{center}} &
-						\parbox{5cm}{\begin{center}	\includegraphics[scale=0.3]{cono} \\
-											$z=\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2$\end{center}} &
-						\parbox{5cm}{\begin{center}	\includegraphics[scale=0.3]{paraboloide_hiperbolico} \\
-											$z=\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2$\end{center}} \\
-							
-					\end{tabular} 
-				\end{center}		
+				$p \in R^3$, $p=(r,\theta,\bar{z})$ \\
+				con $r\geq0,\theta\in[0,2\pi]$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				$p\in R^3$, $p=(\rho,\theta,\varphi)$ \\
+				con $\rho\geq0,\varphi\in[0,\pi],\theta\in[0,2\pi]$
+			\end{center}} &
+		\parbox{4cm}{
+			\begin{center}
+				$p\in R^2,\, p=(r,\theta)$ \\
+				con $r\geq0,\theta\in[0,2\pi]$
+			\end{center}} \\
+		\hline
+		\includegraphics[scale=0.4]{cilindricas} & 
+		\includegraphics[scale=0.4]{esfericas} &
+		\noindent \includegraphics[scale=0.4]{polares} \\
+		\hline
+		\parbox{5cm}{
+			\begin{center}
+				$r=c\Rightarrow$ cilindro vertical recto \\
+				$\theta=c\Rightarrow$ semiplano vertical \\
+				$\bar{z}=c\Rightarrow$ plano horizontal
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				$r=c\Rightarrow$ esfera concéntrica \\
+				$\varphi=c\Rightarrow$ semicono \\
+				$\theta=c\Rightarrow$ semiplano
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				$r=c\Rightarrow$ circunferencia \\
+				$\theta=c\Rightarrow$ semirrecta
+			\end{center}} \\
+		\hline
+		\parbox{5cm}{
+			\begin{center}
+				De cilíndricas a cartesianas:
+				$\begin{cases}
+				x=r\cdot cos(\theta) \\
+				y=r\cdot sin(\theta) \\
+				z=\bar{z}
+				\end{cases}$ \\
+				De cartesianas a cilíndricas:
+				$\begin{cases}
+				r=\sqrt{x^2+y^2} \\
+				\theta=arctan(\frac{y}{x}) \\
+				\bar{z}=z
+				\end{cases}$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				De esféricas a cartesianas:
+				$\begin{cases}
+				x=\rho\cdot sin(\varphi)cos(\theta) \\
+				y=\rho\cdot sin(\varphi)sin(\theta) \\
+				z=\rho\cdot cos(\varphi)
+				\end{cases}$ \\
+				De cartesianas a esféricas:
+				$\begin{cases}
+				\rho=\sqrt{x^2+y^2+z^2} \\
+				\theta=arctan(\frac{y}{x}) \\
+				\varphi=arccos(\frac{z}{r})\end{cases}$
+			\end{center}} & 
+		\parbox{5cm}{
+			\begin{center}
+				De polares a cartesianas:
+				$\begin{cases}
+				x=r\cdot cos(\theta) \\
+				y=r\cdot sin(\theta)
+				\end{cases}$ \\
+				De cartesianas a polares:
+				$\begin{cases}
+				r=\sqrt{x^2+y^2} \\
+				\theta=arctan(\frac{y}{x})
+				\end{cases}$
+			\end{center}} \\
+	\end{tabular}
+\end{table}
 
-		\subsection{Áreas y volúmenes}
-		
-			Algunas fórmulas de áreas y volúmenes que conviene recordar:
-				\begin{center}
-					\begin{tabular}{c c c}
-						 Figura & Superficie &  Volumen\\ 
-						 \hline
-						 Elipse & $\pi ab$ & 0 \\
-						 Circunferencia & $\pi r^2$ & 0 \\
-						 Esfera & $4\pi r^2$ & $\frac{4}{3}\pi r^3$ \\
-						 Elipsoide & $4\pi \left(\frac{(ab)^{1.61}+(ac)^{1.61}+(bc)^{1.61}}{3}\right)^\frac{1}{1.61}$ & $\frac{4}{3}\pi abc$ \\
-						 Cilindro & $2\pi h r$ & $\pi h r^2$\\
-						 Cono & $\frac{2}{3}\pi h r$ & $\frac{1}{3}\pi h r^2$ \\					
-					\end{tabular} 
-				\end{center}				
+\subsection{Secciones cónicas}
+\begin{center}
+	\setlength{\tabcolsep}{30pt}
+	\begin{tabular}{c c}
+		\textbf{Circunferencia} & \textbf{Elipse} \\
+		$(x-x_0)^2+(y-y_0)^2=r^2$ & $\frac{(x-x_0)^2}{a^2}+\frac{(y-y_0)^2}{b^2}=1$ \\
+		\includegraphics[scale=0.3]{circulo} & \includegraphics[scale=0.35]{elipse}
+	\end{tabular}
+	\begin{tabular}{c c}
+		\textbf{Parábola} & \textbf{Hipérbola} \\
+		$y=ax^2+bx+c$ & $\frac{(x-x_0)^2}{a^2}-\frac{(y-y_0)^2}{b^2}=1$ \\
+		\includegraphics[scale=0.35]{parabola} & \includegraphics[scale=0.4]{hiperbola}	
+	\end{tabular}
+	\setlength{\tabcolsep}{6pt}
+\end{center}
 
-	\section{Funciones de varias variables}
-		\subsection{Funciones de varias variables}
-			
-			\subsubsection{Puntos y conjuntos de puntos en $R^n$}
-			
-				\begin{enumerate}
-					\item \textbf{Entorno de $A\in R^n$}: Un conjunto capaz de incluir una esfera abierta de $R^n$ con centro en $A$ y radio mayor a cero. Se denota como $E(A)$.
-					\item \textbf{Entorno reducido de $A\in R^n$}: $E^*(A)=E(A)-\{A\}$
-					\item \textbf{Punto aislado}: $A\in S$ es un punto aislado de $S$ cuando existe un $E^*(A)$ que no tiene puntos de $S$.
-					\item \textbf{Punto de acumulación}: $A$ es un punto de acumulación de $S$ cuando en todo $E^*(A)$ existe algún punto de $S$.
-					\item \textbf{Conjunto abierto}: Aquel que todos sus puntos son interiores.
-					\item \textbf{Conjunto cerrado}: Aquel que contiene a todos sus puntos de acumulación.
-					\item \textbf{Conjunto acotado}: Aquel que se lo puede incluir en una esfera abierta con radio finito.
-					\item \textbf{Conjunto compacto}: Aquel que es cerrado y acotado.
-					\item \textbf{Conjunto convexo}: $S$ es convexo cuando $\forall A,B\in S$, el segmento $\overline{AB}$ está incluido en $S$.
-					\item \textbf{Conjunto conexo}: $S$ es conexo cuando $\forall A,B\in S$ se puede pasar de $A$ a $B$ desplazándose por $S$.
-					\item \textbf{Conjunto simplemente conexo}: $S$ conexo es simplemente conexo cuando toda curva cerrada trazada en él puede, por deformación continua, transformarse en un punto, manteniéndose en el conjunto. En $R^2$, simplemente conexo $\equiv$ conexo sin \emph{agujeros}.
-				\end{enumerate}
+\subsection{Superficies cuádricas}
+\begin{center}
+	\begin{tabular}{c c c}
+		\multicolumn{3}{c}{\textbf{Cilindro}} \\ 
+		\toprule
+		Elíptico & Parabólico & Hiperbólico \\ 
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{cilindro_eliptico} \\
+				$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2=1$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{cilindro_parabolico} \\
+				$x^2+2rz=0$\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{cilindro_hiperbolico} \\
+				$\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2=1$
+			\end{center}} \\
+	\end{tabular}
+
+	\begin{tabular}{c | c c}
+		\textbf{Cono} & \multicolumn{2}{c}{\textbf{Hiperboloide}} \\ 
+		\hline
+		 & De una hoja & De dos hojas \\ 
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{cono}\\
+				$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=0$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{hiperboloide_1hoja} \\
+				$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=1$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{hiperboloide_2hojas} \\
+				$\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=1$
+			\end{center}} \\
+	\end{tabular}	
+
+	\begin{tabular}{c | c c}
+		\textbf{Elipsoide} & \multicolumn{2}{c}{\textbf{Paraboloide}} \\ 
+		\hline
+		 & Elíptico & Hiperbólico \\ 
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{elipsoide} \\
+				$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2+\left(\frac{z}{c}\right)^2=1$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{cono} \\
+				$z=\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2$
+			\end{center}} &
+		\parbox{5cm}{
+			\begin{center}
+				\includegraphics[scale=0.3]{paraboloide_hiperbolico} \\
+				$z=\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2$
+			\end{center}} \\
+	\end{tabular} 
+\end{center}		
+
+\subsection{Áreas y volúmenes}
+Algunas fórmulas de áreas y volúmenes que conviene recordar:
+
+\begin{center}
+	\begin{tabular}{c c c}
+		Figura & Superficie & Volumen \\
+		\hline
+		Elipse & $\pi ab$ & 0 \\
+		Circunferencia & $\pi r^2$ & 0 \\
+		Esfera & $4\pi r^2$ & $\frac{4}{3}\pi r^3$ \\
+		Elipsoide & $4\pi \left(\frac{(ab)^{1.61}+(ac)^{1.61}+(bc)^{1.61}}{3}\right)^\frac{1}{1.61}$ 
+		& $\frac{4}{3}\pi abc$ \\
+		Cilindro & $2\pi h r$ & $\pi h r^2$\\
+		Cono & $\frac{2}{3}\pi h r$ & $\frac{1}{3}\pi h r^2$ \\					
+	\end{tabular} 
+\end{center}				
+
+\section{Funciones de varias variables}
+\subsection{Funciones de varias variables}
+\subsubsection{Puntos y conjuntos de puntos en $R^n$}
+\begin{enumerate}
+	\item \textbf{Entorno de $A\in R^n$}: Un conjunto capaz de incluir una esfera 
+		abierta de $R^n$ con centro en $A$ y radio mayor a cero. Se denota como $E(A)$.
+	\item \textbf{Entorno reducido de $A\in R^n$}: $E^*(A)=E(A)-\{A\}$
+	\item \textbf{Punto aislado}: $A\in S$ es un punto aislado de $S$ cuando 
+		existe un $E^*(A)$ que no tiene puntos de $S$.
+	\item \textbf{Punto de acumulación}: $A$ es un punto de acumulación de $S$ 
+		cuando en todo $E^*(A)$ existe algún punto de $S$.
+	\item \textbf{Conjunto abierto}: Aquel que todos sus puntos son interiores.
+	\item \textbf{Conjunto cerrado}: Aquel que contiene a todos sus puntos de acumulación.
+	\item \textbf{Conjunto acotado}: Aquel que se lo puede incluir en una esfera 
+		abierta con radio finito.
+	\item \textbf{Conjunto compacto}: Aquel que es cerrado y acotado.
+	\item \textbf{Conjunto convexo}: $S$ es convexo cuando $\forall A,B\in S$, el 
+		segmento $\overline{AB}$ está incluido en $S$.
+	\item \textbf{Conjunto conexo}: $S$ es conexo cuando $\forall A,B\in S$ se 
+		puede pasar de $A$ a $B$ desplazándose por $S$.
+	\item \textbf{Conjunto simplemente conexo}: $S$ conexo es simplemente conexo 
+		cuando toda curva cerrada trazada en él puede, por deformación continua, 
+		transformarse en un punto, manteniéndose en el conjunto. En $R^2$, 
+		simplemente conexo $\equiv$ conexo sin \emph{agujeros}.
+\end{enumerate}
 	
-				\begin{figure}[H]
-					\subfloat[Convexidad]{\includegraphics[scale=0.5]{convexidad}} \hfill{}
-					\subfloat[A es conexo, B no es conexo]{\includegraphics[scale=0.4]{conexidad}} \hfill{}
-					\subfloat[El tubo no es simplemente conexo]{\includegraphics[scale=0.3]{\string"simplemente conexo\string".png}}
-				\end{figure}			
+\begin{figure}[H]
+	\hspace*{\fill}
+	\subfloat[Convexidad]{\includegraphics[scale=0.5]{convexidad}}
+	\hfill
+	\subfloat[A es conexo, B no es conexo]{\includegraphics[scale=0.4]{conexidad}}
+	\hfill
+	\subfloat[El tubo no es simplemente conexo]{\includegraphics[scale=0.3]{\string"simplemente conexo\string".png}}
+	\hspace*{\fill}
+\end{figure}	
 		
 				\begin{tikzpicture}
 					\node [corolario] (box){%
