@@ -1,7 +1,7 @@
 \documentclass[a4paper, twoside]{article}
 \usepackage[utf8]{inputenc} % Especifica la codificación de caracteres de los documentos.
 \usepackage[spanish]{babel} % Indica que el documento se escribirá en español.
-\usepackage[top=3cm, bottom=2.5cm, inner=1.5cm, outer=2.5cm]{geometry} % Márgenes personalizados
+\usepackage[top=2.5cm, bottom=2cm, inner=1.2cm, outer=2cm]{geometry} % Márgenes personalizados
 \usepackage{subfiles} % Paquete para incluir el preambulo en los sub archivos.
 \usepackage{afterpage} % Permite añadir páginas despues de una página dada.
 \usepackage{hyperref} % Permite incluir enlaces en los archivos.
@@ -31,11 +31,11 @@
 
 % Define los estilos de los enlaces interpretados por el paquete hyperref
 \hypersetup{
-    colorlinks=true,   % false: boxed links; true: colored links
-    linkcolor=black,   % color of internal links (change box color with linkbordercolor)
-    citecolor=green,   % color of links to bibliography
-    filecolor=magenta, % color of file links
-    urlcolor=blue,     % color of external links
+	colorlinks=true,   % false: boxed links; true: colored links
+	linkcolor=black,   % color of internal links (change box color with linkbordercolor)
+	citecolor=green,   % color of links to bibliography
+	filecolor=magenta, % color of file links
+	urlcolor=blue,	 % color of external links
 }
 
 \newcommand{\imgdir}{../resources/images} % Ruta de las imágenes
@@ -83,12 +83,12 @@
 
 \tikzstyle{definicion} = [draw=red, fill=gray!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
-					
+
 \tikzstyle{corolario} = [draw=red, fill=green!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
-					
+
 \tikzstyle{teorema} = [draw=red, fill=blue!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]										
+\tikzstyle{fancytitle} =[fill=red, text=white]
 
 %------------------------- Inicio del documento ---------------------------
 
@@ -125,7 +125,7 @@
 				con $r\geq0,\theta\in[0,2\pi]$
 			\end{center}} \\
 		\hline
-		\includegraphics[scale=0.4]{cilindricas} & 
+		\includegraphics[scale=0.4]{cilindricas} &
 		\includegraphics[scale=0.4]{esfericas} &
 		\noindent \includegraphics[scale=0.4]{polares} \\
 		\hline
@@ -175,7 +175,7 @@
 				\rho=\sqrt{x^2+y^2+z^2} \\
 				\theta=arctan(\frac{y}{x}) \\
 				\varphi=arccos(\frac{z}{r})\end{cases}$
-			\end{center}} & 
+			\end{center}} &
 		\parbox{5cm}{
 			\begin{center}
 				De polares a cartesianas:
@@ -203,7 +203,7 @@
 	\begin{tabular}{c c}
 		\textbf{Parábola} & \textbf{Hipérbola} \\
 		$y=ax^2+bx+c$ & $\frac{(x-x_0)^2}{a^2}-\frac{(y-y_0)^2}{b^2}=1$ \\
-		\includegraphics[scale=0.35]{parabola} & \includegraphics[scale=0.4]{hiperbola}	
+		\includegraphics[scale=0.35]{parabola} & \includegraphics[scale=0.4]{hiperbola}
 	\end{tabular}
 	\setlength{\tabcolsep}{6pt}
 \end{center}
@@ -211,9 +211,9 @@
 \subsection{Superficies cuádricas}
 \begin{center}
 	\begin{tabular}{c c c}
-		\multicolumn{3}{c}{\textbf{Cilindro}} \\ 
+		\multicolumn{3}{c}{\textbf{Cilindro}} \\
 		\toprule
-		Elíptico & Parabólico & Hiperbólico \\ 
+		Elíptico & Parabólico & Hiperbólico \\
 		\parbox{5cm}{
 			\begin{center}
 				\includegraphics[scale=0.3]{cilindro_eliptico} \\
@@ -222,7 +222,8 @@
 		\parbox{5cm}{
 			\begin{center}
 				\includegraphics[scale=0.3]{cilindro_parabolico} \\
-				$x^2+2rz=0$\end{center}} &
+				$x^2+2rz=0$
+			\end{center}} &
 		\parbox{5cm}{
 			\begin{center}
 				\includegraphics[scale=0.3]{cilindro_hiperbolico} \\
@@ -231,12 +232,12 @@
 	\end{tabular}
 
 	\begin{tabular}{c | c c}
-		\textbf{Cono} & \multicolumn{2}{c}{\textbf{Hiperboloide}} \\ 
+		\textbf{Cono} & \multicolumn{2}{c}{\textbf{Hiperboloide}} \\
 		\hline
-		 & De una hoja & De dos hojas \\ 
+		 & De una hoja & De dos hojas \\
 		\parbox{5cm}{
 			\begin{center}
-				\includegraphics[scale=0.3]{cono}\\
+				\includegraphics[scale=0.3]{cono} \\
 				$\left(\frac{x}{a}\right)^2+\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=0$
 			\end{center}} &
 		\parbox{5cm}{
@@ -249,12 +250,12 @@
 				\includegraphics[scale=0.3]{hiperboloide_2hojas} \\
 				$\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2-\left(\frac{z}{c}\right)^2=1$
 			\end{center}} \\
-	\end{tabular}	
+	\end{tabular}
 
 	\begin{tabular}{c | c c}
-		\textbf{Elipsoide} & \multicolumn{2}{c}{\textbf{Paraboloide}} \\ 
+		\textbf{Elipsoide} & \multicolumn{2}{c}{\textbf{Paraboloide}} \\
 		\hline
-		 & Elíptico & Hiperbólico \\ 
+		 & Elíptico & Hiperbólico \\
 		\parbox{5cm}{
 			\begin{center}
 				\includegraphics[scale=0.3]{elipsoide} \\
@@ -270,8 +271,8 @@
 				\includegraphics[scale=0.3]{paraboloide_hiperbolico} \\
 				$z=\left(\frac{x}{a}\right)^2-\left(\frac{y}{b}\right)^2$
 			\end{center}} \\
-	\end{tabular} 
-\end{center}		
+	\end{tabular}
+\end{center}
 
 \subsection{Áreas y volúmenes}
 Algunas fórmulas de áreas y volúmenes que conviene recordar:
@@ -285,11 +286,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		Esfera & $4\pi r^2$ & $\frac{4}{3}\pi r^3$ \\
 		Elipsoide & $4\pi \left(\frac{(ab)^{1.61}+(ac)^{1.61}+(bc)^{1.61}}{3}\right)^\frac{1}{1.61}$ 
 		& $\frac{4}{3}\pi abc$ \\
-		Cilindro & $2\pi h r$ & $\pi h r^2$\\
-		Cono & $\frac{2}{3}\pi h r$ & $\frac{1}{3}\pi h r^2$ \\					
-	\end{tabular} 
-\end{center}				
+		Cilindro & $2\pi h r$ & $\pi h r^2$ \\
+		Cono & $\frac{2}{3}\pi h r$ & $\frac{1}{3}\pi h r^2$ \\
+	\end{tabular}
+\end{center}
 
+\newpage
 \section{Funciones de varias variables}
 \subsection{Funciones de varias variables}
 \subsubsection{Puntos y conjuntos de puntos en $R^n$}
@@ -315,7 +317,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		transformarse en un punto, manteniéndose en el conjunto. En $R^2$, 
 		simplemente conexo $\equiv$ conexo sin \emph{agujeros}.
 \end{enumerate}
-	
+
 \begin{figure}[H]
 	\hspace*{\fill}
 	\subfloat[Convexidad]{\includegraphics[scale=0.5]{convexidad}}
@@ -324,693 +326,694 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	\hfill
 	\subfloat[El tubo no es simplemente conexo]{\includegraphics[scale=0.3]{\string"simplemente conexo\string".png}}
 	\hspace*{\fill}
-\end{figure}	
-		
-				\begin{tikzpicture}
-					\node [corolario] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					   		Dado un conjunto $S\subset R^n$ y un punto $A\in R^n$,pueden ocurrir tres cosas:
-							\begin{enumerate}
-								\item $A$ es un punto interior a $S$, cuando existe $E(A)$ incluido en $S$,
-								\item $A$ es un punto exterior a $S$, cuando existe $E(A)$ que no tiene puntos de $S$,
-								\item $A$ es un punto frontera de $S$, cuando para todo $E(A)$ hay puntos en $S$ y puntos que no están en $S$.
-							\end{enumerate}			   			
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Corolario};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}				
+\end{figure}
+
+\begin{tikzpicture}
+	\node[corolario](box){
+		\begin{minipage}{0.80\textwidth}
+			Dado un conjunto $S\subset R^n$ y un punto $A\in R^n$,pueden ocurrir tres cosas:
+			\begin{enumerate}
+				\item $A$ es un punto interior a $S$, cuando existe $E(A)$ incluido en $S$,
+				\item $A$ es un punto exterior a $S$, cuando existe $E(A)$ que no tiene puntos de $S$,
+				\item $A$ es un punto frontera de $S$, cuando para todo $E(A)$ hay puntos en $S$ y 
+					puntos que no están en $S$.
+			\end{enumerate}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Corolario};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsubsection{Función escalar}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			$f:U\subseteq R^n \rightarrow R$. Regla que asocia a cada n-ada ordenada de 
+			números reales, (o bien a cada vector $x$ de U), un número real. \\
 				
-				\subsubsection{Función escalar} 
-		
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					   		$f:U\subseteq R^n \rightarrow R$.Regla que asocia a cada n-ada ordenada de números reales, (o bien a cada vector $x$ de U), un número real.\\
-					   		
-					   		El conjunto U es el dominio de $f$, su codominio es $R$, y el rango de $f$ es $\{z\in R:\, z=f\left(x\right),\, x\in U\}$		   			
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Campo escalar};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}										
-									
-				\subsubsection{Campo vectorial}
+			El conjunto U es el dominio de $f$, su codominio es $R$, y el rango de $f$
+			es $\{z\in R:\, z=f\left(x\right),\, x\in U\}$.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Campo escalar};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsubsection{Campo vectorial}
+\begin{minipage}{0.3\textwidth}
+	\begin{center}
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.5]{campo_vectorial} \caption{Campo vectorial en $R^2$.}
+			\end{center}
+		\end{figure}
+	\end{center}
+\end{minipage}
+
+\begin{minipage}{0.6\textwidth}
+	\begin{tikzpicture}
+		\node[definicion](box){
+			\begin{minipage}{0.80\textwidth}
+				$f:U\subseteq R^n \rightarrow R^m$,($m>1)$. Regla que asocia a cada n-ada 
+				ordenada de números reales un vector de $R^m$. \\
+			\end{minipage}};
+			\node[fancytitle, right=10pt] at (box.north west) {Campo vectorial};
+			\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+	\end{tikzpicture}	
+\end{minipage}
+
+\subsubsection{Operaciones entre funciones de varias variables}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Sean $f:U\subseteq R^n \to R$, $g:V\subseteq R^n \to R$, entonces:
+			\begin{itemize}
+				\item $f+g:U\cap V\subseteq R^n \rightarrow R$ tal que 
+					$\left(f+g\right)\left(x\right)=f\left(x\right)+g\left(x\right)$
+				\item $f\cdot g:U\cap V\subseteq R^n \rightarrow R$ tal que 
+					$\left(fg\right)\left(x\right)=f\left(x\right)\cdot g\left(x\right)$
+				\item $\frac{f}{g}:W\subseteq R^n \rightarrow R$ tal que 
+					$\left(\frac{f}{g}\right)\left(x\right)=\frac{f\left(x\right)}{g\left(x\right)}$, 
+					donde $W=U\cap V-\{x\in V:g\left(x\right)=0\}$
+			\end{itemize}
+		\end{minipage}};
+		\node[fancytitle, right=10pt] at (box.north west) {Operaciones entre funciones de varias variables};
+		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Geometría de las funciones de varias variables}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Se define la gráfica de $f:U\subseteq R^n \rightarrow R$ al conjunto:
+			
+			\begin{align}
+				\{(x_1,x_2,\ldots,x_n,y)\in R^{n+1}:\overline{x}\in U,y=f(x_1,x_2,\ldots,x_n)\}
+			\end{align}
+			 		
+			La gráfica de la función $f:U\subseteq R^2 \rightarrow R$ es la gráfica de 
+			la superficie $z=f\left(x,y\right)$. \\
+			
+			Para $n\geq3$,la gráfica no puede ser visualizada. \\
+		\end{minipage}};
+		\node[fancytitle, right=10pt] at (box.north west) {Gráfica de f};
+		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{minipage}{0.5\textwidth}		
+	Para graficar, hay que cortar la superficie $z=f(x,y)$ con los planos 
+	del tipo $y=kx$ y estudiar el tipo de curvas resultantes.
+	En particular, se estudian las curvas resultantes de cortar la superficie 
+	con los planos $y=0$ y $x=0$. \\
 	
-					\begin{minipage}{0.3\textwidth}
-						\begin{center}	
-							\begin{figure}[H]
-								\begin{center}
-									\includegraphics[scale=0.5]{campo_vectorial} \caption{Campo vectorial en $R^2$.}
-								\end{center}
-							\end{figure}	
-						\end{center}
-					\end{minipage}
-					\begin{minipage}{0.6\textwidth}
+	Otro concepto importante que también se usa como ayuda para obtener gráficos 
+	de funciones de dos variables es el de \emph{nivel constante} de una función: 
+	dada la función $f:U\subseteq R^n \rightarrow R$ y el número $c\in\mbox{rango de f}$, 
+	se define el \emph{\textbf{nivel $c$ de la función $f$}} como el conjunto 
+	$N_{c}=\{x\in U:\, f\left(x\right)=c\}.$ \\
+	
+	Cuando $n=2$, la curva se llama \textit{\textbf{curva de nivel}}. 
+	Cuando $n=3$, la curva se llama \textit{\textbf{superficie de nivel}}. 
+	El nivel \textit{c}de la superficie $z=f\left(x,y\right)$ se puede interpretar 
+	geométricamente como la intersección de la función con el plano $z=c$. 
+	Estas curvas nos dan idea de la imagen de la función.
+\end{minipage}					
 
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					   		$f:U\subseteq R^n \rightarrow R^m$,($m>1)$.Regla que asocia a cada n-ada ordenada de números reales un vector de $R^m$.\\			   			
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Campo vectorial};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}	
-						
-					\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.35]{curvas_de_nivel.png}\caption{$f(x,y)=-x^2-2y^2$ y sus curvas de nivel.}
+		\end{center}
+	\end{figure}
+\end{minipage}
+
+\subsection{Limites y continuidad}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $x_0\in R^n$ y $r>0$. La bola abierta de centro $x_0$ y radio $r$, 
+			denotada por $B\left(x_0,r\right)$ es el conjunto de puntos de $R^n$ que 
+			distan de $x_0$ en menos que $r$.
+		\end{minipage}};
+		\node[fancytitle, right=10pt] at (box.north west) {Bola abierta};
+		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Un conjunto $U\subseteq R^n$ es un conjunto abierto de $R^n$ si para cada 
+			$x_0\in U$ existe un $r>0$ tal que $B\left(x_0,r\right)\subset U$. Esto es, 
+			el conjunto $U\subseteq R^n$ será abierto si cuando tomamos un punto $x_0$ 
+			en él, este siempre tiene vecinos que siguen viviendo dentro de $U$. \\
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Conjunto abierto};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $U\subseteq R^n$ un subconjunto de $R^n$. Un punto $x_0\in R^n$ es un 
+			punto frontera de U si toda bola abierta $B(x_0,r)$ contiene puntos en U y 
+			fuera de él.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Frontera de un conjunto};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto 
+			abierto U. Si $x_0$ es un punto de U o un punto frontera de U, se dice que 
+			el límite de $f$ cuando $x$ tiende a $x_0$ es L, lo cual se escribe como 
+			$\lim_{x\rightarrow x_0}f\left(x\right)=L$ si dado cualquier $\varepsilon>0$ 
+			existe $\delta>0$ tal que $x\in B\left(x_{0},\delta\right)\cap U\left(x\neq x_{0}\right)\Rightarrow f\left(x\right)\in B(L,\varepsilon)$
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Límite};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Una condición \textit{necesaria} (pero no suficiente) para que el límite 
+			$\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)$ exista y 
+			sea L, es que si los límites $\lim_{x\rightarrow x_{0}}f\left(x,\phi\left(x\right)\right)$ y 
+			$\lim_{x\rightarrow x_{0}}f\left(x,\psi\left(x\right)\right)$ existen 
+			(donde $y=\phi\left(x\right)$ e $y=\psi\left(x\right)$ son curvas que 
+			pasan por $\left(x_0,y_0\right)$) deben valer L. \\
+
+			El único argumento que concluye que un límite existe requiere la 
+			aplicación directa de la definición. Para calcular límites también 
+			es útil expresar la función en coordenadas polares. \\
+			
+			\begin{center}
+				\textit{Ejemplo}: $\lim_{\left(x,y\right)\rightarrow(0,0)}\frac{x^{3}y}{x^{2}+y^{2}}=\lim_{r\rightarrow0}\frac{(rcos\theta)^{3}(rsen\theta)}{(rcos\theta)^{2}+(rsen\theta)^{2}}=\lim_{r\rightarrow0}\frac{r^4cos^3(\theta)sen(\theta)}{r^2(\underbrace{cos^2(\theta)+sen^2(\theta))}_1}=0$\\
+			\end{center}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Límite por curva};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en 
+			el abierto U y sea $x_0$ un punto de U o un punto frontera de U. 
+			Si $\lim_{x\rightarrow x_0}f\left(x\right)=L$ y 
+			$\lim_{x\rightarrow x_0}g\left(x\right)=M$, entonces:
+			\begin{align}
+				\lim_{x\rightarrow x_{0}}\left(f+g\right)\left(x\right)=L+M \\
+				\lim_{x\rightarrow x_{0}}\left(f\cdot g\right)\left(x\right)=L\cdot M \\
+				Si M\neq0,\lim_{x\rightarrow x_{0}}\left(\frac{f}{g}\right)\left(x\right)=\frac{L}{M} \\
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Teorema de límites de funciones};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node [teorema] (box){
+		\begin{minipage}{0.80\textwidth}
+			Si $f:U\subseteq R^2 \rightarrow R$ es una función polinomial, entonces:
+			\begin{align}
+				\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)=f(x_0,y_0)
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Continuidad en polinomios};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $f:U\subseteq R^n\rightarrow R$ una función definida en el 
+			abierto U de $R^n$, y sea $x_0\in U.$ Se dice que $f$ es una función 
+			continua en $x_{0}$ si $f\left(x_{0}\right)=\lim_{x\rightarrow x_0}f(x)$. 
+			Las funciones polinomiales son continuas en cualquier punto $\left(x_0,y_0\right)\in R^2$ \\
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Continuidad en un punto};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			$f:U\subseteq R^n \rightarrow R$ una función definida en el abierto 
+			U de $R^n$, se dice continua en $U$ si lo es para todos y cada uno 
+			de los puntos $\left(x,y\right)\in U$.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Continuidad en un abierto};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			$f:D\subset R^2 \to R$ es continuo en un punto $\left(x_0,y_0\right)\in D$ si:
+			\begin{align} 
+				\lim_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0)
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Continuidad de un campo escalar};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			La función $\vect{f}:U\subseteq R^n \to R^m$, $m>1$, 
+			$\vect{f}=\left(f_1,f_2,\ldots,f_m\right)$ es continua en el punto 
+			$\vect{x}_0\in U$ sí y solo si: 
+			\begin{align}
+				f_i:U\subseteq R^n \to R, i=1,2,\ldots,m, \text{ son continuas}
+			\end{align}
+
+			La función $\vect{f}:U\subseteq R^n \to R^m$, $m>1$, 
+			$\vect{f}=\left(f_1,f_2,\ldots,f_m\right)$ es diferenciable en el 
+			punto $\vect{x}_0\in U$ sí y solo si: 
+			\begin{align} 
+				f_i:U\subseteq R^n \to R, i=1,2,\ldots,m, \text{ son diferenciables}
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Continuidad y diferenciabilidad de un campo vectorial};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			Sean $f,g:U\subseteq R^n \rightarrow R$ funciones definidas en el 
+			abierto $U$ de $R^n$. Si $f$ y $g$ son continuas, entonces:
+			\begin{align}
+				\text{La función } f+g:U\subseteq R^n \rightarrow R=f\left(x\right)+g(x) \text{ es continua} \\
+				\text{La función } f\cdot g:U\subseteq R^n \rightarrow R=f\left(x\right)\cdot g(x) \text{ es continua} \\
+				\text{La función } \frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f\left(x\right)}{g\left(x\right)} \text{ es continua en todo punto } x\in U \text{, donde } g(x)\neq0 \\
+				\text{La composición } g\circ f:U\subseteq R^n \rightarrow R \text{ es continua}
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Teorema de continuidad de funciones};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Derivadas parciales}
+\textbf{Para una función de una variable}: 
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			$f:I\subseteq R \rightarrow R$ definida en el intervalo abierto I, 
+			se define la \textit{derivada} de $f$ en $x_0\in I$:
+			\begin{align}
+				f^\prime(x_0)=\frac{\partial f}{\partial x}(x_0)=\lim_{h \to 0}\frac{f(x_0+h)-f(x_0)}{h}
+			\end{align}
+			Si $f^\prime (x_0)$ existe, su valor nos da la pendiente de la recta 
+			tangente a la gráfica de la función $y=f(x)$ en el punto $(x_0,y_0)$. 
+			Para este tipo de funciones, diferenciabilidad equivale a existencia 
+			de derivada, y la diferenciabilidad en un punto implica la continuidad 
+			de la función en ese punto 
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Derivada parcial en $R^1$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			$f:U\subseteq R^2 \rightarrow R$ definida en el abierto $U$, 
+			con $(x_0,y_0)$ un punto de $U$:
+			\begin{align}
+				\frac{\partial f}{\partial x}(x_0,y_0)=\lim_{h \to 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h} \\
+				\frac{\partial f}{\partial y}(x_0,y_0)=\lim_{h \to 0}\frac{f\left(x_0,y_0+h\right)-f(x_0,y_0)}{h}
+			\end{align}
+			Para este tipo de funciones, la existencia de derivadas parciales un 
+			punto no implica que la función sea continua en ese punto, por lo que 
+			tampoco implica que sea diferenciable en ese punto.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Derivada parcial en $R^2$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+Las derivadas parciales de una función $z=f(x,y)$ en un punto $(x_0,y_0)$ nos 
+hablan del comportamiento geométrico (la inclinación) de las superficie que tal 
+función representa, en las direcciones de los ejes $x$ e $y$.\\
+
+Las derivadas parciales de una función se obtienen \emph{derivando parcialmente} 
+cada una de las variables, y dejando las otras como constantes.\\
+
+\textit{Ejemplo}: sea la función $f(x,y)=5x^3+4xy+y^2$. 
+Se tiene que $f^\prime_x=15x^2+4y$ y que $f^\prime_y=4x+2y$.
+
+\subsection{Derivadas direccionales}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto abierto U, y sea $x_0 \in U$. Sea $\vect{v} \in R^n$ un vector \emph{unitario} dado. Se define la derivada de la función $f$ en $x_0$ en la dirección del vector $\vect{v}$:
+			\begin{align}
+				\frac{\partial f}{\partial \vect{v}}\left(x_0\right)=\lim_{t \to 0}\frac{f(x_0+t v_0)-f(x_0)}{t}
+			\end{align}
+			\begin{align}
+				\lim_{h \to 0}\frac{r(h)}{h}=0
+			\end{align}
+			El vector unitario $\vect{v}$ se puede escribir como $\vect{v}=(cos(\theta),sin(\theta))$, $0\leq\theta\leq2\pi$, entonces:
+			\begin{align}
+				\frac{\partial f}{\partial \vect{v}}(x_0,y_0)=\lim_{t \to 0}\frac{f(x_0+tcos(\theta),y_0+tsin(\theta))-f(x_0,y_0)}{t}
+			\end{align}
+			Si $\theta=0$ se tiene $\frac{\partial f}{\partial v}=\frac{\partial f}{\partial x}$,y si $\theta=\frac{\pi}{2}$ se tiene $\frac{\partial f}{\partial v}=\frac{\partial f}{\partial y}$. 
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Derivada direccional};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Diferenciabilidad}
+\subsubsection{Para funciones de una variable} 
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			La función $f:I\subseteq R \rightarrow R$ es \emph{diferenciable} en $x_0\in I$ si existe una constante $A$ tal que:
+			\begin{align}
+				f(x_0+h)=f(x_0)+Ah+r(h)
+			\end{align}
+			\begin{align}
+				\lim_{h \to 0}\frac{r(h)}{h}=0
+			\end{align}
+			El residuo $r(h) \to 0$ más rápidamente que $h$. Despejando A, obtenemos que:
+			\begin{align}
+				A=\frac{f(x_0+h)-f(x_0)}{h}-\frac{r(h)}{h}
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad en $R^1$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsubsection{Para funciones de dos variable} 
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			La función $f:U\subseteq R^2 \rightarrow R$ es \emph{diferenciable} en el punto $(x_0,y_0)$ si hay constantes $A_1$ y $A_2$ tales que:
+			\begin{align}
+				f((x_0,y_0)+(h_1,h_2))=f(x_0,y_0)+A_1h_1+A_2h_2+r(h_1,h_2)
+			\end{align}
+			\begin{align}
+				\lim_{(h_1,h_2)\rightarrow(0,0)}=\frac{r(h_1,h_2)}{|(h_1,h_2)|}
+			\end{align}
+			Despejando $A_1$ y $A_2$, obtenemos que:
+			\begin{align}
+				A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
+				A_2=\frac{\partial f}{\partial y}(x_0,y_0)
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad en $R^2$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			La función $f:U\subseteq R^2 \rightarrow R$ definida en el abierto $U$ es diferenciable en el punto $(x_0,y_0)\in U$ si:
+			\begin{align}
+					\exists \text{ } A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
+					\exists \text{ } A_2=\frac{\partial f}{\partial y}(x_0,y_0) \\
+					\lim_{(h_1,h_2) \to (0,0)}\frac{r(h_1,h_2)}{|(h_1,h_2)|}=0
+			\end{align}
+			\begin{align}
+				\lim_{(x,y) \to (x_0,y_0)} \frac{f(x,y)-\left[\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)+f(x_0,y_0)\right]}{\sqrt{(x-x_0)^{2}+(y-y_0)^{2}}}=0
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Teorema diferenciabilidad};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[corolario](box){
+		\begin{minipage}{0.80\textwidth}
+			\begin{itemize}
+				\item Si la función es diferenciable en $(x_0,y_0)$, es continua en ese punto.
+				\item Las funciones polinomiales $f: R^2 \rightarrow R$ son diferenciables en todo punto.
+				\item Si las derivadas parciales son continuas en el punto $\vect{x}_0 \in U$, entonces $f$ es diferenciable en $\vect{x}_0$
+			\end{itemize}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Corolarios del teorema};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en $U$, y diferenciables en $(x_0,y_0) \in U.$ Entonces:
+			\begin{itemize}
+				\item La suma $f+g:U\subseteq R^n \rightarrow R=f(x_0,y_0)+g(x_0,y_0)$	es una función diferenciable en $(x_0,y_0)$.
+				\item El producto $f \cdot g:U\subseteq R^n \rightarrow R=f(x_0,y_0)\cdot g(x_0,y_0)$ es una función diferenciable en $(x_0,y_0)$.
+				\item Si $g(x_0,y_0) \neq 0$, el cociente $\frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f(x_0,y_0)}{g(x_0,y_0)}$ es una función diferenciable en $(x_0,y_0)$.
+				\item La composición $g \circ f:U\subseteq R^n \rightarrow R$ es diferenciable en $(x_0,y_0)$.
+			\end{itemize}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Teorema diferenciabilidad de varias funciones};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsubsection{Para funciones de n variables} 
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			La función $f:U\subseteq R^n \rightarrow R$ es \emph{diferenciable} en el punto $\vect{x}_0$ si hay constantes $A_1,A_2,...,A_n$ tales que:
+			\begin{align}
+				f(\vect{x}_0+\vect{h})=f(\vect{x}_0)+\sum_{i=1}^{n} A_ih_i+r(\vect{h})
+			\end{align}
+			\begin{align}
+				\lim_{\vect{h} \to \vect{0}}=\frac{r(\vect{h})}{|\vect{h}|}
+			\end{align}
+			Despejando $A_1$ y $A_2$, obtenemos que:
+			\begin{align}
+				A_i=\frac{\partial f}{\partial x_i}(\vect{x}_0), \forall i=1,...,n
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad  en $R^n$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $f:U\subseteq R^n \rightarrow R$ \textit{\emph{diferenciable}}, definida en el conjunto abierto U. Sea $x_0\in U$ y sea $\vect{v}\in R^n$ el vector unitario en cuya dirección queremos calcular la derivada de la función $f$ en el punto $x_0.$ Entonces:
+			\begin{align}
+				\frac{\partial f}{\partial\vect{v}}(x_{0})=\sum_{i=1}^{n}\frac{\partial f}{\partial x_{i}}(x_0)\cdot\vect{v}_{i}
+			\end{align}
+			\textit{Ejemplo}: dada $f:R^2 \rightarrow R$ tal que $f(x,y)=x^2+y^2,$ queremos calcular la derivada de la función en un punto arbitrario $(x_{0},y_{0})\in R^2$ en la dirección del vector unitario $\vect{v}=(cos(\theta),sin(\theta))$.\\
+
+			Dado que la función es polinomial, es diferenciable en todo el dominio.\\
+
+			Entonces según la fórmula se tiene que:\\
+			\begin{align}
+				\frac{\partial f}{\partial v}(x_0,y_0)=\frac{\partial f}{\partial x}(x_0,y_0)cos(\theta)+\frac{\partial f}{\partial y}(x_0,y_0)sen(\theta)=2x_0cos(\theta)+2y_0sen(\theta)
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Teorema de la diferenciabilidad y las derivadas direccionales};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Gradiente}
+\begin{minipage}{0.3\textwidth}
+	\begin{center}
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.23]{campo_de_gradientes.png}\caption{El gradiente apunta a la dirección de mayor variación.}
+			\end{center}
+		\end{figure}
+	\end{center}
+\end{minipage}
+
+\begin{minipage}{0.6\textwidth}
+	\begin{tikzpicture}
+		\node[definicion](box){
+			\begin{minipage}{0.80\textwidth}
+				Sea $f:U\subseteq R^n \rightarrow R$ una función diferenciable definida en el conjunto abierto U de $R^n$.Se define el vector gradiente de la función $f$ en el punto $x_0\in U$ como el vector de $R^n$ dado por: \\
+				\begin{align}
+					\nabla f(x_0)=(f^\prime_{x_1}(x_0),f^\prime_{x_2}(x_0),\ldots,f^\prime_{x_n}(x_0))
+				\end{align}
+				\begin{align}
+					\nabla f(x_0)\cdot\vect{v}=f^\prime_{\vect{v}}(x_0)
+				\end{align}
 				
-					\subsubsection{Operaciones entre funciones de varias variables} 			
+				El vector $\nabla f(x_0)$ nos dice en qué dirección se tiene la mayor variación (el mayor crecimiento) de la función $f$ en el punto	$x_0$.\\
 				
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					   		Sean $f:U\subseteq R^n \to R$, $g:V\subseteq R^n \to R$, entonces:
-							\begin{itemize}
-								\item $f+g:U\cap V\subseteq R^n \rightarrow R$ tal que $\left(f+g\right)\left(x\right)=f\left(x\right)+g\left(x\right)$
-								\item $f\cdot g:U\cap V\subseteq R^n \rightarrow R$ tal que $\left(fg\right)\left(x\right)=f\left(x\right)\cdot g\left(x\right)$
-								\item $\frac{f}{g}:W\subseteq R^n \rightarrow R$ tal que $\left(\frac{f}{g}\right)\left(x\right)=\frac{f\left(x\right)}{g\left(x\right)}$, donde $W=U\cap V-\{x\in V:g\left(x\right)=0\}$
-							\end{itemize}				   			
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Operaciones entre funciones de varias variables};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}	
-						
-					\subsection{Geometría de las funciones de varias variables}
+				Además, se tiene que el vector $\nabla f(x_0)$ es un vector ortogonal a la curva de nivel que pasa por $x_0$.		
+			\end{minipage}};
+		\node[fancytitle, right=10pt] at (box.north west) {Gradiente de una función};
+		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{tikzpicture}
+	\node [corolario] (box){%
+		\begin{minipage}{0.80\textwidth}
+			Si $f$ es diferenciable, la dirección de la derivada direccional	puede ser
+			\begin{center}
+				\begin{itemize}
+					\item Máxima: $v=\frac{\nabla f}{\left|\nabla f\right|}$, y su valor es $\left|\nabla f\right|$
+					\item Mínima: $v=-\frac{\nabla f}{\left|\nabla f\right|}$, y su valor es $-\left|\nabla f\right|$
+					\item Nula: $v\bot\nabla f$, y su valor es 0
+				\end{itemize}
+			\end{center}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Propiedades del gradiente};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Vectores normales}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Dada una función diferenciable $f:U\subseteq R^2 \rightarrow R$ definida en el conjunto abierto U de $R^2$ tal que $z=f(x,y)$, y dado un punto $p=(x_0,y_0,f(x_0,y_0))$, el vector normal $N_{p}$ a la superficie de la función en el punto $(x_0,y_0)$ se obtiene mediante:
+			\begin{align}
+				\vect{N}_{p}=\left|\begin{array}{ccc}
+				\hat{i} & \hat{j} & \hat{k}\\
+				\frac{\partial f_x}{\partial x} & \frac{\partial f_y}{\partial x} & \frac{\partial f_z}{\partial x}\\
+				\frac{\partial f_x}{\partial y} & \frac{\partial f_y}{\partial y} & \frac{\partial f_z}{\partial y}\end{array}\right|_{p}=\left|\begin{array}{ccc}
+				\hat{i} & \hat{j} & \hat{k}\\
+				1 & 0 & f^\prime_{x}(x_0,y_0)\\
+				0 & 1 & f^\prime_{y}(x_0,y_0)\end{array}\right|=(-f^\prime_{x}(x_0,y_0),-f^\prime_{y}(x_0,y_0),1)
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Vectores normales};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\underbar{Nota}: recordar que la superficie $z=f(x,y)$ se puede ver  como el nivel 0 de la función $F(x,y,z)=z-f(x,y)$. De allí el porqué de la última coordenada del vector. Suele presentarse como $(f^\prime_{x}(x_0,y_0),f^\prime_{y}(x_0,y_0),-1)$ que luego es \underline{mal llamado gradiente extendido}.
+
+\subsection{Planos tangentes y rectas normales}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Si la función $f:U\subseteq R^2 \rightarrow R$ es diferenciable en el punto $(x_0,y_0)$, entonces la siguiente ecuación define al \textbf{plano tangente} a la superficie $z=f(x,y)$ en el punto $(x_0,y_0,f(x_0,y_0))$:
+			\begin{align}
+				z=f(x_0,y_0)+f^\prime_{x}(x_0,y_0)(x-x_0)+f^\prime_{y}(x_0,y_0)(y-y_0)
+			\end{align}
+			De la ecuación anterior se deduce que el plano tangente en un punto $(x_0,y_0)$ es un plano que pasa por el punto y contiene a las rectas tangentes en el punto.\\
+			Es decir, tiene como vector normal al vector $\vect{N}_{(x_0,y_0)}=(\nabla f(x_0,y_0),-1)$ calculado anteriormente.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Plano tangente};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{minipage}{0.22\textwidth}
+	\begin{figure}[H]
+		\includegraphics[scale=0.3]{plano_tangente.png}\caption{Plano tangente}
+	\end{figure}
+\end{minipage}
+
+\begin{minipage}{0.72\textwidth}
+	\begin{tikzpicture}
+		\node[definicion](box){
+			\begin{minipage}{0.80\textwidth}
+				Dada una función diferenciable $f:U\subseteq R^2 \rightarrow R$ cuya gráfica es una superficie $S$, se define la \textbf{recta normal} a la superficie $S$ en el punto $p=(x_0,y_0,z_0)$ de ella, como la recta que pasa por $p$ y contiene al vector normal a la superficie en $p.$ Su ecuación está dada por:
+				\begin{align}
+					L:\:(x,y,z)=t(f^\prime_{x}(x_0,y_0),f^\prime_{y}(x_0,y_0),-1)+(x_0,y_0,z_0), \text{ } t \in R
+				\end{align}
+			\end{minipage}};
+		\node[fancytitle, right=10pt] at (box.north west) {Recta normal};
+		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+	\end{tikzpicture}
+\end{minipage}
+
+\subsection{Diferencial}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Dada la función $f:U\subseteq R^n \rightarrow R$ diferenciable, la diferencial de $f$ se define como:
+			\begin{align}
+				df=\sum_{i=1}^{n}\frac{\partial f}{\partial x_i}\partial x_i
+			\end{align}
+			\textit{Ejemplo}: el diferencial de $f(x)=sen^3(x^2)$	es:
+			\begin{align}
+				df=3sen^2(x^2)cos(x^2)2xdx=6xsen^2(x^2)cos(x^2)dx
+				\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Diferencial};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Derivadas parciales de órdenes superiores}
+Dada una función $f:U\subset R^2 \rightarrow R$ definida en el conjunto abierto $U$ de $R^2$. Si la función es diferenciable, entonces existen las derivadas parciales $\frac{\partial f}{\partial x}$ y $\frac{\partial f}{\partial y}$ en cualquier punto $(x,y)\in U$.\\
+
+Puede ocurrir que estas derivadas sean lo suficientemente \emph{bien	portadas} en $U$ como para que podamos obtener de ellas sus derivadas parciales $\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right),\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right),\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right),\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right)$.\\
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			Sea $f:U\subseteq R^2 \rightarrow R$ una función definida en el abierto $U$ de $R^2$. Si:
+			\begin{align}
+				\exists \frac{\partial^2 f}{\partial x\partial y}:U\subseteq R^2 \rightarrow R \\
+				\exists \frac{\partial^2 f}{\partial y\partial x}:U\subseteq R^2 \rightarrow R
+			\end{align}
+			Y son funciones continuas en $U$, entonces:
+			\begin{align}
+				 \frac{\partial^2 f}{\partial x\partial y}=\frac{\partial^2 f}{\partial y\partial x}
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Teorema de Schwarz};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\subsection{Funciones de clase $\mathcal{C}^{\mathbf{k}}$}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			$f$ es una función $k$ veces diferenciable si la función $f^{(k-1)}:I\subseteq R \rightarrow R$ es diferenciable.\\
+			
+			Si $f$ es $k$ veces diferenciable para todo $k\in N$,	se dice ser infinitamente diferenciable, o bien, de clase $\mathcal{C}^{\infty}$.\\
+			
+			En particular, sea $f:I\subseteq R \rightarrow R$ una función diferenciable.	Si la función derivada $f^\prime$ es continua, se dice que $f$ es una función de clase $\mathcal{C}^{1}$. Si esta función $f^\prime$ es, a su vez, una función diferenciable, decimos que $f$ es una función dos veces diferenciable.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Funciones de clase $\mathcal{C}^k$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[teorema](box){
+		\begin{minipage}{0.80\textwidth}
+			Si la función $f:U\subseteq R^n \rightarrow R$	es de clase $\mathcal{C}^{1}$, entonces $f$ es diferenciable.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Corolario};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\section{Funciones compuestas, inversas e implícitas}
+\subsection{Composición de funciones}
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Si tenemos las funciones $g:I\subseteq R \rightarrow R$ y $f:J\subseteq R \rightarrow R$ (tales que $g(I)\subseteq J$), podemos formar la composición $f\circ g:I\subseteq R \rightarrow R$.\\
+			
+			Si $g:I\subseteq R \rightarrow R$  es diferenciable en un punto $x_0 \in I$ y $f:J\subseteq R \rightarrow R$ es diferenciable en $g(x_0)\in J$, entonces la composición $f\circ g$ es diferenciable en $x_0$, es decir, que $(f\circ g)^\prime(x)$ existe, y $(f\circ g)^\prime(x)=f^{\prime}(g(x))g^{\prime}(x)$.
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Composición de funciones};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\node[definicion](box){
+		\begin{minipage}{0.80\textwidth}
+			Para el caso de dos variables, tenemos que $z=f(x,y)$. Para \emph{componer} esta función tendremos que sustituir las \textit{dos variables} ($x$ e $y$) por \textit{dos funciones}, $g_1$ y $g_2$, que conecten a éstas con \textit{otras} variables,  $u$ y $v$.\\
+			
+			Si consideramos las funciones $x=g_1(u,v)$ e $y=g_2(u,v)$, podemos sustituir éstas en la función $f$ y obtener la \textbf{función compuesta} :
+			\begin{align}
+				y=f(g_1(u,v),g_2(u,v))
+			\end{align}
+		\end{minipage}};
+	\node[fancytitle, right=10pt] at (box.north west) {Composicion de funciones de $R^2$};
+	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
+\end{tikzpicture}
 
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					   		Se define la gráfica de $f:U\subseteq R^n \rightarrow R$ al conjunto:
-					   		
-					   		\begin{align}
-					   			\{(x_1,x_2,\ldots,x_n,y)\in R^{n+1}:\overline{x}\in U,y=f(x_1,x_2,\ldots,x_n)\}
-					   		\end{align}
-					   		
-					   		La gráfica de la función $f:U\subseteq R^2 \rightarrow R$ es la gráfica de la superficie $z=f\left(x,y\right)$.\\
-					   		
-					   		Para $n\geq3$,la gráfica no puede ser visualizada.\\
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Gráfica de f};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}	
-					
-					\begin{minipage}{0.6\textwidth}		
-						Para graficar, hay que cortar la superficie $z=f(x,y)$ con los planos del tipo $y=kx$ y estudiar el tipo de curvas resultantes. En particular, se estudian las curvas resultantes de cortar la superficie con los planos $y=0$ y $x=0$.\\
-						
-						Otro concepto importante que también se usa como ayuda para obtener gráficos de funciones de dos variables es el de \emph{nivel constante} de una función: dada la función $f:U\subseteq R^n \rightarrow R$ y el número $c\in\mbox{rango de f}$, se define el \emph{\textbf{nivel $c$ de la función $f$}} como el conjunto $N_{c}=\{x\in U:\, f\left(x\right)=c\}.$ \\
-						
-						Cuando $n=2$, la curva se llama \textit{\textbf{curva de nivel}}. Cuando $n=3$, la curva se llama \textit{\textbf{superficie de nivel}}. El nivel \textit{c}de la superficie $z=f\left(x,y\right)$ se puede interpretar geométricamente como la intersección de la función con el plano $z=c$. Estas curvas nos dan idea de la imagen de la función.
-						
-					\end{minipage}					
-					\begin{minipage}{0.3\textwidth}
-						\begin{figure}[H]
-							\begin{center}	
-								\includegraphics[scale=0.35]{curvas_de_nivel.png}\caption{$f(x,y)=-x^2-2y^2$ y sus curvas de nivel.}
-							\end{center}	
-						\end{figure}	
-					\end{minipage}
-				
-					\subsection{Limites y continuidad}
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					   		Sea $x_0\in R^n$ y $r>0.$ La bola abierta de centro $x_0$ y radio $r$, denotada por $B\left(x_0,r\right)$ es el conjunto de puntos de $R^n$ que distan de $x_0$ en menos que $r.$
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Bola abierta};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};						
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Un conjunto $U\subseteq R^n$ es un conjunto abierto de $R^n$ si para cada $x_0\in U$ existe un $r>0$ tal que $B\left(x_0,r\right)\subset U.$ Esto es, el conjunto $U\subseteq R^n$ será abierto si cuando tomamos un punto $x_0$ en él, este siempre tiene vecinos que siguen viviendo dentro de $U$.\\
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Conjunto abierto};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $U\subseteq R^n$ un subconjunto de $R^n$. Un punto $x_0\in R^n$ es un punto frontera de U si toda bola abierta $B(x_0,r)$ contiene puntos en U y fuera de él.
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Frontera de un conjunto};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-					
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto abierto U. Si $x_0$ es un punto de U o un punto frontera de U, se dice que el límite de $f$ cuando $x$ tiende a $x_0$ es L, lo cual se escribe como $\lim_{x\rightarrow x_0}f\left(x\right)=L$ si dado cualquier $\varepsilon>0$ existe $\delta>0$ tal que $x\in B\left(x_{0},\delta\right)\cap U\left(x\neq x_{0}\right)\Rightarrow f\left(x\right)\in B(L,\varepsilon)$
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Límite};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};					
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Una condición \textit{necesaria} (pero no suficiente) para que el límite $\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)$ exista y sea L, es que si los límites $\lim_{x\rightarrow x_{0}}f\left(x,\phi\left(x\right)\right)$ y $\lim_{x\rightarrow x_{0}}f\left(x,\psi\left(x\right)\right)$ existen (donde $y=\phi\left(x\right)$ e $y=\psi\left(x\right)$ son curvas que pasan por $\left(x_0,y_0\right)$) deben valer L.\\
-					    	
-					    	El único argumento que concluye que un límite existe requiere la aplicación directa de la definición. Para calcular límites también es útil expresar la función en coordenadas polares.\\
-										    	
-					    \begin{center}
-							\textit{Ejemplo}: $\lim_{\left(x,y\right)\rightarrow(0,0)}\frac{x^{3}y}{x^{2}+y^{2}}=\lim_{r\rightarrow0}\frac{(rcos\theta)^{3}(rsen\theta)}{(rcos\theta)^{2}+(rsen\theta)^{2}}=\lim_{r\rightarrow0}\frac{r^4cos^3(\theta)sen(\theta)}{r^2(\underbrace{cos^2(\theta)+sen^2(\theta))}_1}=0$\\
-					\end{center}
-						
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Límite por curva};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}						
-					
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en el abierto U y sea $x_0$ un punto de U o un punto frontera de U. Si $\lim_{x\rightarrow x_0}f\left(x\right)=L$ y $\lim_{x\rightarrow x_0}g\left(x\right)=M$, entonces:
-					    	\begin{align}
-								\lim_{x\rightarrow x_{0}}\left(f+g\right)\left(x\right)=L+M \\
-								\lim_{x\rightarrow x_{0}}\left(f\cdot g\right)\left(x\right)=L\cdot M \\
-								Si M\neq0,\lim_{x\rightarrow x_{0}}\left(\frac{f}{g}\right)\left(x\right)=\frac{L}{M} \\
-							\end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Teorema de límites de funciones};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}						
-
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Si $f:U\subseteq R^2 \rightarrow R$ es una función polinomial, entonces:
-					    	\begin{align}
-					    		\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)=f(x_0,y_0)
-					    	\end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Continuidad en polinomios};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}						
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n\rightarrow R$ una función definida en el abierto U de $R^n$, y sea $x_0\in U.$ Se dice que $f$ es una función continua en $x_{0}$ si $f\left(x_{0}\right)=\lim_{x\rightarrow x_0}f(x)$. Las funciones polinomiales son continuas en cualquier punto $\left(x_0,y_0\right)\in R^2$\\
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Continuidad en un punto};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	$f:U\subseteq R^n \rightarrow R$ una función definida en el abierto U de $R^n$, se dicecontinua en $U$ si lo es para todos y cada uno de los puntos $\left(x,y\right)\in U.$
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Continuidad en un abierto};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	$f:D\subset R^2 \to R$ es continuo en un punto $\left(x_0,y_0\right)\in D$ si:
-					    	\begin{align} 
-					       		\lim_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0)
-					       	\end{align}
-					      
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Continuidad de un campo escalar};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	La función $\vect{f}:U\subseteq R^n \to R^m$, $m>1$,$\vect{f}=\left(f_1,f_2,\ldots,f_m\right)$ es continua en el punto $\vect{x}_0\in U$ sí y solo si: 
-					    	\begin{align} 
-					       		f_i:U\subseteq R^n \to R, i=1,2,\ldots,m,  \text{ son continuas}
-					       \end{align}
-					       La función $\vect{f}:U\subseteq R^n \to R^m$, $m>1$,$\vect{f}=\left(f_1,f_2,\ldots,f_m\right)$ es diferenciable en el punto $\vect{x}_0\in U$ sí y solo si: 
-					       \begin{align} 
-					       		f_i:U\subseteq R^n \to R, i=1,2,\ldots,m,  \text{ son diferenciables}
-					       \end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Continuidad y diferenciabilidad de un campo vectorial};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        Sean $f,g:U\subseteq R^n \rightarrow R$ funciones definidas en el abierto U de $R^n$. Si $f$ y $g$ son continuas, entonces:
-					       	\begin{align}
-								\text{La función } f+g:U\subseteq R^n \rightarrow R=f\left(x\right)+g(x) \text{ es continua} \\
-								\text{La función } f\cdot g:U\subseteq R^n \rightarrow R=f\left(x\right)\cdot g(x) \text{ es continua} \\
-								\text{La función } \frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f\left(x\right)}{g\left(x\right)} \text{ es continua en todo punto } x\in U \text{, donde } g(x)\neq0 \\
-								\text{La composición } g\circ f:U\subseteq R^n \rightarrow R \text{ es continua}
-							\end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Teorema de continuidad de funciones};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}		
-					
-				\subsection{Derivadas parciales}
-				
-					\textbf{Para una función de una variable}: 
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        $f:I\subseteq R \rightarrow R$ definida en el intervalo abierto I, se define la \textit{derivada} de $f$ en $x_0\in I$:
-					        \begin{align}
-					            f^\prime(x_0)=\frac{\partial f}{\partial x}(x_0)=\lim_{h \to 0}\frac{f(x_0+h)-f(x_0)}{h}
-					        \end{align}
-					       Si $f^\prime (x_0)$ existe, su valor nos da la pendiente de la recta tangente a la gráfica de la función $y=f(x)$ en el punto $(x_0,y_0)$. Para este tipo de funciones, diferenciabilidad	equivale a existencia de derivada, y la diferenciabilidad en un punto implica la continuidad de la función en ese punto 
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Derivada parcial en $R^1$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}						
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        $f:U\subseteq R^2 \rightarrow R$ definida en el abierto $U$, con $(x_0,y_0)$ un punto de $U$:
-					        \begin{align}
-					            \frac{\partial f}{\partial x}(x_0,y_0)=\lim_{h \to 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h} \\
-					            \frac{\partial f}{\partial y}(x_0,y_0)=\lim_{h \to 0}\frac{f\left(x_0,y_0+h\right)-f(x_0,y_0)}{h}
-					        \end{align}
-					       Para este tipo de funciones, la existencia de derivadas parciales un punto no implica que la función sea continua en ese punto, por lo que tampoco implica que sea diferenciable en ese punto.
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Derivada parcial en $R^2$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}			
-					
-					Las derivadas parciales de una función $z=f(x,y)$ en un punto $(x_0,y_0)$	nos hablan del comportamiento geométrico (la inclinación) de las superficie que tal función representa, en las direcciones de los ejes $x$ e $y$.\\
-					
-					Las derivadas parciales de una función se obtienen \emph{derivando parcialmente} cada una de las variables, y dejando las otras como constantes.\\
-					
-					\textit{Ejemplo}: sea la función $f(x,y)=5x^3+4xy+y^2$.	Se tiene que $f^\prime_x=15x^2+4y$ y que $f^\prime_y=4x+2y$.
-
-				\subsection{Derivadas direccionales}
-
-					\begin{tikzpicture}
-					\node [definicion] (box){
-					    \begin{minipage}{0.80\textwidth}
-					        Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto abierto U, y sea $x_0 \in U$. Sea $\vect{v} \in R^n$ un vector \emph{unitario} dado. Se define la derivada de la función $f$ en $x_0$ en la dirección del vector $\vect{v}$:
-					        \begin{align}
-					            \frac{\partial f}{\partial \vect{v}}\left(x_0\right)=\lim_{t \to 0}\frac{f(x_0+t v_0)-f(x_0)}{t}
-					        \end{align}
-					        \begin{align}	 
-					        	\lim_{h \to 0}\frac{r(h)}{h}=0
-					        \end{align}
-					        El vector unitario $\vect{v}$ se puede escribir como $\vect{v}=(cos(\theta),sin(\theta))$, $0\leq\theta\leq2\pi$, entonces:
-					        \begin{align}
-					           \frac{\partial f}{\partial \vect{v}}(x_0,y_0)=\lim_{t \to 0}\frac{f(x_0+tcos(\theta),y_0+tsin(\theta))-f(x_0,y_0)}{t}
-					        \end{align}
-					       	Si $\theta=0$ se tiene $\frac{\partial f}{\partial v}=\frac{\partial f}{\partial x}$,y si $\theta=\frac{\pi}{2}$ se tiene $\frac{\partial f}{\partial v}=\frac{\partial f}{\partial y}$. 
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Derivada direccional};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}			
-
-				\subsection{Diferenciabilidad}
-				
-					\subsubsection{Para funciones de una variable} 
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        La función $f:I\subseteq R \rightarrow R$ es \emph{diferenciable} en $x_0\in I$ si existe una constante $A$ tal que:
-					        \begin{align}
-					            f(x_0+h)=f(x_0)+Ah+r(h)
-					        \end{align}
-					        \begin{align}	 
-					        	\lim_{h \to 0}\frac{r(h)}{h}=0
-					        \end{align}
-					        El residuo $r(h) \to 0$ más rápidamente que $h$. Despejando A, obtenemos que:
-					        \begin{align}
-					           A=\frac{f(x_0+h)-f(x_0)}{h}-\frac{r(h)}{h}
-					        \end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad en $R^1$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}					
-					
-					\subsubsection{Para funciones de dos variable} 
-				
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        La función $f:U\subseteq R^2 \rightarrow R$ es \emph{diferenciable} en el punto $(x_0,y_0)$ si hay constantes $A_1$ y $A_2$ tales que:
-					        \begin{align}
-					        		f((x_0,y_0)+(h_1,h_2))=f(x_0,y_0)+A_1h_1+A_2h_2+r(h_1,h_2)
-					        \end{align}
-					        \begin{align}		
-					        		\lim_{(h_1,h_2)\rightarrow(0,0)}=\frac{r(h_1,h_2)}{|(h_1,h_2)|}
-					        \end{align}
-					        Despejando $A_1$ y $A_2$, obtenemos que:
-					        \begin{align}
-					           A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
-					           A_2=\frac{\partial f}{\partial y}(x_0,y_0)
-					        \end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad en $R^2$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}									
-					
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        La función $f:U\subseteq R^2 \rightarrow R$ definida en el abierto $U$ es diferenciable en el punto $(x_0,y_0)\in U$ si:
-					        \begin{align}
-					        		\exists \text{ } A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
-					        		\exists \text{ } A_2=\frac{\partial f}{\partial y}(x_0,y_0) \\
-					        		\lim_{(h_1,h_2) \to (0,0)}\frac{r(h_1,h_2)}{|(h_1,h_2)|}=0
-					        \end{align}
-					        \begin{align}
-					        	\lim_{(x,y) \to (x_0,y_0)} \frac{f(x,y)-\left[\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)+f(x_0,y_0)\right]}{\sqrt{(x-x_0)^{2}+(y-y_0)^{2}}}=0
-					        \end{align}			   
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Teorema diferenciabilidad};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-
-					\begin{tikzpicture}
-					\node [corolario] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	\begin{itemize}
-					    		\item Si la función es diferenciable en $(x_0,y_0)$, es continua en ese punto.
-					    		\item Las funciones polinomiales $f: R^2 \rightarrow R$ son diferenciables en todo punto.
-					    		\item Si las derivadas parciales son continuas en el punto $\vect{x}_0 \in U$, entonces $f$ es diferenciable en $\vect{x}_0$
-					    	\end{itemize}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Corolarios del teorema};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}								
-
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en $U$, y diferenciables en $(x_0,y_0) \in U.$ Entonces:
-					       \begin{itemize}
-								\item La suma $f+g:U\subseteq R^n \rightarrow R=f(x_0,y_0)+g(x_0,y_0)$	es una función diferenciable en $(x_0,y_0)$.
-								\item El producto $f \cdot g:U\subseteq R^n \rightarrow R=f(x_0,y_0)\cdot g(x_0,y_0)$ es una función diferenciable en $(x_0,y_0)$.
-								\item Si $g(x_0,y_0) \neq 0$, el cociente $\frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f(x_0,y_0)}{g(x_0,y_0)}$ es una función diferenciable en $(x_0,y_0)$.
-								\item La composición $g \circ f:U\subseteq R^n \rightarrow R$ es diferenciable en $(x_0,y_0)$.
-							\end{itemize}			   
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Teorema diferenciabilidad de varias funciones};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-					
-					\subsubsection{Para funciones de n variables} 
-					
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					        La función $f:U\subseteq R^n \rightarrow R$ es \emph{diferenciable} en el punto $\vect{x}_0$ si hay constantes $A_1,A_2,...,A_n$ tales que:
-					        \begin{align}
-					        		f(\vect{x}_0+\vect{h})=f(\vect{x}_0)+\sum_{i=1}^{n} A_ih_i+r(\vect{h})
-					        \end{align}
-					        \begin{align}		
-					        		\lim_{\vect{h} \to \vect{0}}=\frac{r(\vect{h})}{|\vect{h}|}
-					        \end{align}
-					        Despejando $A_1$ y $A_2$, obtenemos que:
-					        \begin{align}
-					           A_i=\frac{\partial f}{\partial x_i}(\vect{x}_0), \forall i=1,...,n
-					        \end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad  en $R^n$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}			
-
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Sea $f:U\subseteq R^n \rightarrow R$ \textit{\emph{diferenciable}}, definida en el conjunto abierto U. Sea $x_0\in U$ y sea $\vect{v}\in R^n$ el vector unitario en cuya dirección queremos calcular la derivada de la función $f$ en el punto $x_0.$ Entonces:
-					        \begin{align}
-					        	\frac{\partial f}{\partial\vect{v}}(x_{0})=\sum_{i=1}^{n}\frac{\partial f}{\partial x_{i}}(x_0)\cdot\vect{v}_{i}
-					        \end{align}
-								\textit{Ejemplo}: dada $f:R^2 \rightarrow R$ tal que $f(x,y)=x^2+y^2,$ queremos calcular la derivada de la función en un punto arbitrario $(x_{0},y_{0})\in R^2$ en la dirección del vector unitario $\vect{v}=(cos(\theta),sin(\theta)).$\\
-					
-					Dado que la función es polinomial, es diferenciable en todo el dominio.\\
-					
-					Entonces según la fórmula se tiene que:\\
-					        \begin{align}
-					           \frac{\partial f}{\partial v}(x_0,y_0)=\frac{\partial f}{\partial x}(x_0,y_0)cos(\theta)+\frac{\partial f}{\partial y}(x_0,y_0)sen(\theta)=2x_0cos(\theta)+2y_0sen(\theta)
-					        \end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Teorema de la diferenciabilidad y las derivadas direccionales};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-										
-				\subsection{Gradiente}
-				
-					\begin{minipage}{0.3\textwidth}
-						\begin{center}
-							\begin{figure}[H]
-								\begin{center}
-									\includegraphics[scale=0.23]{campo_de_gradientes.png}\caption{El gradiente apunta a la dirección de mayor variación.}
-								\end{center}
-							\end{figure}
-						\end{center}
-					\end{minipage}
-					\begin{minipage}{0.6\textwidth}
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Sea $f:U\subseteq R^n \rightarrow R$ una función diferenciable definida en el conjunto abierto U de $R^n$.Se define el vector gradiente de la función $f$ en el punto $x_0\in U$ como el vector de $R^n$ dado por: \\
-					        \begin{align}
-					        	\nabla f(x_0)=(f^\prime_{x_1}(x_0),f^\prime_{x_2}(x_0),\ldots,f^\prime_{x_n}(x_0))
-					        \end{align}
-					        \begin{align}
-					        	\nabla f(x_0)\cdot\vect{v}=f^\prime_{\vect{v}}(x_0)
-					        \end{align}
-							
-							El vector $\nabla f(x_0)$ nos dice en qué dirección se tiene la mayor variación (el mayor crecimiento) de la función $f$ en el punto	$x_0$.\\
-							
-							Además, se tiene que el vector $\nabla f(x_0)$ es un vector ortogonal a la curva de nivel que pasa por $x_0$.		
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Gradiente de una función};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}
-					
-					\end{minipage}
-					
-					\begin{tikzpicture}
-					\node [corolario] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Si $f$ es diferenciable, la dirección de la derivada direccional	puede ser
-							\begin{center}
-						    	\begin{itemize}
-									\item Máxima: $v=\frac{\nabla f}{\left|\nabla f\right|}$, y su valor es $\left|\nabla f\right|$
-									\item Mínima: $v=-\frac{\nabla f}{\left|\nabla f\right|}$, y su valor es $-\left|\nabla f\right|$
-									\item Nula: $v\bot\nabla f$, y su valor es 0
-								\end{itemize}
-							\end{center}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Propiedades del gradiente};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}
-				
-				\subsection{Vectores normales }
-				
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Dada una función diferenciable $f:U\subseteq R^2 \rightarrow R$ definida en el conjunto abierto U de $R^2$ tal que $z=f(x,y)$, y dado un punto $p=(x_0,y_0,f(x_0,y_0))$, el vector normal $N_{p}$ a la superficie de la función en el punto $(x_0,y_0)$ se	obtiene mediante:
-						    	\begin{align}
-						    		\vect{N}_{p}=\left|\begin{array}{ccc}
-									\hat{i} & \hat{j} & \hat{k}\\
-									\frac{\partial f_x}{\partial x} & \frac{\partial f_y}{\partial x} & \frac{\partial f_z}{\partial x}\\
-									\frac{\partial f_x}{\partial y} & \frac{\partial f_y}{\partial y} & \frac{\partial f_z}{\partial y}\end{array}\right|_{p}=\left|\begin{array}{ccc}
-									\hat{i} & \hat{j} & \hat{k}\\
-									1 & 0 & f^\prime_{x}(x_0,y_0)\\
-									0 & 1 & f^\prime_{y}(x_0,y_0)\end{array}\right|=(-f^\prime_{x}(x_0,y_0),-f^\prime_{y}(x_0,y_0),1)
-						    	\end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Vectores normales};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}
-							
-					\underbar{Nota}: recordar que la superficie $z=f(x,y)$ se puede ver  como el nivel 0 de la función $F(x,y,z)=z-f(x,y)$. De allí el porqué de la última coordenada del vector. Suele presentarse como $(f^\prime_{x}(x_0,y_0),f^\prime_{y}(x_0,y_0),-1)$ que luego es \underline{mal llamado gradiente extendido}.
-
-				\subsection{Planos tangentes y rectas normales}
-					
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Si la función $f:U\subseteq R^2 \rightarrow R$ es diferenciable en el punto $(x_0,y_0)$, entonces 	la siguiente ecuación define al \textbf{plano tangente} a la superficie $z=f(x,y)$ en el punto $(x_0,y_0,f(x_0,y_0))$:
-						    	\begin{align}
-						    		z=f(x_0,y_0)+f^\prime_{x}(x_0,y_0)(x-x_0)+f^\prime_{y}(x_0,y_0)(y-y_0)
-						    	\end{align}
-						    De la ecuación anterior se deduce que el plano tangente en un punto $(x_0,y_0)$ es un plano que pasa por el punto y contiene a las rectas tangentes en el punto.\\
-						     Es decir, tiene como vector normal al vector $\vect{N}_{(x_0,y_0)}=(\nabla f(x_0,y_0),-1)$ calculado anteriormente.	
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Plano tangente};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}					
-					
-					\begin{minipage}{0.22\textwidth}
-						\begin{figure}[H]
-							\includegraphics[scale=0.3]{plano_tangente.png}\caption{Plano tangente}
-						\end{figure}
-					\end{minipage}
-					\begin{minipage}{0.72\textwidth}
-						\begin{tikzpicture}
-							\node [definicion] (box){%
-					  		  \begin{minipage}{0.80\textwidth}
-					   		    Dada una función diferenciable $f:U\subseteq R^2 \rightarrow R$ cuya gráfica es una superficie $S$, se define la \textbf{recta normal} a la superficie $S$ en el punto $p=(x_0,y_0,z_0)$ de ella, como la recta que pasa por $p$ y contiene al vector normal a la superficie en $p.$ Su ecuación está dada por:
-								    	\begin{align}
-								    		L:\:(x,y,z)=t(f^\prime_{x}(x_0,y_0),f^\prime_{y}(x_0,y_0),-1)+(x_0,y_0,z_0), \text{ } t \in R
-								    	\end{align}
-							    \end{minipage}
-							};
-							\node[fancytitle, right=10pt] at (box.north west) {Recta normal};
-							\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-						\end{tikzpicture}		
-					\end{minipage}
-
-				\subsection{Diferencial}
-								
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Dada la función $f:U\subseteq R^n \rightarrow R$ diferenciable, la diferencial de $f$ se define como:
-						    	\begin{align}
-						    		df=\sum_{i=1}^{n}\frac{\partial f}{\partial x_i}\partial x_i
-						    	\end{align}
-						   \textit{Ejemplo}: el diferencial de $f(x)=sen^3(x^2)$	es:
-						   		\begin{align}
-						   			df=3sen^2(x^2)cos(x^2)2xdx=6xsen^2(x^2)cos(x^2)dx
-						   		\end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Diferencial};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}							
-					
-
-				\subsection{Derivadas parciales de órdenes superiores}
-
-					Dada una función $f:U\subset R^2 \rightarrow R$ definida en el conjunto abierto $U$ de $R^2$. Si la función es diferenciable, entonces existen las derivadas parciales $\frac{\partial f}{\partial x}$ y $\frac{\partial f}{\partial y}$ en cualquier punto $(x,y)\in U$.\\
-					
-					Puede ocurrir que estas derivadas sean lo suficientemente \emph{bien	portadas} en $U$ como para que podamos obtener de ellas sus derivadas parciales $\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right),\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right),\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right),\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right)$.\\
-					
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					       Sea $f:U\subseteq R^2 \rightarrow R$ una función definida en el abierto $U$ de $R^2$. Si:
-						    	\begin{align}
-						    		\exists \frac{\partial^2 f}{\partial x\partial y}:U\subseteq R^2 \rightarrow R \\
-						    		\exists \frac{\partial^2 f}{\partial y\partial x}:U\subseteq R^2 \rightarrow R
-						    	\end{align}
-						   Y son funciones continuas en $U$, entonces:
-						   		\begin{align}
-						   			 \frac{\partial^2 f}{\partial x\partial y}=\frac{\partial^2 f}{\partial y\partial x}
-						   		\end{align}
-					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Teorema de Schwarz};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-				
-				\subsection{Funciones de clase $\mathcal{C}^{\mathbf{k}}$}
-				
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	$f$ es una función $k$ veces diferenciable si la función $f^{(k-1)}:I\subseteq R \rightarrow R$ es diferenciable.\\
-					    	
-					    	Si $f$ es $k$ veces diferenciable para todo $k\in N$,	se dice ser infinitamente diferenciable, o bien, de clase $\mathcal{C}^{\infty}$.\\
-					       
-							En particular, sea $f:I\subseteq R \rightarrow R$ una función diferenciable.	Si la función derivada $f^\prime$ es continua, se dice que $f$ es una función de clase $\mathcal{C}^{1}$. Si esta función $f^\prime$ es, a su vez, una función diferenciable, decimos que $f$ es una función dos veces diferenciable.
-								       
-   					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Funciones de clase $\mathcal{C}^k$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}					
-				
-					\begin{tikzpicture}
-					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Si la función $f:U\subseteq R^n \rightarrow R$	es de clase $\mathcal{C}^{1}$, entonces $f$ es diferenciable.
-   					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Corolario};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}		
-					
-			\section{Funciones compuestas, inversas e implícitas}
-				\subsection{Composición de funciones}
-
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Si tenemos las funciones $g:I\subseteq R \rightarrow R$ y $f:J\subseteq R \rightarrow R$ (tales que $g(I)\subseteq J$),
-					podemos formar la composición $f\circ g:I\subseteq R \rightarrow R$.\\
-					
-					    	 Si $g:I\subseteq R \rightarrow R$  es diferenciable en un punto $x_0 \in I$ y $f:J\subseteq R \rightarrow R$ es diferenciable en $g(x_0)\in J$, entonces la composición $f\circ g$ es diferenciable en $x_0$, es decir, que $(f\circ g)^\prime(x)$ existe, y $(f\circ g)^\prime(x)=f^{\prime}(g(x))g^{\prime}(x)$.
-   					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Composición de funciones};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-					
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	  Para el caso de dos variables, tenemos que $z=f(x,y)$.	Para \emph{componer} esta función tendremos que sustituir las \textit{dos variables} ($x$ e $y$) por \textit{dos funciones}, $g_1$ y $g_2$, que conecten a éstas con \textit{otras} variables,  $u$ y $v$.\\
-					
-					 Si consideramos las funciones $x=g_1(u,v)$ e $y=g_2(u,v)$, podemos sustituir éstas en la función $f$ y obtener la \textbf{función compuesta} :
-							\begin{align}
-								y=f(g_1(u,v),g_2(u,v))
-							\end{align}												    	  
-					    	
-   					    \end{minipage}
-					};
-					\node[fancytitle, right=10pt] at (box.north west) {Composicion de funciones de $R^2$};
-					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-					\end{tikzpicture}	
-							 
-					\begin{tikzpicture}
-					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	  Si tenemos la función $f:U\subseteq R^n \rightarrow R$ definida en el conjunto $U$, y la función $g:V\subseteq R^n \rightarrow R$ definida en el conjunto $V$, cuyo rango está contenido en $U$ (i.e. tal que $g(V)\subseteq U$) entonces podemos formar la composición $f\circ g:V\subseteq R^n \rightarrow R$, como:
+						\begin{minipage}{0.80\textwidth}
+							  Si tenemos la función $f:U\subseteq R^n \rightarrow R$ definida en el conjunto $U$, y la función $g:V\subseteq R^n \rightarrow R$ definida en el conjunto $V$, cuyo rango está contenido en $U$ (i.e. tal que $g(V)\subseteq U$) entonces podemos formar la composición $f\circ g:V\subseteq R^n \rightarrow R$, como:
 							\begin{align}
 								(f\circ g)(\vect{v})=f(g(\vect{v})),v\in V.
-							\end{align}												    	  
-					    	
-   					    \end{minipage}
+							\end{align}														  
+							
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Composicion de funciones de $R^n$};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1020,13 +1023,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	 Sea $g:V\subseteq R^m \to R^n$ 	una función definida en el conjunto abierto V de $R^m$, diferenciable en $x_0\in V$. Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto U de $R^n$, tal que $g(V)\subseteq U$, diferenciable en el punto $g(x_0)\in U$:					
+						\begin{minipage}{0.80\textwidth}
+							 Sea $g:V\subseteq R^m \to R^n$ 	una función definida en el conjunto abierto V de $R^m$, diferenciable en $x_0\in V$. Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto U de $R^n$, tal que $g(V)\subseteq U$, diferenciable en el punto $g(x_0)\in U$:					
 							\begin{align}
 								f\circ g:V\subseteq R^m \to R \text{ es diferenciable en } x_0 \\
 								\frac{\partial}{\partial x_j}(f\circ g)(x_0)=\sum_{i=1}^{n}\frac{\partial f}{\partial y_i}(g(x_0))\frac{\partial g_i}{\partial x_j}(x_0) \text{ , } j=1,2,\ldots,m
-							\end{align}												    	  		    	
-   					    \end{minipage}
+							\end{align}														  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Regla de la cadena};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1036,8 +1039,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea la función $f:U\subseteq R^n \to R^m$ definida en el conjunto abierto U de $R^n$, y sea $x_0\in U.$\\
+						\begin{minipage}{0.80\textwidth}
+							Sea la función $f:U\subseteq R^n \to R^m$ definida en el conjunto abierto U de $R^n$, y sea $x_0\in U.$\\
 										
 							Se dice que esta función es diferenciable en $x_0$ si existe una transformación lineal $f^\prime (x_0):R^n \to R^m$, llamada derivada de $f$ en $x_0$ tal que:
 				
@@ -1054,8 +1057,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 								\frac{\partial f_m}{\partial x_1}(x_0) & \cdots & \frac{\partial f_m}{\partial x_n}(x_0)\end{array}\right]
 							\end{align}					
 												
-							Esta matriz de $m\times n$ se llama \textbf{matriz jacobiana} de la función $f$ en $x_0$ y se denota $Jf(x_0)$. Esta es, entonces, la derivada de la función diferenciable $f$ en $x_0$. En el caso de que $m=1$, la matriz jacobiana se identifica de manera natural	con el vector gradiente de $f$ en $x_0$.\\							    	  		    	
-   					    \end{minipage}
+							Esta matriz de $m\times n$ se llama \textbf{matriz jacobiana} de la función $f$ en $x_0$ y se denota $Jf(x_0)$. Esta es, entonces, la derivada de la función diferenciable $f$ en $x_0$. En el caso de que $m=1$, la matriz jacobiana se identifica de manera natural	con el vector gradiente de $f$ en $x_0$.\\									  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Regla de la cadena general};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1080,12 +1083,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	 Sea $f:U\subseteq R^n \to R^p$ una función definida en el abierto $U$ de $R^n$, y $g:V\subseteq R^m \to R^n$ una función definida en el abierto V de $R^m$ tal que $g(V)\subseteq U.$ Si $g$ es diferenciable en $x_0\in V$ y $f$ es diferenciable en $g(x_0)\in U$, entonces la función $f\circ g:V\subseteq R^m \to R^p$ es diferenciable en $x_0$ y su derivada viene dada por la matriz:
+						\begin{minipage}{0.80\textwidth}
+							 Sea $f:U\subseteq R^n \to R^p$ una función definida en el abierto $U$ de $R^n$, y $g:V\subseteq R^m \to R^n$ una función definida en el abierto V de $R^m$ tal que $g(V)\subseteq U.$ Si $g$ es diferenciable en $x_0\in V$ y $f$ es diferenciable en $g(x_0)\in U$, entonces la función $f\circ g:V\subseteq R^m \to R^p$ es diferenciable en $x_0$ y su derivada viene dada por la matriz:
 							\begin{align}
 								J(f\circ g)(x_0)=Jf(g(x_0))\cdot Jg(x_0)
-							\end{align}												    	  		    	
-   					    \end{minipage}
+							\end{align}														  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Regla de la cadena en funciones compuestas};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1095,22 +1098,21 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $z=F(x,y)$,	y sea $(x_0,y_0) \in R^2$ un punto. Si:
-					    	\begin{enumerate}
-					    		\item $F\left(x_{0},y_{0}\right)=0$
-					    		\item La función F tiene derivadas parciales continuas en un entorno de $(x_0,y_0)$
-					    		\item $\frac{\partial F}{\partial y}(x_0,y_0)\ne0$
-					    	\end{enumerate}
-					    	Entonces $F(x,y)=0$ se puede resolver para $y$ en términos de $x$ y definir así una función $y=f(x)$ con dominio en una vecindad de $x_0$, tal que $y_0=f(x_0)$, la cual tiene derivadas continuas en $V$ que pueden calcularse como:
+						\begin{minipage}{0.80\textwidth}
+							Sea $z=F(x,y)$,	y sea $(x_0,y_0) \in R^2$ un punto. Si:
+							\begin{enumerate}
+								\item $F\left(x_{0},y_{0}\right)=0$
+								\item La función F tiene derivadas parciales continuas en un entorno de $(x_0,y_0)$
+								\item $\frac{\partial F}{\partial y}(x_0,y_0)\ne0$
+							\end{enumerate}
+							Entonces $F(x,y)=0$ se puede resolver para $y$ en términos de $x$ y definir así una función $y=f(x)$ con dominio en una vecindad de $x_0$, tal que $y_0=f(x_0)$, la cual tiene derivadas continuas en $V$ que pueden calcularse como:
 							\begin{align}
 								y^{'}=f^{'}\left(x\right)=-\frac{\frac{\partial F}{\partial x}(x,y)}{\frac{\partial F}{\partial y}(x,y)} \text{ , } x\in V.
-							\end{align}		
-							\underbar{Nota 1}: Este teorema es de \textit{existencia}, es decir, 	nos puede decir si existe una función $y=f(x)$ definida implícitamente por $F(x,y)=0$, pero \textit{no} nos dice cómo se determina tal función.\\
+							\end{align}
+							\underbar{Nota 1}: Este teorema es de \textit{existencia}, es decir, nos puede decir si existe una función $y=f(x)$ definida implícitamente por $F(x,y)=0$, pero \textit{no} nos dice cómo se determina tal función.\\
 							
-							\underbar{Nota 2}: Este teorema es \textit{local}. Nos asegura la existencia de la función $y=f(x)$, o nos asegura la posibilidad del despeje de $y$ en términos de $x$ a partir de $F(x,y)=0$ \textit{solamente en las cercanías del punto }$(x_0,y_0)$. Fuera de la vecindad $V$, el teorema no se responsabiliza por la existencia
-					de la función $f$.								    	  		    	
-   					    \end{minipage}
+							\underbar{Nota 2}: Este teorema es \textit{local}. Nos asegura la existencia de la función $y=f(x)$, o nos asegura la posibilidad del despeje de $y$ en términos de $x$ a partir de $F(x,y)=0$ \textit{solamente en las cercanías del punto }$(x_0,y_0)$. Fuera de la vecindad $V$, el teorema no se responsabiliza por la existencia de la función $f$.
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de la función implícita (1er versión)};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1118,13 +1120,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [corolario] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	 La ecuación de la recta tangente a la curva $F(x,y)=0$
+						\begin{minipage}{0.80\textwidth}
+							 La ecuación de la recta tangente a la curva $F(x,y)=0$
 					en $(x_{0},y_{0})$ está dada por
 							\begin{align}
 								\frac{\partial F}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial F}{\partial y}(x_0,y_0)(y-y_0)=0
-							\end{align}												    	  		    	
-   					    \end{minipage}
+							\end{align}														  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Recta tangente de funciones implícitas};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1132,15 +1134,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [corolario] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	 La ecuación de la recta normal a la curva $F(x,y)=0$
+						\begin{minipage}{0.80\textwidth}
+							 La ecuación de la recta normal a la curva $F(x,y)=0$
 					en $(x_{0},y_{0})$ está dada por
 							\begin{align}
 								\frac{\partial F}{\partial x}(x_0,y_0)(x-x_0)-\frac{\partial F}{\partial y}(x_0,y_0)(y-y_0)=0
 							\end{align}	
 							
-							Muy similar a la recta tangente, ¿Qué sutil puede ser un signo, no?												    	  		    	
-   					    \end{minipage}
+							Muy similar a la recta tangente, ¿Qué sutil puede ser un signo, no?														  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Recta normal de funciones implícitas};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1148,8 +1150,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea la función $z=F(x_1,x_2,\ldots,x_n,y)$ y sea $p=(\overline{x_1},\overline{x_2},\ldots,\overline{x_n},\overline{y}) \in R^{n+1}$ un punto tal que $F\left(p\right)=0$.\\
+						\begin{minipage}{0.80\textwidth}
+							Sea la función $z=F(x_1,x_2,\ldots,x_n,y)$ y sea $p=(\overline{x_1},\overline{x_2},\ldots,\overline{x_n},\overline{y}) \in R^{n+1}$ un punto tal que $F\left(p\right)=0$.\\
 					
 					Suponemos que la función $F$ tiene derivadas parciales $\frac{\partial F}{\partial x_i},i=1,2,\ldots,n$ y $\frac{\partial F}{\partial y}$ continuas en alguna bola $B$ con centro en $p$ y que $\frac{\partial F}{\partial y}(p)\ne0$.\\
 					
@@ -1158,8 +1160,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\begin{align}
 								\frac{\partial f}{\partial x_i}(x_1,x_2,\ldots,x_n)=\frac{\frac{\partial F}{\partial x_i}(x_1,x_2,\ldots,x_n,y)}{\frac{\partial F}{\partial y}(x_1,x_2,\ldots,x_n,y)} \text{ con } (x_1,x_2,\ldots,x_n) \in V
 							\end{align}		
-													    	  		    	
-   					    \end{minipage}
+															  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de la función implícita (2da versión)};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1167,8 +1169,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sean $z_1=F(x,y,u,v)$ y $z_2=G(x,y,u,v)$. Sea $p=(x_0,y_0,u_0,v_0) \in R^4$ un punto tal que $F(p)=G(p)=0$, las funciones $F$ y $G$ tienen todas sus derivadas parciales continuas en un entorno de $p$, y que $\frac{\partial(F,G)}{\partial(u,v)}(p)\ne0$.\\
+						\begin{minipage}{0.80\textwidth}
+							Sean $z_1=F(x,y,u,v)$ y $z_2=G(x,y,u,v)$. Sea $p=(x_0,y_0,u_0,v_0) \in R^4$ un punto tal que $F(p)=G(p)=0$, las funciones $F$ y $G$ tienen todas sus derivadas parciales continuas en un entorno de $p$, y que $\frac{\partial(F,G)}{\partial(u,v)}(p)\ne0$.\\
 					
 					Entonces $z_1$ y $z_2$ definen funciones implícitas $u=\varphi_1(x,y)$ y $v=\varphi_2(x,y)$, definidas en una una vecindad $V$ de $(x_0,y_0)$, las cuales tienen derivadas parciales continuas en $V$ que se pueden calcular con las fórmulas:
 							\begin{align}
@@ -1176,8 +1178,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\end{align}		
 							\underline{Notación:} si $X$ e $Y$ son funciones de las variables $x$ e $y$, se llama \textbf{jacobiano} de $X$ e $Y$ respecto de $x$ e $y$, denotado por $J\left(\frac{X,Y}{x,y}\right)=\frac{\partial\left(X,Y\right)}{\partial\left(x,y\right)}$ al determinante $\frac{\partial\left(X,Y\right)}{\partial\left(x,y\right)}=\left|\begin{array}{cc}
 					\frac{\partial X}{\partial x} & \frac{\partial X}{\partial y}\\
-					\frac{\partial Y}{\partial x} & \frac{\partial Y}{\partial y}\end{array}\right|$					    	  		    	
-   					    \end{minipage}
+					\frac{\partial Y}{\partial x} & \frac{\partial Y}{\partial y}\end{array}\right|$							  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de la función implícita (3ra versión)};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1185,18 +1187,18 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Considere las $n$ funciones $u_i=F_i(x_1,\ldots,x_m,y_1,\ldots,y_n)$ con $i=1,2,\ldots,n$.\\
-					    	
-					    	Sea $p=(\overline{x_1},\ldots,\overline{x_m},\overline{y_1},\ldots,\overline{y_m}) \in R^{m+n}$ un punto tal que $F_i(p)=0$ con $i=1,2,\ldots,n$.\\
-					    	
-					    	Suponga que $F_i$ tiene sus $m+n$ derivadas parciales continuas en un entorno de $p$.\\
-					    	
-					    	Si el jacobiano $\frac{\partial(F_1,F_2,\ldots,F_n)}{\partial(y_1,y_2,\ldots,y_n)}(p)\ne0$, entonces las expresiones $F_i(x_1,\ldots,x_m,y_1,\ldots,y_n)$ definen funciones implícitas $y_i=\varphi_i(x_1,\ldots,x_m)$ con $i=1,2,\ldots,n$ definidas en una vecindad $V$ de ($\overline{x_1},\ldots,\overline{x_m})$, las cuales tienen derivadas parciales continuas en $V$ que se pueden calcular como:
+						\begin{minipage}{0.80\textwidth}
+							Considere las $n$ funciones $u_i=F_i(x_1,\ldots,x_m,y_1,\ldots,y_n)$ con $i=1,2,\ldots,n$.\\
+							
+							Sea $p=(\overline{x_1},\ldots,\overline{x_m},\overline{y_1},\ldots,\overline{y_m}) \in R^{m+n}$ un punto tal que $F_i(p)=0$ con $i=1,2,\ldots,n$.\\
+							
+							Suponga que $F_i$ tiene sus $m+n$ derivadas parciales continuas en un entorno de $p$.\\
+							
+							Si el jacobiano $\frac{\partial(F_1,F_2,\ldots,F_n)}{\partial(y_1,y_2,\ldots,y_n)}(p)\ne0$, entonces las expresiones $F_i(x_1,\ldots,x_m,y_1,\ldots,y_n)$ definen funciones implícitas $y_i=\varphi_i(x_1,\ldots,x_m)$ con $i=1,2,\ldots,n$ definidas en una vecindad $V$ de ($\overline{x_1},\ldots,\overline{x_m})$, las cuales tienen derivadas parciales continuas en $V$ que se pueden calcular como:
 							\begin{align}
 								 \frac{\partial y_i}{\partial x_j}=-\frac{\frac{\partial(F_1,F_2,\ldots,F_n)}{\partial(y_1,\ldots,y_{i-1},x_j,y_{i+1},\ldots,y_n)}}{\frac{\partial(F_1,F_2,\ldots,F_n)}{\partial(y_1,y_2,\ldots,y_n)}}
-							\end{align}				    	  		    	
-   					    \end{minipage}
+							\end{align}						  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de la función implícita (4ta versión)};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1204,15 +1206,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Dado el sistema de ecuaciones $\left\{ \begin{array}{c} F\left(x,y,z\right)=0 \\ G\left(x,y,z\right)=0\end{array}\right.$ y el punto $A=(x_0,y_0,z_0)$. Cuando:
+						\begin{minipage}{0.80\textwidth}
+							Dado el sistema de ecuaciones $\left\{ \begin{array}{c} F\left(x,y,z\right)=0 \\ G\left(x,y,z\right)=0\end{array}\right.$ y el punto $A=(x_0,y_0,z_0)$. Cuando:
 							\begin{enumerate}
 								\item $F(A)=0$ y $G(A)=0$,
 								\item $\nabla F,\nabla G\in C^{1}(E(A)),$
 								\item $\nabla F(A)\neq0$ y $\nabla G(A)\ne0$,
 							\end{enumerate}		
-							El sistema define una curva $\mathcal{C}$ que pasa por $A$, y que admite recta tangente y plano normal en $A$, siendo $d_0=\nabla F(A)\times\nabla G(A)$ el vector director de la recta tangente.	    	  		    	
-   					    \end{minipage}
+							El sistema define una curva $\mathcal{C}$ que pasa por $A$, y que admite recta tangente y plano normal en $A$, siendo $d_0=\nabla F(A)\times\nabla G(A)$ el vector director de la recta tangente.			  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Curvas como intersección de superficies};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1220,15 +1222,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $F(x,y,z)=0$ con $F$ escalar y un punto $A=(x_0,y_0,z_0)$, tal que:
+						\begin{minipage}{0.80\textwidth}
+							Sea $F(x,y,z)=0$ con $F$ escalar y un punto $A=(x_0,y_0,z_0)$, tal que:
 							\begin{enumerate}
 								\item $F(A)=0$
 								\item $\nabla F$ es $\mathcal{C}^{1}$ en $E(A),$
 								\item $\nabla F(A)\ne0,$
 						\end{enumerate}	
-							Entonces $F(x,y,z)=0$ es la ecuación de una superficie que pasa por $A$ y admite recta normal y plano tangente en $A$. Además, se tiene que si $\frac{\partial F}{\partial z}(A)\ne0$, entonces $F(x,y,z)=0$ define a $z=f(x,y)$ en un entorno de $A$.	    	  		    	
-   					    \end{minipage}
+							Entonces $F(x,y,z)=0$ es la ecuación de una superficie que pasa por $A$ y admite recta normal y plano tangente en $A$. Además, se tiene que si $\frac{\partial F}{\partial z}(A)\ne0$, entonces $F(x,y,z)=0$ define a $z=f(x,y)$ en un entorno de $A$.			  				
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Superficies definidas en forma implícita};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1238,12 +1240,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Si $F:U\subseteq R^2 \to R$ es una función tal que $F(\overline{u},\overline{v})=(\overline{x},\overline{y})$ y en un entorno de $(\overline{u},\overline{v})$ las derivadas parciales $\frac{\partial f}{\partial u},\frac{\partial f}{\partial v},\frac{\partial g}{\partial u},\frac{\partial g}{\partial v}$ de las funciones coordenadas de $F$ son continuas (i.e. $F$ es de clase $\mathcal{C}^{1})$, se tiene que siendo el determinante de $JF(\overline{u},\overline{v})\ne0$, entonces existe un entorno de $(\overline{x},\overline{y})$ en la que existe la inversa $F^{-1}$ de la función $F$, la cual tiene continuas las derivadas parciales de sus funciones coordenadas en el entorno, y su matriz jacobiana es $JF^{-1}(x,y)=\left(JF(u,v)\right)^{-1}$ donde $(x,y)=(f(u,v),g(u,v)) \in E((\overline{x},\overline{y}))$:
+						\begin{minipage}{0.80\textwidth}
+							Si $F:U\subseteq R^2 \to R$ es una función tal que $F(\overline{u},\overline{v})=(\overline{x},\overline{y})$ y en un entorno de $(\overline{u},\overline{v})$ las derivadas parciales $\frac{\partial f}{\partial u},\frac{\partial f}{\partial v},\frac{\partial g}{\partial u},\frac{\partial g}{\partial v}$ de las funciones coordenadas de $F$ son continuas (i.e. $F$ es de clase $\mathcal{C}^{1})$, se tiene que siendo el determinante de $JF(\overline{u},\overline{v})\ne0$, entonces existe un entorno de $(\overline{x},\overline{y})$ en la que existe la inversa $F^{-1}$ de la función $F$, la cual tiene continuas las derivadas parciales de sus funciones coordenadas en el entorno, y su matriz jacobiana es $JF^{-1}(x,y)=\left(JF(u,v)\right)^{-1}$ donde $(x,y)=(f(u,v),g(u,v)) \in E((\overline{x},\overline{y}))$:
 							\begin{align}
 								(F^{-1})'(x,y)=\left(F'(u,v)\right)^{-1}
 							\end{align}	  	
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Funciones inversas};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1251,15 +1253,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $F:U\subseteq R^n \to R$ una función definida en el conjunto abierto $U$ de $R^n$.\\
+						\begin{minipage}{0.80\textwidth}
+							Sea $F:U\subseteq R^n \to R$ una función definida en el conjunto abierto $U$ de $R^n$.\\
 					
 							Sea $F(p)=q \text{ , } p=(x_1,x_2,\ldots,x_n) \text{ , } q=(y_1,y_2,\ldots,y_n)$.\\
 					
 							Suponga que en un entorno $B$ de $p$ la función $F$ es de clase $\mathcal{C}^{1}$ y que el determinante $JF(p)\ne0$.\\
 							
 							Entonces hay un entorno $B^\prime$ en $R^n$ de $q$ en la que se puede definir la función inversa de $F$, $F^{-1}:B^\prime \to B$, la cual es de clase $\mathcal{C}^{1}$ y $JF^{-1}(y)=\left(JF(x)\right)^{-1}$ donde $y=F(x)\in B^\prime$  	
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de la función inversa};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1274,8 +1276,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto U de $R^n$.\\
+						\begin{minipage}{0.80\textwidth}
+							Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto U de $R^n$.\\
 					
 							Se dice que $f$ tiene un \emph{máximo relativo} o local en el punto $x_0\in U$ si $f(x_0)\ge f(x)$ para un entorno de $x_0$.\\
 					
@@ -1283,7 +1285,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 							Una condición \textit{necesaria} (pero no suficiente) para que la función $f:U\subseteq R^n \to R$, diferenciable en $\overline{x}\in U$, tenga en ese punto un extremo local es que todas sus derivadas parciales se anulen en $\overline{x}$. Esto es necesario ya que si las derivadas parciales se anulan, el plano tangente
 					en el punto es horizontal.
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Extremos relativos};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1291,14 +1293,14 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}			
+						\begin{minipage}{0.80\textwidth}			
 							Dado $S\subset D$:
 							\begin{itemize}							
 								\item $f(x_0,y_0)$ es un máximo absoluto cuando $\forall x\in S-\left\{ (x_0,y_0)\right\} \to f(x)<f(x_0,y_0)$
 								\item $f(x_0,y_0)$ será un mínimo absoluto cuando $x\in S-\left\{(x_0,y_0)\right\} \to f(x)>f(x_0,y_0)$
 							\end{itemize}
 							Se dice entonces que la función \emph{alcanza un mínimo/máximo} en $(x_0,y_0)$. Su \emph{valor} es $f(x_0,y_0)$\\
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Extremos absolutos};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1306,13 +1308,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n \to R$. A los puntos $\vect{x} \in U$ en los que podría haber extremos se los llama \textbf{puntos críticos}. Hay de dos tipos:
-					    	\begin{enumerate}
+						\begin{minipage}{0.80\textwidth}
+							Sea $f:U\subseteq R^n \to R$. A los puntos $\vect{x} \in U$ en los que podría haber extremos se los llama \textbf{puntos críticos}. Hay de dos tipos:
+							\begin{enumerate}
 								\item Puntos donde $f$ \emph{no es diferenciable}
 								\item Puntos estacionarios: Puntos donde $f$ es derivable y $\nabla f(\vect{x})=0$.
 							\end{enumerate}
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Punto crítico};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1320,11 +1322,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Considere la función $f:U\subseteq R^n \to R$. Sea $\vect{x} \in U$.\\
-					    	
-					    	Si un entorno de $\vect{x}$ contiene puntos $x$ tales que $f(x)>f(\vect{x})$ y puntos $y$ tales que $f(y)>f(\vect{x})$ se dice que $\vect{x}$ es un \textbf{punto silla} de la función $f$
-   					    \end{minipage}
+						\begin{minipage}{0.80\textwidth}
+							Considere la función $f:U\subseteq R^n \to R$. Sea $\vect{x} \in U$.\\
+							
+							Si un entorno de $\vect{x}$ contiene puntos $x$ tales que $f(x)>f(\vect{x})$ y puntos $y$ tales que $f(y)>f(\vect{x})$ se dice que $\vect{x}$ es un \textbf{punto silla} de la función $f$
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Punto silla};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1332,15 +1334,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n \to R$, y sea $\vect{x} \in U$. Suponga que las derivadas parciales de segundo orden $\frac{\partial^2 f}{\partial x_i \partial x_j}$ existen en $\vect{x}.$ Al determinante de la matriz cuadrada y simétrica de orden $n$, se la llama \textbf{hessiano} de la función $f$ en $\vect{x}$ y es tal que:
-					    	\begin{align}
+						\begin{minipage}{0.80\textwidth}
+							Sea $f:U\subseteq R^n \to R$, y sea $\vect{x} \in U$. Suponga que las derivadas parciales de segundo orden $\frac{\partial^2 f}{\partial x_i \partial x_j}$ existen en $\vect{x}.$ Al determinante de la matriz cuadrada y simétrica de orden $n$, se la llama \textbf{hessiano} de la función $f$ en $\vect{x}$ y es tal que:
+							\begin{align}
 								Hf(\vect{x})=\left|\frac{\partial^2 f}{\partial x_i \partial x_j }\left(\vect{x}\right)\right|_{i,j=1,2,\ldots,n}\underrightarrow{en} \text{ } R^2\left[\begin{array}{cc}
 					f_{xx}^{\prime\prime}\left(\vect{x}\right) & f_{xy}^{\prime\prime}\left(\vect{x}\right)\\
 					f_{yx}^{\prime\prime}\left(\vect{x}\right) & f_{yy}^{\prime\prime}\left(\vect{x}\right)\end{array}\right]
 							\end{align}
 					Esta matriz es simétrica.
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Hessiano};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1348,8 +1350,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $(x_0,y_0)$ un punto estacionario de una función $f$. Entonces:
+						\begin{minipage}{0.80\textwidth}
+							Sea $(x_0,y_0)$ un punto estacionario de una función $f$. Entonces:
 							\begin{enumerate}
 								\item Si $H(x_0,y_0)=0$, el criterio no da información.
 								\item Si $H(x_0,y_0)\ne0:$
@@ -1361,7 +1363,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 								\end{enumerate}
 							\end{enumerate}
 						Para funciones continuas: Para analizar si el extremo encontrado es 	relativo o absoluto, puede verse la intersección entre el plano tangent en el punto (que es horizontal, con lo cual su ecuación se reduce a $z=f(x_0,y_0)$) y la función. Si no hay intersección, el extremo es absoluto.
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Criterio del hessiano};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1371,13 +1373,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Para una función $f:R^2 \to R$, en un punto $(x,y) \in E(x_0,y_0)$ vale que:
-					    	\begin{align}
+						\begin{minipage}{0.80\textwidth}
+							Para una función $f:R^2 \to R$, en un punto $(x,y) \in E(x_0,y_0)$ vale que:
+							\begin{align}
 								f(x,y) \approx f(x_0,y_0)+f^\prime_x(x_0,y_0)(x-x_0)+f^\prime_y(x_0,y_0)(y-y_0)
 							\end{align}
 							Las condiciones suficientes que garantizan la existencia de un extremo local de una función $f$ en un punto crítico de la misma se tendrá que plantear con la ayuda de la fórmula de Taylor para la función $f$ en un punto crítico.
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Fórmula de aproximación lineal};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1385,12 +1387,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	El polinomio de grado	1 de una función $z=f(x,y)$ con $f\in C^{1}$ es el polinomio que define a su plano tangente. El polinomio de grado 1 en el punto $p$ es:
-					    	\begin{align}
+						\begin{minipage}{0.80\textwidth}
+							El polinomio de grado	1 de una función $z=f(x,y)$ con $f\in C^{1}$ es el polinomio que define a su plano tangente. El polinomio de grado 1 en el punto $p$ es:
+							\begin{align}
 								P_{1}=f(x_0,y_0)+\frac{\partial f}{\partial x}(p)(x-x_0)+\frac{\partial f}{\partial y}(p)(y-y_0)
 							\end{align}
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Polinomio de Taylor de primer orden};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1398,15 +1400,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Si $z=f(x,y)$ es una función $\mathcal{C}^{k+1}$, en un punto $(x_0,y_0)$ se puede aproximar $f(x,y)$ en un entorno de $(x_0,y_0)$ por un polinomio de grado $k$. El polinomio de grado 2 de una función $z=f(x,y)$ con $f\in C^{3}$ en el punto $(x_0,y_0)$ es:
-					    	{\tiny
-					    	\begin{align}
+						\begin{minipage}{0.80\textwidth}
+							Si $z=f(x,y)$ es una función $\mathcal{C}^{k+1}$, en un punto $(x_0,y_0)$ se puede aproximar $f(x,y)$ en un entorno de $(x_0,y_0)$ por un polinomio de grado $k$. El polinomio de grado 2 de una función $z=f(x,y)$ con $f\in C^{3}$ en el punto $(x_0,y_0)$ es:
+							{\tiny
+							\begin{align}
 								P_{2}(x,y)=f(p)+\frac{\partial f}{\partial x}(p)(x-x_0)+\frac{\partial f}{\partial y}(p)(y-y_0)+\frac{1}{2!}\left[\left(\frac{\partial^2 f}{\partial x^2}\right)(x-x_0)^2+2\left(\frac{\partial^2 f}{\partial y\partial x}\right)(x-x_0)(y-y_0)+\left(\frac{\partial^2 f}{\partial y^2}\right)(y-y_0)^2\right]
 							\end{align}}
 							
 								\underbar{Nota}: En $(x_0,y_0)$ se cumple que $f(x_0,y_0)=P(x_0,y_0)$, y además $\frac{\partial^k f}{\partial y^k}(x_0,y_0)=\frac{\partial^k P}{\partial y^k}(x_0,y_0)$ (i.e. las derivadas de $f$ en el punto son iguales a las derivadas de $P$ en el punto). En un punto $(x_1,y_1)$ cualquiera de un 	entorno de $(x_0,y_0)$ se cumple que $f(x_1,y_1) \approx P(x_1,y_1)$, y no se puede decir nada acerca de las derivadas.
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Polinomio de Taylor de segundo orden};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1416,13 +1418,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto $U$ que tiene en $\vect{x}\in U$ un punto crítico. Supongamos que en un entorno de $\vect{x}$ las derivadas parciales de $f$ de segundo orden son continuas. Sea $H(\vect{x})$ el hessiano de $f$ en $\vect{x}$. Entonces:
-					    	\begin{enumerate}
+						\begin{minipage}{0.80\textwidth}
+							Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto $U$ que tiene en $\vect{x}\in U$ un punto crítico. Supongamos que en un entorno de $\vect{x}$ las derivadas parciales de $f$ de segundo orden son continuas. Sea $H(\vect{x})$ el hessiano de $f$ en $\vect{x}$. Entonces:
+							\begin{enumerate}
 								\item Si todas las submatrices angulares del hessiano tienen determinantes positivos, entonces $f$ tiene un mínimo local en $\vect{x}$.
 								\item Si las submatrices angulares del hessiano tienen determinantes de signo alternado (comenzando con un valor negativo, o sea $\frac{\partial^n f}{\partial x_1^n}<0$), entonces $f$ tiene un máximo local en $\vect{x}$
 							\end{enumerate}
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de existencia de extremos locales};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1432,8 +1434,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:U\subseteq R^n \to R$ una función de clase $\mathcal{C}^{1}$ definida en $U$. Sean $g_1,g_2,\ldots,g_m:U \subseteq R^n \to R$,	\textit{m} funciones de clase $\mathcal{C}^{1}$ en U ($m>n$).\\
+						\begin{minipage}{0.80\textwidth}
+							Sea $f:U\subseteq R^n \to R$ una función de clase $\mathcal{C}^{1}$ definida en $U$. Sean $g_1,g_2,\ldots,g_m:U \subseteq R^n \to R$,	\textit{m} funciones de clase $\mathcal{C}^{1}$ en U ($m>n$).\\
 					
 							Sea $S=\{x\in U:g_i (x)=0,i=1,2,\ldots,m\}$. Sea $x_0 \in S$ un punto de extremo condicionado de $f$.\\
 					
@@ -1443,7 +1445,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 								\nabla f(x_0)+\sum_{k=1}^{m}\lambda_k \cdot \nabla g_k (x_0)=0
 							\end{align}
 							A los números $\lambda_{k},k=1,2,\ldots,m$ se les llama \textbf{multiplicadores de Lagrange}.
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de extremos condicionados con multiplicadores de Lagrange};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1477,15 +1479,15 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				
 					\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.80\textwidth}
-					    	Sea $f:K\subset R^n \to R$ una función real definida en el conjunto compacto $K$ de $R^n$. Si $f$ es continua, existen puntos $x_0,x_1 \in K$ tales que $f(x_0) \ge f(x) \forall x \in K$ y $f(x_1) \le f(x) \forall x \in K.$\\
+						\begin{minipage}{0.80\textwidth}
+							Sea $f:K\subset R^n \to R$ una función real definida en el conjunto compacto $K$ de $R^n$. Si $f$ es continua, existen puntos $x_0,x_1 \in K$ tales que $f(x_0) \ge f(x) \forall x \in K$ y $f(x_1) \le f(x) \forall x \in K.$\\
 					
 							Si además $f$ es diferenciable, se puede demostrar que los extremos absolutos de $f$ ocurren:
 							\begin{enumerate}
 								\item En la frontera de $K$, ó
 								\item En puntos interiores de $K$, donde las derivadas parciales de $f$ se deben anular.
 							\end{enumerate}
-   					    \end{minipage}
+   						\end{minipage}
 					};
 					\node[fancytitle, right=10pt] at (box.north west) {Teorema de extremos en regiones compactas};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1511,10 +1513,10 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Una \textbf{función vectorial} de una variable real es una función del tipo $f:I\subseteq R \to R^n$, la cual a cada número real $t \in I$ le asocia un único valor $f(t)$ en el espacio $R^n$.\\
 						Así, podemos escribir $f(t)=(x_1(t),x_2(t),\ldots,x_n(t)) \in R^n$ donde $x_i:I\subseteq R \to R$ con $i=1,2,\ldots,n$ son funciones reales de la variable real $t$, llamadas funciones coordenadas de la función $f$.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Funciones vectoriales};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1522,11 +1524,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^n$ una función definida en el intervalo abierto I de $R$ y sea $t_0$ un punto de $I$ o un punto frontera de $I$.\\
 						
 						Se dice que el límite de la función $f$ cuando $t$ tiende a $t_0$ es $L \in R^n$, lo cual se escribe como $\lim_{t\to t_0}f(t)=L$ si dado cualquier $\epsilon>0$ existe un $\delta>0$ tal que $t \in I,\:0<|t-t_0|<\delta \Rightarrow |f(t)-L|<\epsilon$.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Límite de funciones vectoriales};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1534,13 +1536,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [teorema] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^n$ como en la definición anterior. Entonces:
 						\begin{align}
 							\lim_{t \to t_0}f(t)=L=(\ell_1,\ell_2,\ldots,\ell_n) \in R^n \longleftrightarrow \lim_{t\to t_0}x_i (t)=\ell_i \\
 							\text{donde } f(t)=(x_1(t),x_2(t),\ldots,x_n(t))
 						\end{align}
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema para el límite de funciones vectoriales};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1548,9 +1550,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^n$ una función definida en el subconjunto abierto $I$ de $R$ y sea $t_0 \in I$. Se dice que $f$ es continua en $t_0$ si $\lim_{t \to t_0}f(t)=f(t_0)$
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Continuidad};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1558,11 +1560,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [teorema] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^n$ una función definida en el intervalo abierto $I$ de $R$, digamos que $f(t)=(x_1(t),x_2(t),\ldots,x_n(t))$.\\
 						
 						Sea $t_0 \in I$, La función $f$ es continua en $t_0$ si y sólo si sus funciones coordenadas $x_i:I\subseteq R \to R$ lo son.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema de continuidad de funciones vectoriales};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1573,13 +1575,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			\begin{minipage}{0.5\textwidth}
 				\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.90\textwidth}
+					\begin{minipage}{0.90\textwidth}
 						Una función $f:I\subseteq R \to R^n$ continua, definida en el intervalo $I$ de $R$, se llama \textbf{camino} o \textbf{trayectoria} en el espacio $R^n$.\\
 						
 						Si la función está definida en el intervalo cerrado $I=[a,b]$, diremos que el punto $f(a) \in R^n$ es el \textit{punto inicial} del camino, y $f(b) \in R^n$ es el \textit{punto final} de él. Si $f(a)=f(b)$, diremos que el camino $f$ es \textbf{cerrado}.\\
 						
 						Si la función $f$ es inyectiva en $I$, diremos que $f$ es un \textit{camino simple}. Si se tiene que $f(a)=f(b)$ y la función $f$ restringida al intervalo $[a,b)$ es inyectiva, diremos que $f$ es un \textit{camino} \textbf{cerrado simple}.\\
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Trayectorias};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1596,9 +1598,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Se llama traza del camino $f:I\subseteq R \to R^n$ al conjunto de las imágenes de $f$, es decir: traza de $f=\{f(t) \in R^n|t \in I\} \subset R^n$
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Traza};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1606,11 +1608,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Designaremos con la palabra curva (en $R^n$) a la traza de un camino $f:I\subseteq R \to R^n$. Si el camino $f: [a,b] \to R^2,\, f(t)=(x_{t},y_{t})$ es simple, podremos decir que la curva $\{f(t) \in R^2:t\in[a,b]$\} es una \textit{curva simple}.\\
 						
 						Una curva es \textit{plana} si hay un plano $S$ tal que $f(t)\in S\:\forall t\in I$
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Curva};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1618,9 +1620,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Curva que no posee puntos angulosos. Una curva $C$ representada por $\lambda:I\rightarrow R^{n}$ $\lambda(t)=(\lambda_1,\ldots\lambda_n)$ es suave si sus derivadas son continuas en el intervalo $I$ y no son simultáneamente nulas, excepto posiblemente en los puntos terminales del intervalo.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Curva suave};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1628,9 +1630,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Una curva $C$ es suave a trozos si es suave en todo intervalo de alguna partición de $I$. O sea que el intervalo puede dividirse en un número finito de subintervalos, en cada uno de los cuales $C$ es suave.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Curva suave a trozos};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1640,11 +1642,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^n$ un camino definido en el intervalo abierto I de $R$. Sea $t_0 \in I$. Se define la derivada de $f$ en $t_0$, denotada por $f^\prime(t_0)$ o $\frac{\partial f}{\partial t}(t_0)$ como el límite $f^\prime (t_0)=\lim_{h \to 0}\frac{f(t_0+h)-f(t_0)}{h}$ cuando éste existe. En tal caso se dice que el camino $f$ es diferenciable en $t_0$.\\
 						
 						Si la función es diferenciable en todos los puntos $t_0 \in I$, decimos que $f$ es diferenciable en $I$. Tener en cuenta que la derivada $f^\prime (t_0)$ es un vector de $R^n$, y además que éste es tangente a la curva en $t_0$, y que apunta en dirección al recorrido de la curva.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Derivada de curvas regulares};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1652,9 +1654,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^n$ un camino diferenciable. Al vector $f^\prime(t)$ se le llama \textbf{vector velocidad} del camino en el punto $f(t) \in R^n$.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Vector velocidad de curvas regulares};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1662,9 +1664,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^3$ un camino de clase $\mathcal{C}^{1}$. $f$ es un \textbf{camino regular} si $f^\prime (t) \ne\vect{0}\:\forall t \in I.$
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Camino regular de curvas regulares};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1672,12 +1674,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:I\subseteq R \to R^3$ un camino regular. \textbf{La recta tangente} a la curva en $f(t_0)$ es la recta en $R^3$ que pasa por $f(t_0)$ y tiene como 	vector director a uno paralelo a $f^\prime(t_0)$. Es decir:
 						\begin{align}
 							L:\:(x,y,z)=k(f^\prime_x(t_0),f^\prime_y(t_0),f^\prime_z(t_0))+(x(t_0),y(t_0),z(t_0))\mbox{ con \ensuremath{k\in R}}
 						\end{align}
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Recta tangente de curvas regulares};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1685,12 +1687,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Para el camino $f:I\subseteq R \to R^3$ el \textbf{plano normal} a la curva correspondiente en $f(t_0)$ es el plano en $R^3$ que pasa por $f(t_0)$ y tiene por vector normal al vector $f^\prime(t_0)$. Este plano tiene como ecuación:
 						\begin{align}
 							\frac{\partial f}{\partial x}(t_0)(x-x(t_0))+\frac{\partial f}{\partial y}(t_0)(y-y(t_0))+\frac{\partial f}{\partial z}(t_0)(z-z(t_0))=0
 						\end{align} 
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Plano normal de curvas regulares};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1700,7 +1702,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:[a,b] \to R^n$ un camino regular. Sea $k$ una constante positiva.\\
 						
 						Para recorrer la curva descrita por $f$, $k$ veces más rápido, podemos tomar la función $\varphi:[0,\frac{b-a}{k}]\to[a,b]$ dada por $\varphi(s)=ks+a$. La reparametrización será:
@@ -1711,7 +1713,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						Si $k$ es negativa, la reparametrización recorre $f$ con una velocidad en módulo $k$ veces mayor, pero en sentido inverso al de $f$.\\
 						
 						Si $k=-1$, el camino $\vect{f}:[0,b-a]\to R^n$ dado por $\vect{f}(s)=f(b-s)$ recorre la curva descripta por $f$ con la misma velocidad (en módulo) de $f$, pero en sentido inverso al de $f$.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Reparametrizaciones};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1721,9 +1723,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Llamamos \textbf{rapidez de un camino} $f:I\subseteq R \to R^n$ de clase $\mathcal{C}^{1}$ en $f(t_0)$ al número no negativo: $\left\Vert f^\prime(t_0)\right\Vert$
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Rapidez de un camino};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1731,12 +1733,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea $f:[a,b] \to R^n$ un camino de clase $\mathcal{C}^{1}$. La longitud de $f$ entre $t=a$ y $t=b$, denotada por $\ell(f)$, se define como:
 						\begin{align}
 							\ell(f)=\int_{a}^{b}\left\Vert f'(t)\right\Vert \: dt
 						\end{align}
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Longitud de un camino};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1748,9 +1750,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Una ecuación se llama \emph{ecuación	diferencial} si contiene derivadas o diferenciales de una o más variables dependientes de una o más variables independientes.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuación diferencial};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1758,9 +1760,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Son las ecuaciones diferenciales en las que figuran derivadas de diferentes órdenes de la función desconocida $y(x)$, que depende solo de una variable independiente.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuación diferencial ordinaria};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1768,11 +1770,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Se llama \emph{orden} de una ecuación diferencial al de la derivada de mayor orden que figura en dicha ecuación.\\
 						
 						\emph{Ejemplo}: el orden de la ecuación $y^{\prime\prime}+y^\prime=x^2$ es 2
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Orden de una ecuación diferencial};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1780,12 +1782,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Una ecuación diferencial es \emph{lineal} cuando es lineal en $y(x)$ y en sus derivadas. Es decir que los términos que contienen la función incógnita y sus derivadas $y^\prime,y^{\prime\prime},...y^{(n)}$ aparecen como combinación lineal de $y,y^\prime,...y^{(n)}.$ Su forma general es:
 						\begin{align}
 							a_1(x)y+a_2(x)y^\prime+\ldots+a_n(x)y^{(n)}=f(x)
 						\end{align}
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuación diferencial lineal};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1793,9 +1795,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Es el problema de encontrar una solución de la ecuación diferencial $y^\prime=f(x,y)$ sujeto a una condición inicial $y(x_0)=y_0$. Para que la solución a este problema sea única, debe verificarse que haya tantas condiciones iniciales como el orden de la ecuación diferencial.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Problemas de valor inicial};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1805,14 +1807,14 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Una ecuación diferencial separable se puede escribir de la forma $N(y)y^\prime=M(x)$.Esta ecuación se puede reescribir como:			
 						\begin{align}
 							N(y)dy=M(x)dx
 						\end{align}
 						
 						e integrando ambos miembros se obtiene una solución.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales de variables separables};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1822,9 +1824,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Son de la forma $y^\prime=f(x,y)$, donde $f(x,y)=f(tx,ty)$. Este tipo de ecuaciones se pueden resolver haciendo el cambio de variables $y=zx$, donde $z=z(x)$. Entonces reemplazamos $y^\prime$ por $z+xz^\prime$ y resolvemos.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales homogéneas};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1834,13 +1836,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Sea la ecuación $y^\prime+p(x)y=q(x)$. La solución general de esta ecuación diferencial se obtiene multiplicando toda la ecuación por el factor integrante de Lagrange:
 						\begin{align}
 							u(x)=e^{\int p(x)dx}
 						\end{align}
 						Entonces la ecuación a resolver es $(u(x)y)^\prime=u(x)q(x)$.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales lineales de orden 1};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1850,7 +1852,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Una ecuación diferencial $P(x,y)dx+Q(x,y)dy=0$ se dice ser \emph{exacta} si exista una función $f(x,y)$ tal que la diferencial total de esta función (es decir, $df(x,y)=\frac{\partial f}{\partial x}(x,y)dx+\frac{\partial f}{\partial y}(x,y)dy$) sea:
 						\begin{align}
 							df(x,y)=P(x,y)dx+Q(x,y)dy
@@ -1864,7 +1866,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\begin{align}
 							\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}
 						\end{align}
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales exactas};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1872,13 +1874,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.80\textwidth}
+					\begin{minipage}{0.80\textwidth}
 						Algunas ecuaciones diferenciales no exactas se pueden convertir en exactas multiplicándolas por un factor adecuado. En general, para la ecuación $P(x,y)dx+Q(x,y)dy=0$ se dice que la función no nula $\mu:U\subseteq R^2 \to R$, de clase $\mathcal{C}^{k}$, es un factor de integración si la ecuación:
 						\begin{align}
 							\mu P(x,y)dx+\mu Q(x,y)dy=0
 						\end{align}
 						En general, la función $\mu$ suele ser $\mu=\mu(x)$ o $\mu=\mu(y)$, aunque también existen $\mu=\mu(x,y)$ para ecuaciones más complicadas.
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Factor integrante};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1911,7 +1913,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			\begin{minipage}{0.6\textwidth}
 				\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.9\textwidth}
+					\begin{minipage}{0.9\textwidth}
 						Dos familias uniparamétricas de curvas $F_1(x,y,c_1)=0$ y $F_2(x,y,c_2)=0$ se dicen que son \emph{trayectorias ortogonales} si todas las curvas de una familia cortan perpendicularmente a todas las curvas de la otra familia.\\
 				
 						En otras palabras, en cada punto de intersección de ambas curvas la recta tangente al punto de una curva es ortogonal a la tangente de la otra curva.\\
@@ -1926,7 +1928,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\end{enumerate}
 						
 						\underbar{Nota}: {\footnotesize Cuando la familia $F_1$ viene dada de forma implícita (ejemplo: $x^2+y^2=c$) el método es el mismo, pero se saltea	el paso 2.}
-   				    \end{minipage}
+   					\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Trayectorias ortogonales};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1945,11 +1947,11 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			\begin{minipage}{0.6\textwidth}
 				\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.9\textwidth}
-					    	Una función del tipo $\vect{F}: U \subseteq R^n \to R^n$ se llama campo vectorial (en $R^n$). Este campo asocia a cada punto $x$ de $U \subseteq R^n$ el vector $\vect{F}(x)$ de $R^n$.\\
-					    	
-					    	Se dice que el campo vectorial $\vect{F}=(F_1,F_2,\ldots,F_n)$ es continuo (diferenciable, o de clase $\mathcal{C}^{k}$) si todas las funciones coordenadas son continuas (diferenciables, o de clase $\mathcal{C}^{k}$).
-	   				    \end{minipage}
+						\begin{minipage}{0.9\textwidth}
+							Una función del tipo $\vect{F}: U \subseteq R^n \to R^n$ se llama campo vectorial (en $R^n$). Este campo asocia a cada punto $x$ de $U \subseteq R^n$ el vector $\vect{F}(x)$ de $R^n$.\\
+							
+							Se dice que el campo vectorial $\vect{F}=(F_1,F_2,\ldots,F_n)$ es continuo (diferenciable, o de clase $\mathcal{C}^{k}$) si todas las funciones coordenadas son continuas (diferenciables, o de clase $\mathcal{C}^{k}$).
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Campo vectorial};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1964,13 +1966,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
-				    	Para tener imágenes geométricas de campos en $R^2$, es útil considerar las \textbf{líneas de campo}. Para un campo $\vect{F}: R^2 \to R^2$, una línea de campo es una curva en $R^2$ cuya propiedad es que en cada punto de ella su tangente va en dirección al campo $\vect{F}$, es decir que $\vect{F}(\lambda(t))=\lambda^\prime(t)$.\\
-					    	
-				    	En general, para un campo $\vect{F}: R^n \to R^n$, las líneas de campo satisfacen que $\frac{dx_1}{F_1}=\frac{dx_2}{F_2}=\ldots=\frac{dx_n}{F_n}$.
-					    	
-				    	\underbar{Propiedad}: Las líneas de campo de un campo vectorial $\vect{F}$ son perpendiculares a las líneas equipotenciales (i.e. las curvas de nivel de la función potencial de $\vect{F}$).
-	   			    \end{minipage}
+					\begin{minipage}{0.8\textwidth}
+						Para tener imágenes geométricas de campos en $R^2$, es útil considerar las \textbf{líneas de campo}. Para un campo $\vect{F}: R^2 \to R^2$, una línea de campo es una curva en $R^2$ cuya propiedad es que en cada punto de ella su tangente va en dirección al campo $\vect{F}$, es decir que $\vect{F}(\lambda(t))=\lambda^\prime(t)$.\\
+							
+						En general, para un campo $\vect{F}: R^n \to R^n$, las líneas de campo satisfacen que $\frac{dx_1}{F_1}=\frac{dx_2}{F_2}=\ldots=\frac{dx_n}{F_n}$.
+							
+						\underbar{Propiedad}: Las líneas de campo de un campo vectorial $\vect{F}$ son perpendiculares a las líneas equipotenciales (i.e. las curvas de nivel de la función potencial de $\vect{F}$).
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Líneas de campo};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1978,9 +1980,9 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
-				    	Sea $f: U \subseteq R^n \to R$ diferenciable, podemos construir con ella el \textbf{campo vectorial gradiente} de $f$, $\nabla f: U \subseteq R^n \to R^n$, que asocia a cada punto $x \in U$ el vector $\nabla f(x) \in R^n$.
-	   			    \end{minipage}
+					\begin{minipage}{0.8\textwidth}
+						Sea $f: U \subseteq R^n \to R$ diferenciable, podemos construir con ella el \textbf{campo vectorial gradiente} de $f$, $\nabla f: U \subseteq R^n \to R^n$, que asocia a cada punto $x \in U$ el vector $\nabla f(x) \in R^n$.
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Campo de gradiente};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -1991,16 +1993,16 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			\begin{minipage}{0.6\textwidth}
 				\begin{tikzpicture}
 					\node [definicion] (box){%
-					    \begin{minipage}{0.9\textwidth}
-						    Sea $\vect{F}:U \subseteq R^n \to R^n,\:\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo vectorial continuo, y sea $\lambda:[a,b] \to R^n,\lambda=(\lambda_1,\lambda_2,\ldots,\lambda_n)$ un camino de clase $\mathcal{C}^1$ tal que $\lambda ([a,b])\subset U$. La integral de línea del campo $\vect{F}$ a lo largo del camino $C$, o la \textbf{circulación} del campo $\vect{F}$ alrededor de (o lo largo de $\lambda$), se define como:
-						    \begin{align}
-						    	\int_{\lambda} \vect{F} \cdot d\vec{l}=\int_{a}^{b} \vect{F}\left(\lambda(t)\right) \cdot \lambda^\prime(t)\: dt
-						    \end{align}
-						    
-						    Cuando el camino $\lambda$ es cerrado, se suele usar la notación $\oint_{\lambda} \vect{F} \cdot d\vec{l}$.
+						\begin{minipage}{0.9\textwidth}
+							Sea $\vect{F}:U \subseteq R^n \to R^n,\:\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo vectorial continuo, y sea $\lambda:[a,b] \to R^n,\lambda=(\lambda_1,\lambda_2,\ldots,\lambda_n)$ un camino de clase $\mathcal{C}^1$ tal que $\lambda ([a,b])\subset U$. La integral de línea del campo $\vect{F}$ a lo largo del camino $C$, o la \textbf{circulación} del campo $\vect{F}$ alrededor de (o lo largo de $\lambda$), se define como:
+							\begin{align}
+								\int_{\lambda} \vect{F} \cdot d\vec{l}=\int_{a}^{b} \vect{F}\left(\lambda(t)\right) \cdot \lambda^\prime(t)\: dt
+							\end{align}
+							
+							Cuando el camino $\lambda$ es cerrado, se suele usar la notación $\oint_{\lambda} \vect{F} \cdot d\vec{l}$.
 		
 							\underbar{Una aplicación}: Si $\vect{F}$ es la fuerza que actúa sobre una partícula moviéndose a lo largo de la curva, entonces la integral sería la cantidad total de trabajo que realiza esa fuerza sobre la partícula.
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Integral de línea (circulación)};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2014,8 +2016,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 					\node [corolario] (box){%
-					    \begin{minipage}{0.8\textwidth}
-						    \underbar{Propiedades}:
+						\begin{minipage}{0.8\textwidth}
+							\underbar{Propiedades}:
 								\begin{enumerate}
 									\item $\int_{-\lambda}F\cdot d\lambda=-\int_{\lambda}F\cdot d\lambda$
 									\item Una integral de línea es invariante por reparametrizaciones del camino sobre el que se integra el campo $F$.
@@ -2034,7 +2036,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 			\begin{tikzpicture}
 					\node [teorema] (box){%
-					    \begin{minipage}{0.8\textwidth}
+						\begin{minipage}{0.8\textwidth}
 							Condición necesaria pero no suficiente para que un campo sea conservativo:\\
 							
 							Sea $\vect{F}:U\subseteq R^n \to R^n$, $\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo de clase $\mathcal{C}^{k}(k\ge1)$ definido en el conjunto abierto $U \subseteq R^n$. Si $\vect{F}$ es conservativo entonces $\frac{\partial F_i}{\partial x_j}(x)=\frac{\partial F_j}{\partial x_i}(x)$ para $x \in U$, $1\le i<j\le n.$ Es decir que la matriz jacobiana de $\vec{F}$ debe ser simétrica.\\
@@ -2042,7 +2044,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\textit{Nota}: Si la matriz es simétrica, el campo \underline{puede o no} ser conservativo. Si no lo es, podemos concluir que no es conservativo.
 			
 							\textit{Propiedad}: Si la matriz jacobiana de $\vect{F}$ es continua y simétrica en un $U$ simplemente conexo, entonces existe función potencial.
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Condiciones para de campos conservativos};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2050,8 +2052,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				
 			\begin{tikzpicture}
 					\node [corolario] (box){%
-					    \begin{minipage}{0.8\textwidth}
-						    Sea $\vect{F}: U \subseteq R^n \to R^n$ un campo de clase $\mathcal{C}^{k}\:(k\ge0)$ definido en el conjunto abierto $U\subseteq R^n$. Las afirmaciones siguientes son equivalentes (esto es, o son todas verdaderas o todas falsas):
+						\begin{minipage}{0.8\textwidth}
+							Sea $\vect{F}: U \subseteq R^n \to R^n$ un campo de clase $\mathcal{C}^{k}\:(k\ge0)$ definido en el conjunto abierto $U\subseteq R^n$. Las afirmaciones siguientes son equivalentes (esto es, o son todas verdaderas o todas falsas):
 			
 			\begin{enumerate}
 				\item $F$ es el \emph{campo gradiente} de una función $\phi:U \subseteq R^n \to R$ de clase $\mathcal{C}^{k+1}$, es decir, $\vect{F}=\nabla\phi$
@@ -2060,7 +2062,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				\item El campo $\vect{F}$ es \textit{conservativo}.
 				\item La función $\phi: U \subseteq R^n \to R$ de clase $\mathcal{C}^{k+1}$ es la \textit{función potencial}.
 			\end{enumerate}
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Propiedades de campos conservativos};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2070,8 +2072,8 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
-					    Sea $f: U \subseteq R^n \to R$ una función real continua definida en el abierto $U \subseteq R^n$, y sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda\left([a,b]\right)\subset U$.\\
+					\begin{minipage}{0.8\textwidth}
+						Sea $f: U \subseteq R^n \to R$ una función real continua definida en el abierto $U \subseteq R^n$, y sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda\left([a,b]\right)\subset U$.\\
 			
 						La integral de línea respecto a la longitud de arco de la función $f$ a lo largo del camino $\lambda$ es:
 							\begin{align}
@@ -2080,7 +2082,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						Donde $dl=\left\Vert \lambda^\prime(t) \right\Vert dt$ es la diferencial de la longitud de arco del camino $\lambda$.\\
 			
 				\underbar{Una aplicación}: Conociendo la densidad lineal de un alambre en el espacio, digamos que dada por la función $\rho=\rho(x,y,z)$ (en gr/cm), y el camino $C:[a,b] \to R^3$ en cuya imagen \emph{se encuentra el alambre}, entonces su masa total se calcula como $M=\int_{C} \rho\: dl$.
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Integral de línea};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2088,7 +2090,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				
 			\begin{tikzpicture}
 				\node [corolario] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						\begin{enumerate}
 							\item Si $f,g: U \subseteq R^n \to R$ son dos funciones continuas definidas en el abierto $U \subseteq R^n$ y $C:[a,b] \to R^n$ es un camino seccionalmente $\mathcal{C}^1$, entonces:
 								\begin{align}
@@ -2096,7 +2098,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 								\end{align}
 							\item Sea $f: U \subseteq R^n \to R$ una función continua definida en el abierto $U \subseteq R^n$. Sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda \left([a,b]\right) \subset U$, y sea $\mu:[c,d] \to R^n$ una reparametrización de $\lambda$. Entonces $\int_{\lambda}f\: ds=\int_{\mu}f\: ds$.
 						\end{enumerate}
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Propiedades de Integraesl de línea};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2108,13 +2110,13 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [corolario] (box){%
-				    \begin{minipage}{0.8\textwidth}		
+					\begin{minipage}{0.8\textwidth}		
 							Sea $\vect{F}: U \subseteq R^2$ (o $R^3$) $ \to R^2$ (o $R^3$) un campo de clase $\mathcal{C}^{k}$, $k\ge0$, y sea $\lambda:[a,b] \to R^2$ (o $R^3$) un camino seccionalmente $\mathcal{C}^1$ cuya imagen está contenida en $U$. El trabajo que hay que realizar para llevar un cuerpo de masa $m$ del punto $p=\lambda(a)$ al punto $q=\lambda(b)$ por el camino $\lambda$ a través del campo $\vect{F}$ es:\\
 							\begin{align}
 								W_{pq}=\int_{\lambda} \vect{F} \cdot d\lambda=\int_{a}^{b} \vect{F} \left(\lambda(t)\right) \cdot \lambda^\prime(t)dt=m\int_{a}^{b}\lambda^{\prime\prime}(t) \cdot \lambda^\prime (t)dt=\frac{1}{2}m\left|\lambda^\prime(b)\right|^2-\frac{1}{2}m\left|\lambda^\prime(a)\right|^2
 							\end{align}
 
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Trabajo};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2122,14 +2124,14 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [corolario] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						Sea una función continua $f: U \subseteq R^n \rightarrow R$ definida en el abierto $U$ de $R^n$, y un camino de clase $\mathcal{C}^1 \text{ } \lambda:[a,b] \rightarrow R^n \text{ , } \lambda([a,b])\subset U$, definimos el valor medio de la función $f$ sobre el camino $\lambda$, como:
 						\begin{align}
 							\bar{f}_{\lambda}=\frac{1}{L_{\lambda}} \cdot \int_{\lambda}\, f\, dl=\frac{1}{\int_{a}^{b}\left\Vert \lambda^\prime(t)\right\Vert dt} \cdot \int_{a}^{b}f(\lambda(t)) \cdot \left\Vert \lambda^\prime(t)\right\Vert dt
 						\end{align}
 						
 						El valor $\bar{f}$ es un tipo de promedio de los valores que toma la función a lo largo del camino $\lambda$.
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema del valor medio};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2141,7 +2143,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						Sea $f: Q \subset R^2 \to R$ una función escalonada definida en el rectángulo Q de $R^2$. Digamos que $Q$ está dividido en $nm$ subrectángulos $Q_{ij}$.\\
 						
 						Se define la integral doble de la función $f(x,y)$ sobre el rectángulo $Q$, como: 
@@ -2151,7 +2153,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						Notar que si $f(x,y)=k$ para $(x,y) \in Q=[a,b] \times [c,d]$ se tiene $\iint_{Q} f(x,y)dxdy=k\cdot(\acute{a}rea\: de\: Q)$.\\
 						
 						Si $k>0$, el valor de la integral representa el volumen de un paralepípedo rectangular con base Q y altura $k$.
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Integral doble};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2159,7 +2161,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		
 			\begin{tikzpicture}
 				\node [teorema] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						Si la función $f: Q \subset R^2 \to R$ definida en el rectángulo $Q=[a,b] \times [c,d]$ es continua, entonces es integrable, y la integral doble de ella sobre $Q$ se puede calcular como:
 						\begin{align}
 							\iint_{Q} f(x,y)\: dxdy=\int_{c}^{d} \left(\int_{a}^{b} f(x,y)dx\right)dy=\int_{a}^{b}\left(\int_{c}^{d} f(x,y)\, dy\right)\, dx
@@ -2168,7 +2170,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\begin{align}
 							\iint_{Q}f(x,y)\, dxdy=\text{ volumen de }\Omega
 						\end{align}
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema para Integral doble};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2178,7 +2180,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						\textbf{Regiones del tipo (I)} son regiones limitadas:\\
 							\begin{tabular}{>{\centering}p{5cm}>{\raggedright}b{11cm}}
 								\noindent \centering{}\includegraphics[scale=0.4]{tipo1} & \begin{enumerate}
@@ -2189,7 +2191,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\end{enumerate}
 							\tabularnewline
 						\end{tabular}
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Regiones tipo I};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2197,7 +2199,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 			
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						\textbf{Regiones del tipo (II)} son regiones limitadas:\\
 							\begin{tabular}{>{\centering}m{5cm}>{\raggedright}m{11cm}}
 								\noindent \centering{}\includegraphics[scale=0.4]{tipo2} & \begin{enumerate}
@@ -2208,7 +2210,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\end{enumerate}
 							\tabularnewline
 						\end{tabular}
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Regiones tipo II};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2216,7 +2218,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		
 			\begin{tikzpicture}
 				\node [definicion] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						\textbf{Regiones del tipo (III)}: Son aquellas regiones que debemos dividir para verlas como la unión de varias regiones de tipo (I) o tipo (II).\\
 			
 						Sea $f:R \subset R^2 \to R$. Si la región R es de tipo (I), es decir, si $R=\{(x,y):\, a\le x\le b,\,\phi_1(x)\le y\le \phi_2(x)\}$ entonces la integral doble de $f(x,y)$ sobre $R$ se puede calcular como: 
@@ -2228,7 +2230,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\begin{align}
 							\iint_{R} f(x,y)dxdy=\int_{c}^{d}\left(\int_{\psi_1(y)}^{\psi_2(y)} f(x,y)dx\right)dy.
 						\end{align}	
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Regiones tipo III};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2236,12 +2238,12 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 		
 			\begin{tikzpicture}
 				\node [corolario] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						Si la región $R$ está subdividida en dos subregiones $R_1$ y $R_2$ (es decir, $R=R_1 \cup R_2$), entonces:
 						\begin{align}
 							\iint_{R} f(x,y)\, dxdy=\iint_{R_1} f(x,y)\, dxdy+\iint_{R_2} f(x,y)\, dxdy
 						\end{align}
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Propiedades de integrales dobles};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2251,7 +2253,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 
 			\begin{tikzpicture}
 				\node [teorema] (box){%
-				    \begin{minipage}{0.8\textwidth}
+					\begin{minipage}{0.8\textwidth}
 						Sea $f: R \subset R^2 \to R$ una función continua de las variables $x,y$ definida en la región $R \subset R^2$.\\
 						Sea $F:R^\prime \subset R^2 \to R$, $F(u,v)=(\phi_{(u,v)},\psi_{(u,v)})$ una función que manda de manera inyectiva los puntos $(u,v)\in R^\prime$ en los puntos $(x,y)\in R$ del plano $xy$. Si $F \in \mathcal{C}^1$ y la derivada $F^\prime(u,v)$ es una matriz inversible para todo $(u,v) \in R^\prime$, entonces la fórmula de cambio de variables en integrales dobles es:
 						\begin{align}
@@ -2263,7 +2265,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\begin{align}
 							\iint_{R}f(x,y)\: dxdy=\iint_{R'}f\left(rcos(\theta),rsin(\theta)\right)\cdot r\: drd\theta
 						\end{align}
-	   			    \end{minipage}
+	   				\end{minipage}
 					};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema de cambio de variable};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2279,7 +2281,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\begin{align}
 								V=\iint_{R}f\left(x,y\right)\: dxdy
 							\end{align}
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Cálculo de volumen};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2298,7 +2300,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\begin{align}
 								area (R)=\iint_{R}\: dxdy
 							\end{align}
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Cálculo de área};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2311,7 +2313,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 				\begin{align}
 					M=\iint_{R}\rho\left(x,y\right)\: dxdy
 				\end{align}
-	   		    \end{minipage}
+	   			\end{minipage}
 				};
 				\node[fancytitle, right=10pt] at (box.north west) {Cálculo de masa total};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2327,7 +2329,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							CM=\left(\overline{x},\overline{y}\right)=\left(\frac{M_{x}}{M},\frac{M_{y}}{M}\right)
 						\end{align}
 			\par\end{center}	
-	   		    \end{minipage}
+	   			\end{minipage}
 				};
 				\node[fancytitle, right=10pt] at (box.north west) {Centro de masa y momentos de figuras planas.};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2352,7 +2354,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\iiint_{\Omega}f(x,y,z)\, dxdydz=\iint_{R}\left[\int_{\phi_1}^{\phi_2}f(x,y,z)\, dz\right]dxdy
 					\end{align}
 					La integral triple de $f(x,y,z)$ sobre $\Omega$ es la integral doble	de una función $\xi(x,y)$ sobre la región $R$, la cual se puede ver como \emph{la proyección de la región $\Omega$ sobre el plano $xy$}. Esta proyección se obtiene expresando el cuerpo en función de las variables $x,y$. También se pueden considerar regiones $R$ en el plano $xz$ e $yz$.
-	   		    \end{minipage}
+	   			\end{minipage}
 				};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema para integrales triples};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2389,7 +2391,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\end{align}
 						\end{footnotesize}
 					\end{itemize}
-	   		    \end{minipage}
+	   			\end{minipage}
 				};
 				\node[fancytitle, right=10pt] at (box.north west) {Teorema de cambio de variable};
 				\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2404,7 +2406,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\begin{align}
 								V=\iiint_{\Omega}\, dxdydz
 							\end{align}
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Cálculo de volúmenes en el espacio};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2417,7 +2419,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 							\begin{align}
 								M=\iiint_{\Omega}d(x,y,z)\: dxdydz=\mbox{masa de \ensuremath{\Omega}}
 							\end{align}
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Cálculo de masa de cuerpos en el espacio};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2436,7 +2438,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 						\begin{align}
 							\text{Centro de masa}=(\bar{x},\bar{y},\bar{z})=\left(\frac{M_{yz}}{M},\frac{M_{xz}}{M},\frac{M_{xy}}{M}\right)
 						\end{align}
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Cálculo de centros de masa y momentos de cuerpos en el espacio};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
@@ -2451,7 +2453,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 					\node [definicion] (box){%
 				   	 \begin{minipage}{0.9\textwidth}
 						Una curva es un objeto unidimensional en $R^2$ o $R^3$, es decir, una curva es la imagen de una cierta función definida \textit{en un subconjunto I} de la recta (espacio de dimensión 1). De la misma manera, una superficie será la imagen en $R^3$ de una cierta función que está definida en \textit{un subconjunto $D$ de } $R^2$ (que es bidimensional).
-	   				    \end{minipage}
+	   					\end{minipage}
 						};
 					\node[fancytitle, right=10pt] at (box.north west) {Curvas};
 					\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
