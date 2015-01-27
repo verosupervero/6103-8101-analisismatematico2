@@ -1,25 +1,22 @@
 \documentclass[a4paper, twoside]{article}
 \usepackage[utf8]{inputenc} % Especifica la codificación de caracteres de los documentos.
 \usepackage[spanish]{babel} % Indica que el documento se escribirá en español.
-\usepackage[top=2cm, bottom=1cm, inner=1cm, outer=1.5cm]{geometry} % Márgenes personalizados
+\usepackage[top=3cm, bottom=2.5cm, inner=1.5cm, outer=2.5cm]{geometry} % Márgenes personalizados
 \usepackage{subfiles} % Paquete para incluir el preambulo en los sub archivos.
 \usepackage{afterpage} % Permite añadir páginas despues de una página dada.
 \usepackage{hyperref} % Permite incluir enlaces en los archivos.
 \usepackage{lastpage} % Paquete para poder contabilizar el total de páginas del documento.
 \usepackage{fancyhdr} % Permite personalizar los header y footer del documento.
-\usepackage{amsmath,bm,times}
-\usepackage{pdfpages}
+\usepackage{amsmath} % Comandos para la escritura de fórmulas matemáticas de mayor complejidad
+\usepackage{amsfonts} % Proporciona fuentes matemáticas
+\usepackage{amssymb} % Proporciona símbolos matemáticos de la American Mathematical Society
 \usepackage{float}
 \usepackage{array}
-\usepackage{listings}
-\usepackage{anysize}
 \usepackage[hang,bf]{caption}
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage{pgf,tikz}
 \usepackage{tikz-timing}
-\usepackage{setspace}
-\usepackage{verbatim}
 \usepackage{booktabs}
 
 % Defino la ruta de los paquetes personalizados para el apunte
@@ -72,7 +69,6 @@
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
-\includepdfset{pagecommand=\thispagestyle{plain}}
 \usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
 
 \pdfcompresslevel=9
@@ -2693,7 +2689,7 @@ Entonces $\nabla F=(2x,0,1)$, y tenemos que el vector normal al punto es $(2x_0,
 \addcontentsline{toc}{section}{\bibliographyname} % Agrego la bibliografía en el índice
 \renewcommand\refname{\bibliographyname} % Renombro a la bibliografía (por default es 'Referencias')
 \begin{thebibliography}{X}
-	\bibitem{Baz} \textsc{Jerrold E. Marsden} y \textsc{Anthony J. Tromba}, \textit{Cálculo Vectorial}, tercera edición, Addison-Wesley Iberoamericana, 1991.
+	\bibitem{Marsden} \textsc{Jerrold E. Marsden} y \textsc{Anthony J. Tromba}, \textit{Cálculo Vectorial}, tercera edición, Addison-Wesley Iberoamericana, 1991.
 \end{thebibliography}
 
 % Nombres de las personas que han colaborado en la creación del apunte
