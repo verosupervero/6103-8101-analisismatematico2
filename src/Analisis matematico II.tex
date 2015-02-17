@@ -7,13 +7,13 @@
 \usepackage{hyperref} % Permite incluir enlaces en los archivos.
 \usepackage{lastpage} % Paquete para poder contabilizar el total de páginas del documento.
 \usepackage{fancyhdr} % Permite personalizar los header y footer del documento.
+\usepackage{graphicx} % Permite incluir gráficos
+\usepackage[hang, bf]{caption} % Personaliza los subtítulos de las figuras y tablas
+\usepackage{float} % Permite posicionar mejor las figuras y tablas
 \usepackage{amsmath} % Comandos para la escritura de fórmulas matemáticas de mayor complejidad
 \usepackage{amsfonts} % Proporciona fuentes matemáticas
 \usepackage{amssymb} % Proporciona símbolos matemáticos de la American Mathematical Society
-\usepackage{float}
 \usepackage{array}
-\usepackage[hang,bf]{caption}
-\usepackage{graphicx}
 \usepackage{svg}
 \usepackage{pgf,tikz}
 \usepackage{tikz-timing}
@@ -22,7 +22,7 @@
 % Defino la ruta de los paquetes personalizados para el apunte
 \newcommand{\rutapaquetes}{./paquetes-apunte}
 
-\usepackage{\rutapaquetes/caratula} % Caratula personalizada (cargada desde caratula.sty)
+\usepackage[mostrarlicencia]{\rutapaquetes/caratula} % Caratula personalizada (cargada desde caratula.sty)
 \usepackage[ocultarrevisores]{\rutapaquetes/colaboradores} % Seccion de colaboradores (cargada y creada con colaboradores.sty)
 \usepackage{\rutapaquetes/historial} % Seccion de historial de cambios (cargada y creada con historial.sty)
 
