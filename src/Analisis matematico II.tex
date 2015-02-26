@@ -414,334 +414,215 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	Si $x_0$ es un punto de U o un punto frontera de U, se dice que el límite de $f$ cuando $x$ tiende a $x_0$ es L, lo cual se escribe como $\lim_{x \rightarrow x_0} f \left( x \right) = L$ si dado cualquier $\varepsilon > 0$ existe $\delta > 0$ tal que $x \in B \left( x_{0}, \delta \right) \cap U \left( x \neq x_{0} \right) \Rightarrow f \left( x \right) \in B(L, \varepsilon)$
 \end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una condición \textit{necesaria} (pero no suficiente) para que el límite 
-			$\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)$ exista y 
-			sea L, es que si los límites $\lim_{x\rightarrow x_{0}}f\left(x,\phi\left(x\right)\right)$ y 
-			$\lim_{x\rightarrow x_{0}}f\left(x,\psi\left(x\right)\right)$ existen 
-			(donde $y=\phi\left(x\right)$ e $y=\psi\left(x\right)$ son curvas que 
-			pasan por $\left(x_0,y_0\right)$) deben valer L. \\
+\begin{definicion*}{Límite por curva}
+	Una condición \textit{necesaria} (pero no suficiente) para que el límite $\lim_{ \left( x, y \right) \rightarrow (x_0, y_0) } f \left( x, y \right)$ exista y sea L, es que si los límites $\lim_{ x \rightarrow x_{0} } f \left( x, \phi \left(x \right) \right)$ y $\lim_{ x \rightarrow x_{0} } f \left(x, \psi \left( x \right) \right)$ existen (donde $y = \phi \left( x \right)$ e $y = \psi \left( x \right)$ son curvas que pasan por $\left( x_0, y_0 \right)$) deben valer L. \\
 
-			El único argumento que concluye que un límite existe requiere la 
-			aplicación directa de la definición. Para calcular límites también 
-			es útil expresar la función en coordenadas polares. \\
-			
-			\begin{center}
-				\textit{Ejemplo}: $\lim_{\left(x,y\right)\rightarrow(0,0)}\frac{x^{3}y}{x^{2}+y^{2}}=\lim_{r\rightarrow0}\frac{(rcos\theta)^{3}(rsen\theta)}{(rcos\theta)^{2}+(rsen\theta)^{2}}=\lim_{r\rightarrow0}\frac{r^4cos^3(\theta)sen(\theta)}{r^2(\underbrace{cos^2(\theta)+sen^2(\theta))}_1}=0$\\
-			\end{center}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Límite por curva};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	El único argumento que concluye que un límite existe requiere la aplicación directa de la definición. Para calcular límites también es útil expresar la función en coordenadas polares. \\
+	
+	\begin{center}
+		\textit{Ejemplo}: $\lim_{ \left( x, y \right) \rightarrow (0,0) } \frac{x^{3} y}{x^{2} + y^{2} } = \lim_{ r \rightarrow 0 } \frac{(rcos\theta)^{3} (rsen\theta)}{(rcos\theta)^{2} + (rsen\theta)^{2}} = \lim_{ r \rightarrow 0 } \frac{r^4cos^3(\theta)sen(\theta)}{r^2(\underbrace{ cos^2(\theta) + sen^2(\theta)) }_1} = 0$\\
+	\end{center}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en 
-			el abierto U y sea $x_0$ un punto de U o un punto frontera de U. 
-			Si $\lim_{x\rightarrow x_0}f\left(x\right)=L$ y 
-			$\lim_{x\rightarrow x_0}g\left(x\right)=M$, entonces:
-			\begin{align}
-				\lim_{x\rightarrow x_{0}}\left(f+g\right)\left(x\right)=L+M \\
-				\lim_{x\rightarrow x_{0}}\left(f\cdot g\right)\left(x\right)=L\cdot M \\
-				Si M\neq0,\lim_{x\rightarrow x_{0}}\left(\frac{f}{g}\right)\left(x\right)=\frac{L}{M} \\
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de límites de funciones};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de límites de funciones}
+	Sean $f, g: U \subseteq R^n \rightarrow R$ dos funciones definidas en el abierto U y sea $x_0$ un punto de U o un punto frontera de U.
+	Si $\lim_{ x \rightarrow x_0 } f \left( x \right) = L$ y $\lim_{ x \rightarrow x_0 } g \left( x \right) = M$, entonces:
+	\begin{align}
+		\lim_{x\rightarrow x_{0}}\left(f+g\right)\left(x\right)=L+M \\
+		\lim_{x\rightarrow x_{0}}\left(f\cdot g\right)\left(x\right)=L\cdot M \\
+		Si M\neq0,\lim_{x\rightarrow x_{0}}\left(\frac{f}{g}\right)\left(x\right)=\frac{L}{M}
+	\end{align}
+\end{teorema*}
 
-\begin{tikzpicture}
-	\node [teorema] (box){
-		\begin{minipage}{0.80\textwidth}
-			Si $f:U\subseteq R^2 \rightarrow R$ es una función polinomial, entonces:
-			\begin{align}
-				\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)=f(x_0,y_0)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Continuidad en polinomios};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Continuidad en polinomios}
+	Si $f:U\subseteq R^2 \rightarrow R$ es una función polinomial, entonces:
+	\begin{align}
+		\lim_{\left(x,y\right)\rightarrow(x_0,y_0)}f\left(x,y\right)=f(x_0,y_0)
+	\end{align}
+\end{teorema*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:U\subseteq R^n\rightarrow R$ una función definida en el 
-			abierto U de $R^n$, y sea $x_0\in U.$ Se dice que $f$ es una función 
-			continua en $x_{0}$ si $f\left(x_{0}\right)=\lim_{x\rightarrow x_0}f(x)$. 
-			Las funciones polinomiales son continuas en cualquier punto $\left(x_0,y_0\right)\in R^2$ \\
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Continuidad en un punto};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Continuidad en un punto}
+	Sea $f: U \subseteq R^n \rightarrow R$ una función definida en el abierto U de $R^n$, y sea $x_0 \in U.$
+	Se dice que $f$ es una función continua en $x_{0}$ si $f \left( x_{0} \right) = \lim_{ x \rightarrow x_0} f(x)$.
+	Las funciones polinomiales son continuas en cualquier punto $\left( x_0, y_0 \right) \in R^2$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			$f:U\subseteq R^n \rightarrow R$ una función definida en el abierto 
-			U de $R^n$, se dice continua en $U$ si lo es para todos y cada uno 
-			de los puntos $\left(x,y\right)\in U$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Continuidad en un abierto};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Continuidad en un abierto}
+	$f: U \subseteq R^n \rightarrow R$ una función definida en el abierto U de $R^n$, se dice continua en $U$ si lo es para todos y cada uno de los puntos $\left(x,y\right)\in U$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			$f:D\subset R^2 \to R$ es continuo en un punto $\left(x_0,y_0\right)\in D$ si:
-			\begin{align} 
-				\lim_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Continuidad de un campo escalar};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Continuidad de un campo escalar}
+	$f:D\subset R^2 \to R$ es continuo en un punto $\left(x_0,y_0\right)\in D$ si:
+	\begin{align} 
+		\lim_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0)
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			La función $\vect{f}:U\subseteq R^n \to R^m$, $m>1$, 
-			$\vect{f}=\left(f_1,f_2,\ldots,f_m\right)$ es continua en el punto 
-			$\vect{x}_0\in U$ sí y solo si: 
-			\begin{align}
-				f_i:U\subseteq R^n \to R, i=1,2,\ldots,m, \text{ son continuas}
-			\end{align}
+\begin{definicion*}{Continuidad y diferenciabilidad de un campo vectorial}
+	La función $\vect{f}: U \subseteq R^n \to R^m$, $m>1$, $\vect{f} = \left( f_1, f_2, \ldots, f_m \right)$ es continua en el punto $\vect{x}_0 \in U$ sí y solo si:
+	\begin{align}
+		f_i:U\subseteq R^n \to R, i=1,2,\ldots,m, \text{ son continuas}
+	\end{align}
 
-			La función $\vect{f}:U\subseteq R^n \to R^m$, $m>1$, 
-			$\vect{f}=\left(f_1,f_2,\ldots,f_m\right)$ es diferenciable en el 
-			punto $\vect{x}_0\in U$ sí y solo si: 
-			\begin{align} 
-				f_i:U\subseteq R^n \to R, i=1,2,\ldots,m, \text{ son diferenciables}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Continuidad y diferenciabilidad de un campo vectorial};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	La función $\vect{f}: U \subseteq R^n \to R^m$, $m>1$, $\vect{f} = \left( f_1, f_2, \ldots, f_m \right)$ es diferenciable en el punto $\vect{x}_0 \in U$ sí y solo si:
+	\begin{align} 
+		f_i:U\subseteq R^n \to R, i=1,2,\ldots,m, \text{ son diferenciables}
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sean $f,g:U\subseteq R^n \rightarrow R$ funciones definidas en el 
-			abierto $U$ de $R^n$. Si $f$ y $g$ son continuas, entonces:
-			\begin{align}
-				\text{La función } f+g:U\subseteq R^n \rightarrow R=f\left(x\right)+g(x) \text{ es continua} \\
-				\text{La función } f\cdot g:U\subseteq R^n \rightarrow R=f\left(x\right)\cdot g(x) \text{ es continua} \\
-				\text{La función } \frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f\left(x\right)}{g\left(x\right)} \text{ es continua en todo punto } x\in U \text{, donde } g(x)\neq0 \\
-				\text{La composición } g\circ f:U\subseteq R^n \rightarrow R \text{ es continua}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de continuidad de funciones};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de continuidad de funciones}
+	Sean $f, g: U \subseteq R^n \rightarrow R$ funciones definidas en el abierto $U$ de $R^n$. Si $f$ y $g$ son continuas, entonces:
+	\begin{align}
+		\text{La función } f+g:U\subseteq R^n \rightarrow R=f\left(x\right)+g(x) \text{ es continua} \\
+		\text{La función } f\cdot g:U\subseteq R^n \rightarrow R=f\left(x\right)\cdot g(x) \text{ es continua} \\
+		\text{La función } \frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f\left(x\right)}{g\left(x\right)} \text{ es continua en todo punto } x\in U \text{, donde } g(x)\neq0 \\
+		\text{La composición } g\circ f:U\subseteq R^n \rightarrow R \text{ es continua}
+	\end{align}
+\end{teorema*}
 
 \subsection{Derivadas parciales}
 \textbf{Para una función de una variable}: 
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			$f:I\subseteq R \rightarrow R$ definida en el intervalo abierto I, 
-			se define la \textit{derivada} de $f$ en $x_0\in I$:
-			\begin{align}
-				f^\prime(x_0)=\frac{\partial f}{\partial x}(x_0)=\lim_{h \to 0}\frac{f(x_0+h)-f(x_0)}{h}
-			\end{align}
-			Si $f^\prime (x_0)$ existe, su valor nos da la pendiente de la recta 
-			tangente a la gráfica de la función $y=f(x)$ en el punto $(x_0,y_0)$. 
-			Para este tipo de funciones, diferenciabilidad equivale a existencia 
-			de derivada, y la diferenciabilidad en un punto implica la continuidad 
-			de la función en ese punto 
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Derivada parcial en $R^1$};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Derivada parcial en $R^1$}
+	$f: I \subseteq R \rightarrow R$ definida en el intervalo abierto I, se define la \textit{derivada} de $f$ en $x_0 \in I$:
+	\begin{align}
+		f^\prime(x_0) = \frac{\partial f}{\partial x}(x_0) = \lim_{h \to 0}\frac{f(x_0+h) - f(x_0)}{h}
+	\end{align}
+	Si $f^\prime (x_0)$ existe, su valor nos da la pendiente de la recta tangente a la gráfica de la función $y=f(x)$ en el punto $(x_0,y_0)$.
+	Para este tipo de funciones, diferenciabilidad equivale a existencia de derivada, y la diferenciabilidad en un punto implica la continuidad de la función en ese punto.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			$f:U\subseteq R^2 \rightarrow R$ definida en el abierto $U$, 
-			con $(x_0,y_0)$ un punto de $U$:
-			\begin{align}
-				\frac{\partial f}{\partial x}(x_0,y_0)=\lim_{h \to 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h} \\
-				\frac{\partial f}{\partial y}(x_0,y_0)=\lim_{h \to 0}\frac{f\left(x_0,y_0+h\right)-f(x_0,y_0)}{h}
-			\end{align}
-			Para este tipo de funciones, la existencia de derivadas parciales un 
-			punto no implica que la función sea continua en ese punto, por lo que 
-			tampoco implica que sea diferenciable en ese punto.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Derivada parcial en $R^2$};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Derivada parcial en $R^2$}
+	$f: U \subseteq R^2 \rightarrow R$ definida en el abierto $U$, con $(x_0, y_0)$ un punto de $U$:
+	\begin{align}
+		\frac{\partial f}{\partial x}(x_0, y_0) = \lim_{h \to 0}\frac{f(x_0+h, y_0) - f(x_0, y_0)}{h} \\
+		\frac{\partial f}{\partial y}(x_0, y_0) = \lim_{h \to 0}\frac{f\left( x_0, y_0 + h \right) - f(x_0, y_0)}{h}
+	\end{align}
+	Para este tipo de funciones, la existencia de derivadas parciales un punto no implica que la función sea continua en ese punto, por lo que tampoco implica que sea diferenciable en ese punto.
+\end{definicion*}
 
-Las derivadas parciales de una función $z=f(x,y)$ en un punto $(x_0,y_0)$ nos 
-hablan del comportamiento geométrico (la inclinación) de las superficie que tal 
-función representa, en las direcciones de los ejes $x$ e $y$.\\
+Las derivadas parciales de una función $z = f(x, y)$ en un punto $(x_0, y_0)$ nos hablan del comportamiento geométrico (la inclinación) de las superficie que tal función representa, en las direcciones de los ejes $x$ e $y$.\\
 
-Las derivadas parciales de una función se obtienen \emph{derivando parcialmente} 
-cada una de las variables, y dejando las otras como constantes.\\
+Las derivadas parciales de una función se obtienen \emph{derivando parcialmente} cada una de las variables, y dejando las otras como constantes.\\
 
-\textit{Ejemplo}: sea la función $f(x,y)=5x^3+4xy+y^2$. 
-Se tiene que $f^\prime_x=15x^2+4y$ y que $f^\prime_y=4x+2y$.
+\textit{Ejemplo}: sea la función $f(x, y) = 5x^3 + 4xy + y^2$.
+Se tiene que $f^\prime_x = 15x^2 + 4y$ y que $f^\prime_y = 4x + 2y$.
 
 \subsection{Derivadas direccionales}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto abierto U, y sea $x_0 \in U$. Sea $\vect{v} \in R^n$ un vector \emph{unitario} dado. Se define la derivada de la función $f$ en $x_0$ en la dirección del vector $\vect{v}$:
-			\begin{align}
-				\frac{\partial f}{\partial \vect{v}}\left(x_0\right)=\lim_{t \to 0}\frac{f(x_0+t v_0)-f(x_0)}{t}
-			\end{align}
-			\begin{align}
-				\lim_{h \to 0}\frac{r(h)}{h}=0
-			\end{align}
-			El vector unitario $\vect{v}$ se puede escribir como $\vect{v}=(cos(\theta),sin(\theta))$, $0\leq\theta\leq2\pi$, entonces:
-			\begin{align}
-				\frac{\partial f}{\partial \vect{v}}(x_0,y_0)=\lim_{t \to 0}\frac{f(x_0+tcos(\theta),y_0+tsin(\theta))-f(x_0,y_0)}{t}
-			\end{align}
-			Si $\theta=0$ se tiene $\frac{\partial f}{\partial v}=\frac{\partial f}{\partial x}$,y si $\theta=\frac{\pi}{2}$ se tiene $\frac{\partial f}{\partial v}=\frac{\partial f}{\partial y}$. 
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Derivada direccional};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Derivada direccional}
+	Sea $f: U \subseteq R^n \rightarrow R$ una función definida en el conjunto abierto U, y sea $x_0 \in U$. Sea $\vect{v} \in R^n$ un vector \emph{unitario} dado. Se define la derivada de la función $f$ en $x_0$ en la dirección del vector $\vect{v}$:
+	\begin{align}
+		\frac{\partial f}{\partial \vect{v}} \left( x_0 \right) = \lim_{t \to 0} \frac{f(x_0 + t v_0) - f(x_0)}{t}
+	\end{align}
+	\begin{align}
+		\lim_{h \to 0} \frac{r(h)}{h} = 0
+	\end{align}
+	El vector unitario $\vect{v}$ se puede escribir como $\vect{v} = (cos(\theta), sin(\theta))$, $0 \leq \theta \leq2 \pi$, entonces:
+	\begin{align}
+		\frac{\partial f}{\partial \vect{v}}(x_0,y_0) = \lim_{t \to 0} \frac{f(x_0 + tcos(\theta), y_0 + tsin(\theta)) - f(x_0,y_0)}{t}
+	\end{align}
+	Si $\theta = 0$ se tiene $\frac{\partial f}{\partial v} = \frac{\partial f}{\partial x}$,y si $\theta = \frac{\pi}{2}$ se tiene $\frac{\partial f}{\partial v} = \frac{\partial f}{\partial y}$. 
+\end{definicion*}
 
 \subsection{Diferenciabilidad}
 \subsubsection{Para funciones de una variable} 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			La función $f:I\subseteq R \rightarrow R$ es \emph{diferenciable} en $x_0\in I$ si existe una constante $A$ tal que:
-			\begin{align}
-				f(x_0+h)=f(x_0)+Ah+r(h)
-			\end{align}
-			\begin{align}
-				\lim_{h \to 0}\frac{r(h)}{h}=0
-			\end{align}
-			El residuo $r(h) \to 0$ más rápidamente que $h$. Despejando A, obtenemos que:
-			\begin{align}
-				A=\frac{f(x_0+h)-f(x_0)}{h}-\frac{r(h)}{h}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad en $R^1$};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Diferenciabilidad en $R^1$}
+	La función $f: I \subseteq R \rightarrow R$ es \emph{diferenciable} en $x_0 \in I$ si existe una constante $A$ tal que:
+	\begin{align}
+		f(x_0+h)=f(x_0)+Ah+r(h)
+	\end{align}
+	\begin{align}
+		\lim_{h \to 0}\frac{r(h)}{h}=0
+	\end{align}
+	El residuo $r(h) \to 0$ más rápidamente que $h$. Despejando A, obtenemos que:
+	\begin{align}
+		A=\frac{f(x_0+h)-f(x_0)}{h}-\frac{r(h)}{h}
+	\end{align}
+\end{definicion*}
 
 \subsubsection{Para funciones de dos variable} 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			La función $f:U\subseteq R^2 \rightarrow R$ es \emph{diferenciable} en el punto $(x_0,y_0)$ si hay constantes $A_1$ y $A_2$ tales que:
-			\begin{align}
-				f((x_0,y_0)+(h_1,h_2))=f(x_0,y_0)+A_1h_1+A_2h_2+r(h_1,h_2)
-			\end{align}
-			\begin{align}
-				\lim_{(h_1,h_2)\rightarrow(0,0)}=\frac{r(h_1,h_2)}{|(h_1,h_2)|}
-			\end{align}
-			Despejando $A_1$ y $A_2$, obtenemos que:
-			\begin{align}
-				A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
-				A_2=\frac{\partial f}{\partial y}(x_0,y_0)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad en $R^2$};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Diferenciabilidad en $R^2$}
+	La función $f:U\subseteq R^2 \rightarrow R$ es \emph{diferenciable} en el punto $(x_0,y_0)$ si hay constantes $A_1$ y $A_2$ tales que:
+	\begin{align}
+		f((x_0,y_0)+(h_1,h_2))=f(x_0,y_0)+A_1h_1+A_2h_2+r(h_1,h_2)
+	\end{align}
+	\begin{align}
+		\lim_{(h_1,h_2)\rightarrow(0,0)}=\frac{r(h_1,h_2)}{|(h_1,h_2)|}
+	\end{align}
+	Despejando $A_1$ y $A_2$, obtenemos que:
+	\begin{align}
+		A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
+		A_2=\frac{\partial f}{\partial y}(x_0,y_0)
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			La función $f:U\subseteq R^2 \rightarrow R$ definida en el abierto $U$ es diferenciable en el punto $(x_0,y_0)\in U$ si:
-			\begin{align}
-					\exists \text{ } A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
-					\exists \text{ } A_2=\frac{\partial f}{\partial y}(x_0,y_0) \\
-					\lim_{(h_1,h_2) \to (0,0)}\frac{r(h_1,h_2)}{|(h_1,h_2)|}=0
-			\end{align}
-			\begin{align}
-				\lim_{(x,y) \to (x_0,y_0)} \frac{f(x,y)-\left[\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)+f(x_0,y_0)\right]}{\sqrt{(x-x_0)^{2}+(y-y_0)^{2}}}=0
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema diferenciabilidad};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema diferenciabilidad}
+	La función $f: U \subseteq R^2 \rightarrow R$ definida en el abierto $U$ es diferenciable en el punto $(x_0,y_0) \in U$ si:
+	\begin{align}
+		\exists \text{ } A_1=\frac{\partial f}{\partial x}(x_0,y_0) \\
+		\exists \text{ } A_2=\frac{\partial f}{\partial y}(x_0,y_0) \\
+		\lim_{(h_1,h_2) \to (0,0)}\frac{r(h_1,h_2)}{|(h_1,h_2)|}=0
+	\end{align}
+	\begin{align}
+		\lim_{(x,y) \to (x_0,y_0)} \frac{f(x,y)-\left[\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0)+f(x_0,y_0)\right]}{\sqrt{(x-x_0)^{2}+(y-y_0)^{2}}}=0
+	\end{align}
+\end{teorema*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.80\textwidth}
-			\begin{itemize}
-				\item Si la función es diferenciable en $(x_0,y_0)$, es continua en ese punto.
-				\item Las funciones polinomiales $f: R^2 \rightarrow R$ son diferenciables en todo punto.
-				\item Si las derivadas parciales son continuas en el punto $\vect{x}_0 \in U$, entonces $f$ es diferenciable en $\vect{x}_0$
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Corolarios del teorema};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Corolarios del teorema}
+	\begin{itemize}
+		\item Si la función es diferenciable en $(x_0,y_0)$, es continua en ese punto.
+		\item Las funciones polinomiales $f: R^2 \rightarrow R$ son diferenciables en todo punto.
+		\item Si las derivadas parciales son continuas en el punto $\vect{x}_0 \in U$, entonces $f$ es diferenciable en $\vect{x}_0$
+	\end{itemize}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en $U$, y diferenciables en $(x_0,y_0) \in U.$ Entonces:
-			\begin{itemize}
-				\item La suma $f+g:U\subseteq R^n \rightarrow R=f(x_0,y_0)+g(x_0,y_0)$	es una función diferenciable en $(x_0,y_0)$.
-				\item El producto $f \cdot g:U\subseteq R^n \rightarrow R=f(x_0,y_0)\cdot g(x_0,y_0)$ es una función diferenciable en $(x_0,y_0)$.
-				\item Si $g(x_0,y_0) \neq 0$, el cociente $\frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f(x_0,y_0)}{g(x_0,y_0)}$ es una función diferenciable en $(x_0,y_0)$.
-				\item La composición $g \circ f:U\subseteq R^n \rightarrow R$ es diferenciable en $(x_0,y_0)$.
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema diferenciabilidad de varias funciones};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema diferenciabilidad de varias funciones}
+	Sean $f,g:U\subseteq R^n \rightarrow R$ dos funciones definidas en $U$, y diferenciables en $(x_0,y_0) \in U.$ Entonces:
+	\begin{itemize}
+		\item La suma $f+g:U\subseteq R^n \rightarrow R=f(x_0,y_0)+g(x_0,y_0)$	es una función diferenciable en $(x_0,y_0)$.
+		\item El producto $f \cdot g:U\subseteq R^n \rightarrow R=f(x_0,y_0)\cdot g(x_0,y_0)$ es una función diferenciable en $(x_0,y_0)$.
+		\item Si $g(x_0,y_0) \neq 0$, el cociente $\frac{f}{g}:U\subseteq R^n \rightarrow R=\frac{f(x_0,y_0)}{g(x_0,y_0)}$ es una función diferenciable en $(x_0,y_0)$.
+		\item La composición $g \circ f:U\subseteq R^n \rightarrow R$ es diferenciable en $(x_0,y_0)$.
+	\end{itemize}
+\end{teorema*}
 
 \subsubsection{Para funciones de n variables} 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			La función $f:U\subseteq R^n \rightarrow R$ es \emph{diferenciable} en el punto $\vect{x}_0$ si hay constantes $A_1,A_2,...,A_n$ tales que:
-			\begin{align}
-				f(\vect{x}_0+\vect{h})=f(\vect{x}_0)+\sum_{i=1}^{n} A_ih_i+r(\vect{h})
-			\end{align}
-			\begin{align}
-				\lim_{\vect{h} \to \vect{0}}=\frac{r(\vect{h})}{|\vect{h}|}
-			\end{align}
-			Despejando $A_1$ y $A_2$, obtenemos que:
-			\begin{align}
-				A_i=\frac{\partial f}{\partial x_i}(\vect{x}_0), \forall i=1,...,n
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Diferenciabilidad  en $R^n$};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Diferenciabilidad  en $R^n$}
+	La función $f:U\subseteq R^n \rightarrow R$ es \emph{diferenciable} en el punto $\vect{x}_0$ si hay constantes $A_1,A_2,...,A_n$ tales que:
+	\begin{align}
+		f(\vect{x}_0+\vect{h})=f(\vect{x}_0)+\sum_{i=1}^{n} A_ih_i+r(\vect{h})
+	\end{align}
+	\begin{align}
+		\lim_{\vect{h} \to \vect{0}}=\frac{r(\vect{h})}{|\vect{h}|}
+	\end{align}
+	Despejando $A_1$ y $A_2$, obtenemos que:
+	\begin{align}
+		A_i=\frac{\partial f}{\partial x_i}(\vect{x}_0), \forall i=1,...,n
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:U\subseteq R^n \rightarrow R$ \textit{\emph{diferenciable}}, definida en el conjunto abierto U. Sea $x_0\in U$ y sea $\vect{v}\in R^n$ el vector unitario en cuya dirección queremos calcular la derivada de la función $f$ en el punto $x_0.$ Entonces:
-			\begin{align}
-				\frac{\partial f}{\partial\vect{v}}(x_{0})=\sum_{i=1}^{n}\frac{\partial f}{\partial x_{i}}(x_0)\cdot\vect{v}_{i}
-			\end{align}
-			\textit{Ejemplo}: dada $f:R^2 \rightarrow R$ tal que $f(x,y)=x^2+y^2,$ queremos calcular la derivada de la función en un punto arbitrario $(x_{0},y_{0})\in R^2$ en la dirección del vector unitario $\vect{v}=(cos(\theta),sin(\theta))$.\\
+\begin{teorema*}{Teorema de la diferenciabilidad y las derivadas direccionales}
+	Sea $f:U\subseteq R^n \rightarrow R$ \textit{\emph{diferenciable}}, definida en el conjunto abierto U. Sea $x_0\in U$ y sea $\vect{v}\in R^n$ el vector unitario en cuya dirección queremos calcular la derivada de la función $f$ en el punto $x_0.$ Entonces:
+	\begin{align}
+		\frac{\partial f}{\partial\vect{v}}(x_{0})=\sum_{i=1}^{n}\frac{\partial f}{\partial x_{i}}(x_0)\cdot\vect{v}_{i}
+	\end{align}
+	\textit{Ejemplo}: dada $f:R^2 \rightarrow R$ tal que $f(x,y)=x^2+y^2,$ queremos calcular la derivada de la función en un punto arbitrario $(x_{0},y_{0})\in R^2$ en la dirección del vector unitario $\vect{v}=(cos(\theta),sin(\theta))$.\\
 
-			Dado que la función es polinomial, es diferenciable en todo el dominio.\\
+	Dado que la función es polinomial, es diferenciable en todo el dominio.\\
 
-			Entonces según la fórmula se tiene que:\\
-			\begin{align}
-				\frac{\partial f}{\partial v}(x_0,y_0)=\frac{\partial f}{\partial x}(x_0,y_0)cos(\theta)+\frac{\partial f}{\partial y}(x_0,y_0)sen(\theta)=2x_0cos(\theta)+2y_0sen(\theta)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de la diferenciabilidad y las derivadas direccionales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	Entonces según la fórmula se tiene que:\\
+	\begin{align}
+		\frac{\partial f}{\partial v}(x_0,y_0)=\frac{\partial f}{\partial x}(x_0,y_0)cos(\theta)+\frac{\partial f}{\partial y}(x_0,y_0)sen(\theta)=2x_0cos(\theta)+2y_0sen(\theta)
+	\end{align}
+\end{teorema*}
 
 \subsection{Gradiente}
 \begin{minipage}{0.31\textwidth}
-	\begin{center}
-		\begin{figure}[H]
-			\begin{center}
-				\includegraphics[scale=0.23]{campo_de_gradientes.png}\caption{El gradiente apunta a la dirección de mayor variación.}
-			\end{center}
-		\end{figure}
-	\end{center}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.23]{campo_de_gradientes.png}
+		\caption{El gradiente apunta a la dirección de mayor variación.}
+	\end{figure}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
 	\begin{tikzpicture}
