@@ -23,6 +23,7 @@
 \newcommand{\rutapaquetes}{./paquetes-apunte}
 
 \usepackage[mostrarlicencia]{\rutapaquetes/caratula} % Caratula personalizada (cargada desde caratula.sty)
+\usepackage{\rutapaquetes/macros} % Macros útiles para los apuntes (cargado desde macros.sty)
 \usepackage[ocultarrevisores]{\rutapaquetes/colaboradores} % Seccion de colaboradores (cargada y creada con colaboradores.sty)
 \usepackage{\rutapaquetes/historial} % Seccion de historial de cambios (cargada y creada con historial.sty)
 
@@ -65,11 +66,16 @@
 %\tema{Tema de la Materia}
 %\subtema{Subtema}
 
+% Defino los entornos de los cuadros
+\cuadro{teorema}{blue}
+\cuadro{definicion}{gray}
+\cuadro{corolario}{green}
+
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
-\usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
+%\usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
 
 \pdfcompresslevel=9
 
@@ -97,7 +103,7 @@
 %\listoffigures
 %\listoftables
 
-\subfile{\rutapaquetes/sobre-el-proyecto.tex} % Inlcuye informacion sobre el proyecto FIUBA Apuntes
+\subfile{\rutapaquetes/acerca-del-proyecto.tex} % Inlcuye informacion acerca del proyecto FIUBA Apuntes
 
 \section{Introducción al espacio $R^n$}
 \subsection{Coordenadas cilíndricas, esféricas y polares}
@@ -292,26 +298,17 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 \subsection{Funciones de varias variables}
 \subsubsection{Puntos y conjuntos de puntos en $R^n$}
 \begin{enumerate}
-	\item \textbf{Entorno de $A\in R^n$}: Un conjunto capaz de incluir una esfera 
-		abierta de $R^n$ con centro en $A$ y radio mayor a cero. Se denota como $E(A)$.
+	\item \textbf{Entorno de $A\in R^n$}: Un conjunto capaz de incluir una esfera abierta de $R^n$ con centro en $A$ y radio mayor a cero. Se denota como $E(A)$.
 	\item \textbf{Entorno reducido de $A\in R^n$}: $E^*(A)=E(A)-\{A\}$
-	\item \textbf{Punto aislado}: $A\in S$ es un punto aislado de $S$ cuando 
-		existe un $E^*(A)$ que no tiene puntos de $S$.
-	\item \textbf{Punto de acumulación}: $A$ es un punto de acumulación de $S$ 
-		cuando en todo $E^*(A)$ existe algún punto de $S$.
+	\item \textbf{Punto aislado}: $A\in S$ es un punto aislado de $S$ cuando existe un $E^*(A)$ que no tiene puntos de $S$.
+	\item \textbf{Punto de acumulación}: $A$ es un punto de acumulación de $S$ cuando en todo $E^*(A)$ existe algún punto de $S$.
 	\item \textbf{Conjunto abierto}: Aquel que todos sus puntos son interiores.
 	\item \textbf{Conjunto cerrado}: Aquel que contiene a todos sus puntos de acumulación.
-	\item \textbf{Conjunto acotado}: Aquel que se lo puede incluir en una esfera 
-		abierta con radio finito.
+	\item \textbf{Conjunto acotado}: Aquel que se lo puede incluir en una esfera abierta con radio finito.
 	\item \textbf{Conjunto compacto}: Aquel que es cerrado y acotado.
-	\item \textbf{Conjunto convexo}: $S$ es convexo cuando $\forall A,B\in S$, el 
-		segmento $\overline{AB}$ está incluido en $S$.
-	\item \textbf{Conjunto conexo}: $S$ es conexo cuando $\forall A,B\in S$ se 
-		puede pasar de $A$ a $B$ desplazándose por $S$.
-	\item \textbf{Conjunto simplemente conexo}: $S$ conexo es simplemente conexo 
-		cuando toda curva cerrada trazada en él puede, por deformación continua, 
-		transformarse en un punto, manteniéndose en el conjunto. En $R^2$, 
-		simplemente conexo $\equiv$ conexo sin \emph{agujeros}.
+	\item \textbf{Conjunto convexo}: $S$ es convexo cuando $\forall A,B\in S$, el segmento $\overline{AB}$ está incluido en $S$.
+	\item \textbf{Conjunto conexo}: $S$ es conexo cuando $\forall A,B\in S$ se puede pasar de $A$ a $B$ desplazándose por $S$.
+	\item \textbf{Conjunto simplemente conexo}: $S$ conexo es simplemente conexo cuando toda curva cerrada trazada en él puede, por deformación continua, transformarse en un punto, manteniéndose en el conjunto. En $R^2$, simplemente conexo $\equiv$ conexo sin \emph{agujeros}.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -324,166 +321,98 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	\hspace*{\fill}
 \end{figure}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.80\textwidth}
-			Dado un conjunto $S\subset R^n$ y un punto $A\in R^n$,pueden ocurrir tres cosas:
-			\begin{enumerate}
-				\item $A$ es un punto interior a $S$, cuando existe $E(A)$ incluido en $S$,
-				\item $A$ es un punto exterior a $S$, cuando existe $E(A)$ que no tiene puntos de $S$,
-				\item $A$ es un punto frontera de $S$, cuando para todo $E(A)$ hay puntos en $S$ y 
-					puntos que no están en $S$.
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Corolario};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Corolario}
+	Dado un conjunto $S\subset R^n$ y un punto $A\in R^n$,pueden ocurrir tres cosas:
+	\begin{enumerate}
+		\item $A$ es un punto interior a $S$, cuando existe $E(A)$ incluido en $S$,
+		\item $A$ es un punto exterior a $S$, cuando existe $E(A)$ que no tiene puntos de $S$,
+		\item $A$ es un punto frontera de $S$, cuando para todo $E(A)$ hay puntos en $S$ y puntos que no están en $S$.
+	\end{enumerate}
+\end{corolario*}
 
 \subsubsection{Función escalar}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			$f:U\subseteq R^n \rightarrow R$. Regla que asocia a cada n-ada ordenada de 
-			números reales, (o bien a cada vector $x$ de U), un número real. \\
-				
-			El conjunto U es el dominio de $f$, su codominio es $R$, y el rango de $f$
-			es $\{z\in R:\, z=f\left(x\right),\, x\in U\}$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Campo escalar};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Campo escalar}
+	$f:U\subseteq R^n \rightarrow R$. Regla que asocia a cada n-ada ordenada de números reales, (o bien a cada vector $x$ de U), un número real.\\
+	
+	El conjunto U es el dominio de $f$, su codominio es $R$, y el rango de $f$ es $\{z\in R:\, z=f\left(x\right),\, x\in U\}$.
+\end{definicion*}
 
 \subsubsection{Campo vectorial}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.5]{campo_vectorial} \caption{Campo vectorial en $R^2$.}
-		\end{center}
+		\centering
+		\includegraphics[scale=0.5]{campo_vectorial}
+		\caption{Campo vectorial en $R^2$.}
 	\end{figure}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.80\textwidth}
-				$f:U\subseteq R^n \rightarrow R^m$,($m>1)$. Regla que asocia a cada n-ada 
-				ordenada de números reales un vector de $R^m$. \\
-			\end{minipage}};
-			\node[fancytitle, right=10pt] at (box.north west) {Campo vectorial};
-			\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}	
+	\begin{definicion*}{Campo vectorial}
+		$f:U\subseteq R^n \rightarrow R^m$,($m>1)$. Regla que asocia a cada n-ada ordenada de números reales un vector de $R^m$.\\
+	\end{definicion*}
 \end{minipage}
 
 \subsubsection{Operaciones entre funciones de varias variables}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sean $f:U\subseteq R^n \to R$, $g:V\subseteq R^n \to R$, entonces:
-			\begin{itemize}
-				\item $f+g:U\cap V\subseteq R^n \rightarrow R$ tal que 
-					$\left(f+g\right)\left(x\right)=f\left(x\right)+g\left(x\right)$
-				\item $f\cdot g:U\cap V\subseteq R^n \rightarrow R$ tal que 
-					$\left(fg\right)\left(x\right)=f\left(x\right)\cdot g\left(x\right)$
-				\item $\frac{f}{g}:W\subseteq R^n \rightarrow R$ tal que 
-					$\left(\frac{f}{g}\right)\left(x\right)=\frac{f\left(x\right)}{g\left(x\right)}$, 
-					donde $W=U\cap V-\{x\in V:g\left(x\right)=0\}$
-			\end{itemize}
-		\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Operaciones entre funciones de varias variables};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Operaciones entre funciones de varias variables}
+	Sean $f:U\subseteq R^n \to R$, $g:V\subseteq R^n \to R$, entonces:
+	\begin{itemize}
+		\item $f + g: U \cap V \subseteq R^n \rightarrow R$ tal que $\left( f + g \right) \left( x \right) = f \left( x \right) + g \left( x \right)$
+		\item $f \cdot g: U \cap V \subseteq R^n \rightarrow R$ tal que $\left( fg \right) \left( x \right) = f \left( x \right) \cdot g \left( x \right)$
+		\item $\frac{f}{g}: W \subseteq R^n \rightarrow R$ tal que $\left( \frac{f}{g} \right) \left( x \right) = \frac{f \left( x \right)}{g \left( x \right)}$, donde $W = U \cap V - \{x \in V: g \left(x\right) = 0\}$
+	\end{itemize}
+\end{definicion*}
 
 \subsection{Geometría de las funciones de varias variables}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Se define la gráfica de $f:U\subseteq R^n \rightarrow R$ al conjunto:
-			
-			\begin{align}
-				\{(x_1,x_2,\ldots,x_n,y)\in R^{n+1}:\overline{x}\in U,y=f(x_1,x_2,\ldots,x_n)\}
-			\end{align}
-			 		
-			La gráfica de la función $f:U\subseteq R^2 \rightarrow R$ es la gráfica de 
-			la superficie $z=f\left(x,y\right)$. \\
-			
-			Para $n\geq3$,la gráfica no puede ser visualizada. \\
-		\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Gráfica de f};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Gráfica de $f$}
+	Se define la gráfica de $f:U\subseteq R^n \rightarrow R$ al conjunto:
+	
+	\begin{align}
+		\{(x_1,x_2,\ldots,x_n,y)\in R^{n+1}:\overline{x}\in U,y=f(x_1,x_2,\ldots,x_n)\}
+	\end{align}
+	
+	La gráfica de la función $f:U\subseteq R^2 \rightarrow R$ es la gráfica de la superficie $z=f\left(x,y\right)$.\\
+	
+	Para $n\geq3$,la gráfica no puede ser visualizada. \\
+\end{definicion*}
 
 \begin{minipage}{0.6\textwidth}		
-	Para graficar, hay que cortar la superficie $z=f(x,y)$ con los planos 
-	del tipo $y=kx$ y estudiar el tipo de curvas resultantes.
-	En particular, se estudian las curvas resultantes de cortar la superficie 
-	con los planos $y=0$ y $x=0$. \\
+	Para graficar, hay que cortar la superficie $z=f(x,y)$ con los planos del tipo $y=kx$ y estudiar el tipo de curvas resultantes.
+	En particular, se estudian las curvas resultantes de cortar la superficie con los planos $y=0$ y $x=0$.\\
 	
-	Otro concepto importante que también se usa como ayuda para obtener gráficos 
-	de funciones de dos variables es el de \emph{nivel constante} de una función: 
-	dada la función $f:U\subseteq R^n \rightarrow R$ y el número $c\in\mbox{rango de f}$, 
-	se define el \emph{\textbf{nivel $c$ de la función $f$}} como el conjunto 
-	$N_{c}=\{x\in U:\, f\left(x\right)=c\}.$ \\
+	Otro concepto importante que también se usa como ayuda para obtener gráficos de funciones de dos variables es el de \emph{nivel constante} de una función: dada la función $f:U\subseteq R^n \rightarrow R$ y el número $c\in\mbox{rango de f}$, se define el \emph{\textbf{nivel $c$ de la función $f$}} como el conjunto $N_{c} = \{ x \in U:\, f \left( x \right) = c\}.$\\
 	
 	Cuando $n=2$, la curva se llama \textit{\textbf{curva de nivel}}. 
 	Cuando $n=3$, la curva se llama \textit{\textbf{superficie de nivel}}. 
-	El nivel \textit{c}de la superficie $z=f\left(x,y\right)$ se puede interpretar 
-	geométricamente como la intersección de la función con el plano $z=c$. 
+	El nivel \textit{c}de la superficie $z=f\left(x,y\right)$ se puede interpretar geométricamente como la intersección de la función con el plano $z=c$.
 	Estas curvas nos dan idea de la imagen de la función.
 \end{minipage}					
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.35]{curvas_de_nivel.png}\caption{$f(x,y)=-x^2-2y^2$ y sus curvas de nivel.}
-		\end{center}
+		\centering
+		\includegraphics[scale=0.35]{curvas_de_nivel.png}
+		\caption{$f(x,y)=-x^2-2y^2$ y sus curvas de nivel.}
 	\end{figure}
 \end{minipage}
 
 \subsection{Limites y continuidad}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $x_0\in R^n$ y $r>0$. La bola abierta de centro $x_0$ y radio $r$, 
-			denotada por $B\left(x_0,r\right)$ es el conjunto de puntos de $R^n$ que 
-			distan de $x_0$ en menos que $r$.
-		\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Bola abierta};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Bola abierta}
+	Sea $x_0\in R^n$ y $r>0$.
+	La bola abierta de centro $x_0$ y radio $r$, denotada por $B\left(x_0,r\right)$ es el conjunto de puntos de $R^n$ que distan de $x_0$ en menos que $r$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Un conjunto $U\subseteq R^n$ es un conjunto abierto de $R^n$ si para cada 
-			$x_0\in U$ existe un $r>0$ tal que $B\left(x_0,r\right)\subset U$. Esto es, 
-			el conjunto $U\subseteq R^n$ será abierto si cuando tomamos un punto $x_0$ 
-			en él, este siempre tiene vecinos que siguen viviendo dentro de $U$. \\
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Conjunto abierto};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Conjunto abierto}
+	Un conjunto $U\subseteq R^n$ es un conjunto abierto de $R^n$ si para cada $x_0\in U$ existe un $r>0$ tal que $B\left(x_0,r\right)\subset U$.
+	Esto es, el conjunto $U\subseteq R^n$ será abierto si cuando tomamos un punto $x_0$ en él, este siempre tiene vecinos que siguen viviendo dentro de $U$.\\
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $U\subseteq R^n$ un subconjunto de $R^n$. Un punto $x_0\in R^n$ es un 
-			punto frontera de U si toda bola abierta $B(x_0,r)$ contiene puntos en U y 
-			fuera de él.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Frontera de un conjunto};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Frontera de un conjunto}
+	Sea $U\subseteq R^n$ un subconjunto de $R^n$.
+	Un punto $x_0\in R^n$ es un punto frontera de U si toda bola abierta $B(x_0,r)$ contiene puntos en U y fuera de él.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto 
-			abierto U. Si $x_0$ es un punto de U o un punto frontera de U, se dice que 
-			el límite de $f$ cuando $x$ tiende a $x_0$ es L, lo cual se escribe como 
-			$\lim_{x\rightarrow x_0}f\left(x\right)=L$ si dado cualquier $\varepsilon>0$ 
-			existe $\delta>0$ tal que $x\in B\left(x_{0},\delta\right)\cap U\left(x\neq x_{0}\right)\Rightarrow f\left(x\right)\in B(L,\varepsilon)$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Límite};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Límite}
+	Sea $f:U\subseteq R^n \rightarrow R$ una función definida en el conjunto abierto U.
+	Si $x_0$ es un punto de U o un punto frontera de U, se dice que el límite de $f$ cuando $x$ tiende a $x_0$ es L, lo cual se escribe como $\lim_{x \rightarrow x_0} f \left( x \right) = L$ si dado cualquier $\varepsilon > 0$ existe $\delta > 0$ tal que $x \in B \left( x_{0}, \delta \right) \cap U \left( x \neq x_{0} \right) \Rightarrow f \left( x \right) \in B(L, \varepsilon)$
+\end{definicion*}
 
 \begin{tikzpicture}
 	\node[definicion](box){
