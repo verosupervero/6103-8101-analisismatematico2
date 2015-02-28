@@ -15,8 +15,6 @@
 \usepackage{amssymb} % Proporciona símbolos matemáticos de la American Mathematical Society
 \usepackage{array}
 \usepackage{svg}
-\usepackage{pgf,tikz}
-\usepackage{tikz-timing}
 \usepackage{booktabs}
 
 % Defino la ruta de los paquetes personalizados para el apunte
@@ -75,22 +73,11 @@
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
-%\usetikzlibrary{shapes,arrows,positioning,shadows,trees,automata}
-
 \pdfcompresslevel=9
 
 \everymath{\displaystyle}
 \newcommand{\vect}[1]{\overline{\textbf{#1}}}
 \newcommand{\bayes}{\mathop{\lessgtr}}
-
-\tikzstyle{definicion} = [draw=red, fill=gray!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
-
-\tikzstyle{corolario} = [draw=red, fill=green!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
-
-\tikzstyle{teorema} = [draw=red, fill=blue!20, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
-\tikzstyle{fancytitle} =[fill=red, text=white]
 
 %------------------------- Inicio del documento ---------------------------
 
@@ -374,7 +361,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	Para $n\geq3$,la gráfica no puede ser visualizada. \\
 \end{definicion*}
 
-\begin{minipage}{0.6\textwidth}		
+\begin{minipage}{0.6\textwidth}
 	Para graficar, hay que cortar la superficie $z=f(x,y)$ con los planos del tipo $y=kx$ y estudiar el tipo de curvas resultantes.
 	En particular, se estudian las curvas resultantes de cortar la superficie con los planos $y=0$ y $x=0$.\\
 	
@@ -384,7 +371,7 @@ Algunas fórmulas de áreas y volúmenes que conviene recordar:
 	Cuando $n=3$, la curva se llama \textit{\textbf{superficie de nivel}}. 
 	El nivel \textit{c}de la superficie $z=f\left(x,y\right)$ se puede interpretar geométricamente como la intersección de la función con el plano $z=c$.
 	Estas curvas nos dan idea de la imagen de la función.
-\end{minipage}					
+\end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\centering
@@ -587,7 +574,7 @@ Se tiene que $f^\prime_x = 15x^2 + 4y$ y que $f^\prime_y = 4x + 2y$.
 \end{teorema*}
 
 \subsubsection{Para funciones de n variables} 
-\begin{definicion*}{Diferenciabilidad  en $R^n$}
+\begin{definicion*}{Diferenciabilidad en $R^n$}
 	La función $f:U\subseteq R^n \rightarrow R$ es \emph{diferenciable} en el punto $\vect{x}_0$ si hay constantes $A_1,A_2,...,A_n$ tales que:
 	\begin{align}
 		f(\vect{x}_0+\vect{h})=f(\vect{x}_0)+\sum_{i=1}^{n} A_ih_i+r(\vect{h})
@@ -634,14 +621,14 @@ Se tiene que $f^\prime_x = 15x^2 + 4y$ y que $f^\prime_y = 4x + 2y$.
 			\nabla f(x_0)\cdot\vect{v}=f^\prime_{\vect{v}}(x_0)
 		\end{align}
 		
-		El vector $\nabla f(x_0)$ nos dice en qué dirección se tiene la mayor variación (el mayor crecimiento) de la función $f$ en el punto	$x_0$.\\
+		El vector $\nabla f(x_0)$ nos dice en qué dirección se tiene la mayor variación (el mayor crecimiento) de la función $f$ en el punto $x_0$.\\
 		
 		Además, se tiene que el vector $\nabla f(x_0)$ es un vector ortogonal a la curva de nivel que pasa por $x_0$.
 	\end{definicion*}
 \end{minipage}
 
 \begin{corolario*}{Propiedades del gradiente}
-	Si $f$ es diferenciable, la dirección de la derivada direccional	puede ser
+	Si $f$ es diferenciable, la dirección de la derivada direccional puede ser
 	\begin{itemize}
 		\item Máxima: $v=\frac{\nabla f}{\left|\nabla f\right|}$, y su valor es $\left|\nabla f\right|$
 		\item Mínima: $v=-\frac{\nabla f}{\left|\nabla f\right|}$, y su valor es $-\left|\nabla f\right|$
@@ -696,7 +683,7 @@ Se tiene que $f^\prime_x = 15x^2 + 4y$ y que $f^\prime_y = 4x + 2y$.
 	\begin{align}
 		df=\sum_{i=1}^{n}\frac{\partial f}{\partial x_i}\partial x_i
 	\end{align}
-	\textit{Ejemplo}: el diferencial de $f(x)=sen^3(x^2)$	es:
+	\textit{Ejemplo}: el diferencial de $f(x)=sen^3(x^2)$ es:
 	\begin{align}
 		df=3sen^2(x^2)cos(x^2)2xdx=6xsen^2(x^2)cos(x^2)dx
 	\end{align}
@@ -778,7 +765,7 @@ Puede ocurrir que estas derivadas sean lo suficientemente \emph{bien portadas} e
 	(para $h \in R^n$ tal que $x_0+h\in U$).\\
 	
 	La matriz de esta transformación $f^\prime(x_0) R^n\to R^m$ es:
-	\begin{align}							 
+	\begin{align}
 		\left[\begin{array}{ccc}
 		\frac{\partial f_1}{\partial x_1}(x_0) & \cdots & \frac{\partial f_1}{\partial x_n}(x_0)\\
 		\vdots & \ddots & \vdots\\
@@ -790,7 +777,7 @@ Puede ocurrir que estas derivadas sean lo suficientemente \emph{bien portadas} e
 
 \textit{Ejemplo}: sea $f: R^2 \to R^3$ dada por $f(x,y)=(\overbrace{sen\left(x+y\right)}^{f_1},\overbrace{xe^{x+y}}^{f_2},\overbrace{x+y}^{f_3})$.\\
 
-$f$ es diferenciable en todo su dominio, y su derivada en el punto	$(0,0)$ está dada por la matriz:\\
+$f$ es diferenciable en todo su dominio, y su derivada en el punto $(0,0)$ está dada por la matriz:\\
 
 $Jf(0,0)=\left[
 	\begin{array}{cc}
@@ -863,7 +850,7 @@ $Jf(0,0)=\left[
 
 \begin{teorema*}{Teorema de la función implícita (3\textsuperscript{ra} versión)}
 	Sean $z_1=F(x,y,u,v)$ y $z_2=G(x,y,u,v)$. Sea $p=(x_0,y_0,u_0,v_0) \in R^4$ un punto tal que $F(p)=G(p)=0$, las funciones $F$ y $G$ tienen todas sus derivadas parciales continuas en un entorno de $p$, y que $\frac{\partial(F,G)}{\partial(u,v)}(p)\ne0$.\\
-			
+	
 	Entonces $z_1$ y $z_2$ definen funciones implícitas $u=\varphi_1(x,y)$ y $v=\varphi_2(x,y)$, definidas en una una vecindad $V$ de $(x_0,y_0)$, las cuales tienen derivadas parciales continuas en $V$ que se pueden calcular con las fórmulas:
 	\begin{align}
 		\frac{\partial u}{\partial x}=-\frac{\frac{\partial(F,G)}{\partial(x,v)}}{\frac{\partial(F,G)}{\partial(u,v)}},\frac{\partial u}{\partial y}=-\frac{\frac{\partial(F,G)}{\partial(y,v)}}{\frac{\partial(F,G)}{\partial(u,v)}},\frac{\partial v}{\partial x}=-\frac{\frac{\partial(F,G)}{\partial(u,x)}}{\frac{\partial(F,G)}{\partial(u,v)}},\frac{\partial v}{\partial y}=-\frac{\frac{\partial(F,G)}{\partial(u,y)}}{\frac{\partial(F,G)}{\partial(u,v)}}
@@ -975,9 +962,9 @@ $Jf(0,0)=\left[
 		\item Si $H(x_0,y_0)=0$, el criterio no da información.
 		\item Si $H(x_0,y_0)\ne0:$
 		\begin{enumerate}
-			\item Si $H(x_0,y_0)>0\mbox{ y }f_{xx}^{\prime\prime}(x_0,y_0)>0\Longrightarrow$	$(x_{0},y_{0})$ es un \textbf{mínimo} local.
-			\item Si $H(x_0,y_0)>0\mbox{ y }f_{xx}^{\prime\prime}(x_0,y_0)<0\Longrightarrow$	$(x_{0},y_{0})$ es un \textbf{máximo} local.
-			\item Si $H(x_0,y_0)<0\Longrightarrow$ $(x_0,y_0)$	es un \textbf{punto silla}.
+			\item Si $H(x_0,y_0)>0\mbox{ y }f_{xx}^{\prime\prime}(x_0,y_0)>0\Longrightarrow$ $(x_{0},y_{0})$ es un \textbf{mínimo} local.
+			\item Si $H(x_0,y_0)>0\mbox{ y }f_{xx}^{\prime\prime}(x_0,y_0)<0\Longrightarrow$ $(x_{0},y_{0})$ es un \textbf{máximo} local.
+			\item Si $H(x_0,y_0)<0\Longrightarrow$ $(x_0,y_0)$ es un \textbf{punto silla}.
 			\item En otro caso, $(x_0,y_0)$ no es un extremo de $f$.
 		\end{enumerate}
 	\end{enumerate}
@@ -1007,7 +994,7 @@ $Jf(0,0)=\left[
 		P_{2}(x,y)=f(p)+\frac{\partial f}{\partial x}(p)(x-x_0)+\frac{\partial f}{\partial y}(p)(y-y_0)+\frac{1}{2!}\left[\left(\frac{\partial^2 f}{\partial x^2}\right)(x-x_0)^2+2\left(\frac{\partial^2 f}{\partial y\partial x}\right)(x-x_0)(y-y_0)+\left(\frac{\partial^2 f}{\partial y^2}\right)(y-y_0)^2\right]
 	\end{align}}
 	
-	\underbar{Nota}: En $(x_0,y_0)$ se cumple que $f(x_0,y_0)=P(x_0,y_0)$, y además $\frac{\partial^k f}{\partial y^k}(x_0,y_0)=\frac{\partial^k P}{\partial y^k}(x_0,y_0)$ (i.e. las derivadas de $f$ en el punto son iguales a las derivadas de $P$ en el punto). En un punto $(x_1,y_1)$ cualquiera de un 	entorno de $(x_0,y_0)$ se cumple que $f(x_1,y_1) \approx P(x_1,y_1)$, y no se puede decir nada acerca de las derivadas.
+	\underbar{Nota}: En $(x_0,y_0)$ se cumple que $f(x_0,y_0)=P(x_0,y_0)$, y además $\frac{\partial^k f}{\partial y^k}(x_0,y_0)=\frac{\partial^k P}{\partial y^k}(x_0,y_0)$ (i.e. las derivadas de $f$ en el punto son iguales a las derivadas de $P$ en el punto). En un punto $(x_1,y_1)$ cualquiera de un entorno de $(x_0,y_0)$ se cumple que $f(x_1,y_1) \approx P(x_1,y_1)$, y no se puede decir nada acerca de las derivadas.
 \end{definicion*}
 
 \subsection{Condiciones suficientes para la existencia de extremos locales}
@@ -1021,11 +1008,11 @@ $Jf(0,0)=\left[
 
 \subsection{Extremos condicionados}
 \begin{teorema*}{Teorema de extremos condicionados con multiplicadores de Lagrange}
-	Sea $f: U \subseteq R^n \to R$ una función de clase $\mathcal{C}^{1}$ definida en $U$. Sean $g_1,g_2,\ldots,g_m: U \subseteq R^n \to R$,	\textit{m} funciones de clase $\mathcal{C}^{1}$ en U ($m>n$).\\
+	Sea $f: U \subseteq R^n \to R$ una función de clase $\mathcal{C}^{1}$ definida en $U$. Sean $g_1,g_2,\ldots,g_m: U \subseteq R^n \to R$, \textit{m} funciones de clase $\mathcal{C}^{1}$ en U ($m>n$).\\
 	
 	Sea $S=\{x\in U:g_i (x)=0,i=1,2,\ldots,m\}$. Sea $x_0 \in S$ un punto de extremo condicionado de $f$.\\
 	
-	Suponga que el determinante $\left|\frac{\partial g_i}{\partial x_j}(x_0)\right|\ne0$ para un conjunto de $m$ variables $x_j$, tomadas del conjunto	de $n$ variables $\{ x_1,x_2,\ldots,x_n\} $ de $g_i$. Entonces existen $m$ números reales $\lambda_1,\lambda_2,\ldots,\lambda_m$tales que se cumple:
+	Suponga que el determinante $\left|\frac{\partial g_i}{\partial x_j}(x_0)\right|\ne0$ para un conjunto de $m$ variables $x_j$, tomadas del conjunto de $n$ variables $\{ x_1,x_2,\ldots,x_n\} $ de $g_i$. Entonces existen $m$ números reales $\lambda_1,\lambda_2,\ldots,\lambda_m$tales que se cumple:
 	
 	\begin{align}
 		\nabla f(x_0)+\sum_{k=1}^{m}\lambda_k \cdot \nabla g_k (x_0)=0
@@ -1318,7 +1305,7 @@ Entonces la solución general de la ecuación es $\phi=yx^3-cos(y)=c$.
 			\item Resolver esta nueva ecuación diferencial.
 		\end{enumerate}
 		
-		\underbar{Nota}: {\footnotesize Cuando la familia $F_1$ viene dada de forma implícita (ejemplo: $x^2+y^2=c$) el método es el mismo, pero se saltea	el paso 2.}
+		\underbar{Nota}: {\footnotesize Cuando la familia $F_1$ viene dada de forma implícita (ejemplo: $x^2+y^2=c$) el método es el mismo, pero se saltea el paso 2.}
 	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
@@ -1622,7 +1609,7 @@ Entonces la solución general de la ecuación es $\phi=yx^3-cos(y)=c$.
 
 \subsection{Cambio de variable en integrales triples}
 \begin{teorema*}[0.9\textwidth]{Teorema de cambio de variable}
-	Consideremos una función de transformación de coordenadas $F:\Omega^\prime \subset R^3 \to R^3$ del tipo $F(u,v,w)=(x,y,z)=\left(x_{(u,v,w)},y_{(u,v,w)},z_{(u,v,w)}\right).$	La fórmula de cambio de cambio de variables en integrales triples es:
+	Consideremos una función de transformación de coordenadas $F:\Omega^\prime \subset R^3 \to R^3$ del tipo $F(u,v,w)=(x,y,z)=\left(x_{(u,v,w)},y_{(u,v,w)},z_{(u,v,w)}\right).$ La fórmula de cambio de cambio de variables en integrales triples es:
 	\begin{align}
 		\iiint_{\Omega}f(x,y,z)\: dxdydz=\iiint_{\Omega'}f\left(F(u,v,w)\right)\left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right|dudvdw
 	\end{align}
@@ -1682,76 +1669,53 @@ Entonces la solución general de la ecuación es $\phi=yx^3-cos(y)=c$.
 \section{Integrales de superficie}
 \subsection{Superficies simples}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.8\textwidth}
-				Una curva es un objeto unidimensional en $R^2$ o $R^3$, es decir, una curva es la imagen de una cierta función definida \textit{en un subconjunto I} de la recta (espacio de dimensión 1). De la misma manera, una superficie será la imagen en $R^3$ de una cierta función que está definida en \textit{un subconjunto $D$ de } $R^2$ (que es bidimensional).
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Curvas};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Curvas}
+		Una curva es un objeto unidimensional en $R^2$ o $R^3$, es decir, una curva es la imagen de una cierta función definida \textit{en un subconjunto I} de la recta (espacio de dimensión 1). De la misma manera, una superficie será la imagen en $R^3$ de una cierta función que está definida en \textit{un subconjunto $D$ de } $R^2$ (que es bidimensional).
+	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.3]{integrales_de_sup.png}{\small \caption{Superficie simple}}
+			\centering
+			\includegraphics[scale=0.3]{integrales_de_sup.png}
+			\caption{Superficie simple}
 		\end{center}
 	\end{figure}
 \end{minipage}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $S \subseteq R^2$ una región del tipo I y del tipo II en $R^2$, y sea $f: S \subset R^2 \to R^3$, $f(u,v)=(f_{1(u,v)},f_{2(u,v)},f_{3(u,v)})$ una función inyectiva (para que no haya puntos tales que $f(p_1)=f(p_2) \in K$) de clase $C^1$, de modo que los vectores $\frac{\partial f}{\partial u}$ y $\frac{\partial f}{\partial v}$ son linealmente independientes en todo $(u,v)\in S$.\\
-			
-			A la imagen de la función $f$, $K=f(S)$, se le llama superficie simple. La región $S$, dominio de $f$, es una región cerrada y acotada del plano $R^2$.\\
+\begin{definicion*}{Superficie simple}
+	Sea $S \subseteq R^2$ una región del tipo I y del tipo II en $R^2$, y sea $f: S \subset R^2 \to R^3$, $f(u,v) = (f_{1(u,v)}, f_{2(u,v)}, f_{3(u,v)})$ una función inyectiva (para que no haya puntos tales que $f(p_1) = f(p_2) \in K$) de clase $C^1$, de modo que los vectores $\frac{\partial f}{\partial u}$ y $\frac{\partial f}{\partial v}$ son linealmente independientes en todo $(u,v)\in S$.\\
+	
+	A la imagen de la función $f$, $K=f(S)$, se le llama superficie simple. La región $S$, dominio de $f$, es una región cerrada y acotada del plano $R^2$.\\
 
-			\emph{Notación:} $\partial K$ es la frontera de K ($\partial K=f(\partial S)$ con $\partial S$ la frontera de S, su dominio), e $\text{Int}(K)$ es el interior de de la superficie simple $K$, siendo $\text{Int}(K)=f(\text{Int},S)$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Superficie simple};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\emph{Notación:} $\partial K$ es la frontera de K ($\partial K = f(\partial S)$ con $\partial S$ la frontera de S, su dominio), e $\text{Int}(K)$ es el interior de de la superficie simple $K$, siendo $\text{Int}(K) = f(\text{Int},S)$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Dada la superficie de ecuación $\bar{x}=\vect{F}(u,v)$ con $(u,v)\in D$, se dice que la misma es \emph{regular} si:
-			\begin{align}
-				\vect{F}  \text{ es diferenciable y }\\
-				\vect{F}^\prime_u,\vect{F}^\prime_v \neq0
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Superficie regular};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Superficie regular}
+	Dada la superficie de ecuación $\bar{x}=\vect{F}(u,v)$ con $(u,v)\in D$, se dice que la misma es \emph{regular} si:
+	\begin{align}
+		\vect{F}  \text{ es diferenciable y }\\
+		\vect{F}^\prime_u,\vect{F}^\prime_v \neq0
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Dada la superficie de ecuación $\vect{x}=\vect{F}(u,v)$ con $(u,v) \in D$, se dice que la misma es \emph{suave} si:
-			\begin{align}
-				\vect{F}(u,v) \text{ es regular y }\\
-				\vect{F}(u,v) \in C^2
-			\end{align}
-			Intuitivamente, una superficie suave no tiene \emph{esquinas}.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Superficie suave};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Superficie suave}
+	Dada la superficie de ecuación $\vect{x} = \vect{F}(u,v)$ con $(u,v) \in D$, se dice que la misma es \emph{suave} si:
+	\begin{align}
+		\vect{F}(u,v) \text{ es regular y }\\
+		\vect{F}(u,v) \in C^2
+	\end{align}
+	Intuitivamente, una superficie suave no tiene \emph{esquinas}.
+\end{definicion*}
 
 \subsection{Orientación de superficies}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			De manera general, una superficie $K$ en $R^3$ se dirá \emph{orientable} si es posible decidir sin ambigüedad cuál es cada uno de los lados de la superficie, el \emph{interior} y el \emph{exterior}.\\
-			
-			Decir que una superficie $K$ es orientable, significa que podemos tener un campo de vectores normales a $K$, $N:K \to R^3$, de manera que los vectores normales apunten en la dirección de uno de los lados de la superficie. Se requiere que este campo $N$ sea continuo en $K$. Este campo es $N(x,y,z)=\frac{\frac{\partial f}{\partial u}\times\frac{\partial f}{\partial v}}{\left\Vert \frac{\partial f}{\partial u}\times\frac{\partial f}{\partial v}\right\Vert }$.\\
-			
-			Para obtener un vector normal a una superficie, se utiliza la \emph{regla	del pulgar:} si imaginamos que caminamos alrededor de $\partial S$, la superficie debe quedar a nuestra izquierda, y nosotros seríamos el vector normal $\breve{n}$.\\
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Orientación de superficies};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Orientación de superficies}
+	De manera general, una superficie $K$ en $R^3$ se dirá \emph{orientable} si es posible decidir sin ambigüedad cuál es cada uno de los lados de la superficie, el \emph{interior} y el \emph{exterior}.\\
+	
+	Decir que una superficie $K$ es orientable, significa que podemos tener un campo de vectores normales a $K$, $N:K \to R^3$, de manera que los vectores normales apunten en la dirección de uno de los lados de la superficie. Se requiere que este campo $N$ sea continuo en $K$. Este campo es $N(x,y,z)=\frac{\frac{\partial f}{\partial u}\times\frac{\partial f}{\partial v}}{\left\Vert \frac{\partial f}{\partial u}\times\frac{\partial f}{\partial v}\right\Vert }$.\\
+	
+	Para obtener un vector normal a una superficie, se utiliza la \emph{regla del pulgar:} si imaginamos que caminamos alrededor de $\partial S$, la superficie debe quedar a nuestra izquierda, y nosotros seríamos el vector normal $\breve{n}$.\\
+\end{definicion*}
 
 \emph{Ejemplo(superficie implícita):} Tenemos una superficie $S$ dada por $z=4-x^{2}$ y queremos obtener un vector normal en un punto $(x_{0},y_{0},z_{0})$.\\
 
@@ -1760,281 +1724,214 @@ Si tomamos $\vect{F}(x,y,z)=z-4+x^{2}$, sabemos que la superficie $S$ es la curv
 Entonces $\nabla F=(2x,0,1)$, y tenemos que el vector normal al punto es $(2x_0,0,1)$.
 
 \subsection{Área de una superficie }
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $S=f(D)$ una superficie simple en $R^3$ parametrizada por la función $f:D \subset R^2 \to R^3$. El área de la superficie $\Sigma$ se define como:
-			\begin{align}
-				\mbox{Area de S}=\iint_{D}\left\Vert \frac{\partial f}{\partial u}\times\frac{\partial f}{\partial v}\right\Vert \, dudv
-			\end{align}
+\begin{definicion*}{Área de superficies}
+	Sea $S=f(D)$ una superficie simple en $R^3$ parametrizada por la función $f:D \subset R^2 \to R^3$. El área de la superficie $\Sigma$ se define como:
+	\begin{align}
+		\mbox{Area de S} = \iint_{D} \left\Vert \frac{\partial f}{\partial u} \times \frac{\partial f}{\partial v} \right\Vert \, dudv
+	\end{align}
 	
-			\underbar{Nota}: El área de la superficie $S$ es independiente de la parametrización que se tenga de ella.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Área de superficies};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\underbar{Nota}: El área de la superficie $S$ es independiente de la parametrización que se tenga de ella.
+\end{definicion*}
 
 \subsection{Integrales de superficie de campos escalares}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $S$ una superficie simple parametrizada por la función $\phi: D \subset R^2 \to R^3$, $\phi(u,v)=(\phi_1,\phi_2,\phi_3)$. Sea $f: S \to R$ una función escalar continua definida sobre la superficie $S$. La integral de superficie de la función $f$ sobre $S$ se define como:
-			\begin{align}
-				\iint_{S}f\, ds=\iint_{S}f(\phi(u,v))\cdot\left\Vert \frac{\partial\phi}{\partial u}\times\frac{\partial\phi}{\partial v}\right\Vert \, dudv
-			\end{align}
+\begin{definicion*}{Integral de superficie en campo escalar}
+	Sea $S$ una superficie simple parametrizada por la función $\phi: D \subset R^2 \to R^3$, $\phi(u,v) = (\phi_1,\phi_2,\phi_3)$. Sea $f: S \to R$ una función escalar continua definida sobre la superficie $S$. La integral de superficie de la función $f$ sobre $S$ se define como:
+	\begin{align}
+		\iint_{S} f\, ds = \iint_{S} f(\phi(u,v)) \cdot \left\Vert \frac{\partial\phi}{\partial u} \times \frac{\partial\phi}{\partial v} \right\Vert \, dudv
+	\end{align}
 	
-			\underbar{Nota}: Si $f(x,y,z)=1$, la integral $\iint_{S}\, f\, ds$ no es más que la definición de área de la superficie $S$.\\
+	\underbar{Nota}: Si $f(x,y,z)=1$, la integral $\iint_{S}\, f\, ds$ no es más que la definición de área de la superficie $S$.\\
 
-			\underbar{Una aplicación}: Si la función $f$ representa la densidad de una sábana, la integral sería la masa total de la sábana.
-		\end{minipage}
-		};
-	\node[fancytitle, right=10pt] at (box.north west) {Integral de superficie en campo escalar};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\underbar{Una aplicación}: Si la función $f$ representa la densidad de una sábana, la integral sería la masa total de la sábana.
+\end{definicion*}
 
 \subsection{Integrales de superficie de campos vectoriales}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.24]{integral_de_superficie.png}\caption{Integral de superficie.}
-		\end{center}
+		\centering
+		\includegraphics[scale=0.24]{integral_de_superficie.png}
+		\caption{Integral de superficie.}
 	\end{figure}
 \end{minipage}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.8\textwidth}
-				Sea $S$ una superficie simple parametrizada por la función $\phi: D \subset R^2 \to R^3$, $\phi(u,v)=(\phi_1,\phi_2,\phi_3)$ la cual proporciona una orientación que coincide con la del campo continuo de vectores normales $N: S \to R^3$. Sea $\vect{F}: U \subseteq R^3 \to R^3$ un campo continuo definido en el abierto $U$ de $R^3$ que contiene a $S$. Se define la integral de superficie de $\vect{F}$ sobre $S$, llamada flujo de $\vect{F}$ a través de $S$, como
-				\begin{align}
-					\iint_{S}\vect{F}\cdot d\vect{s}=\iint_{D}\vect{F}(\phi(u,v)) \cdot \left(\frac{\partial\phi}{\partial u}\times\frac{\partial\phi}{\partial v}\right)\, dudv
-				\end{align}
-				
-				\underbar{Nota}: La integral es invariante por reparametrizaciones que no cambian la orientación de la superficie $S$. Si tomamos una reparametrización de $S$ que cambie su orientación, esto sí se reflejará en un cambio de signo de la integral.\\
-			
-				\underbar{Una aplicación}: Si el campo vectorial $\vect{F}$ representa el flujo de un líquido, entonces la integral de superficie de $\vect{F}$ representa la cantidad de fluido que fluye a través de la superficie $S$ por unidad de tiempo.
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Flujo};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Flujo}
+		Sea $S$ una superficie simple parametrizada por la función $\phi: D \subset R^2 \to R^3$, $\phi(u,v) = (\phi_1,\phi_2,\phi_3)$ la cual proporciona una orientación que coincide con la del campo continuo de vectores normales $N: S \to R^3$. Sea $\vect{F}: U \subseteq R^3 \to R^3$ un campo continuo definido en el abierto $U$ de $R^3$ que contiene a $S$. Se define la integral de superficie de $\vect{F}$ sobre $S$, llamada flujo de $\vect{F}$ a través de $S$, como
+		\begin{align}
+			\iint_{S}\vect{F} \cdot d\vect{s} = \iint_{D}\vect{F}(\phi(u,v)) \cdot \left(\frac{\partial\phi}{\partial u} \times \frac{\partial\phi}{\partial v}\right)\, dudv
+		\end{align}
+		
+		\underbar{Nota}: La integral es invariante por reparametrizaciones que no cambian la orientación de la superficie $S$. Si tomamos una reparametrización de $S$ que cambie su orientación, esto sí se reflejará en un cambio de signo de la integral.\\
+		
+		\underbar{Una aplicación}: Si el campo vectorial $\vect{F}$ representa el flujo de un líquido, entonces la integral de superficie de $\vect{F}$ representa la cantidad de fluido que fluye a través de la superficie $S$ por unidad de tiempo.
+	\end{definicion*}
 \end{minipage}
 
 \newpage
 \section{Teoremas integrales}
 \subsection{Gradiente, Divergencia, Rotor: las fórmulas clásicas}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $f$ un campo escalar y $\vect{F}=(P,Q,R)$ un campo vectorial:
-			\begin{align}
-				\nabla=\left(\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\cdots,\frac{\partial}{\partial x_n}\right) \in R^n \\
-				\nabla \cdot f=\text{grad}(f)=\left(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\cdots,\frac{\partial f}{\partial x_n}\right) \\
-				\nabla \cdot \vect{F}=\text{div}\left(\vect{F}\right)=P_x^\prime+Q_y^\prime+R_z^\prime=\text{tr}\left(J(\vect{F})\right) \\
-				\nabla \times \vect{F}=\text{rot} \left(\vect{F}\right)=\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z},\frac{\partial R}{\partial x}-\frac{\partial P}{\partial z},\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) \\
-				\nabla \cdot \nabla f=\text{div}(\text{grad}(f))=\frac{\partial^2 f}{\partial x_1^2}+\frac{\partial^2 f}{\partial x_2^2}+\ldots+\frac{\partial^2 f}{\partial x_n^2}=\nabla^2 f=\text{Laplaciano de \ensuremath{f}}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Fórmulas: Gradiente,Divergencia, Rotor};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Fórmulas: Gradiente,Divergencia, Rotor}
+	Sea $f$ un campo escalar y $\vect{F}=(P,Q,R)$ un campo vectorial:
+	\begin{align}
+		\nabla = \left(\frac{\partial}{\partial x_1}, \frac{\partial}{\partial x_2}, \cdots, \frac{\partial}{\partial x_n}\right) \in R^n \\
+		\nabla \cdot f = \text{grad}(f) = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \cdots, \frac{\partial f}{\partial x_n}\right) \\
+		\nabla \cdot \vect{F} = \text{div} \left(\vect{F}\right) = P_x^\prime + Q_y^\prime + R_z^\prime = \text{tr} \left(J(\vect{F})\right) \\
+		\nabla \times \vect{F} = \text{rot} \left(\vect{F}\right) = \left(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}, \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z}, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) \\
+		\nabla \cdot \nabla f = \text{div}(\text{grad}(f)) = \frac{\partial^2 f}{\partial x_1^2} + \frac{\partial^2 f}{\partial x_2^2} + \ldots + \frac{\partial^2 f}{\partial x_n^2} = \nabla^2 f = \text{Laplaciano de \ensuremath{f}}
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			\begin{align}
-				\text{div}(\text{rot}(\vect{F}))=0 \Rightarrow \text{ Campo selenoidal} \\
-				\text{rot}(\text{grad}(f))=0 \Rightarrow \text{ Campo irrotacional} \\
-				\text{div}(\text{grad}(f)\times \text{grad}(g))=0 \Rightarrow \text{ Campo selenoidal} \\
-				\nabla^2 f=\text{div}(\text{grad}(f))=0 \Rightarrow \text{ Función armónica}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Propiedades}
+	\begin{align}
+		\text{div}(\text{rot}(\vect{F}))=0 \Rightarrow \text{ Campo selenoidal} \\
+		\text{rot}(\text{grad}(f))=0 \Rightarrow \text{ Campo irrotacional} \\
+		\text{div}(\text{grad}(f)\times \text{grad}(g))=0 \Rightarrow \text{ Campo selenoidal} \\
+		\nabla^2 f=\text{div}(\text{grad}(f))=0 \Rightarrow \text{ Función armónica}
+	\end{align}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Se dice que la función $f: U \subseteq R^n \to R$ de clase $\mathcal{C}^2$ definida en $U$, es \textbf{armónica} si satisface la ecuación de Laplace:
-			\begin{align}
-				\nabla^{2}f=0
-			\end{align}
-			Es decir, si:
-			\begin{align}
-				\sum_{i=1}^{n}\frac{\partial^2 f}{\partial x_i^{2}}=0
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Función armónica};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Función armónica}
+	Se dice que la función $f: U \subseteq R^n \to R$ de clase $\mathcal{C}^2$ definida en $U$, es \textbf{armónica} si satisface la ecuación de Laplace:
+	\begin{align}
+		\nabla^{2}f=0
+	\end{align}
+	Es decir, si:
+	\begin{align}
+		\sum_{i=1}^{n}\frac{\partial^2 f}{\partial x_i^{2}}=0
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Un campo vectorial $\vect{F}$ se dice \textbf{solenoidal} si:
-			\begin{align}
-				div(\vect{F})\equiv0 \text{ ,para todo punto del dominio.}
-			\end{align} 
-			La integral de superficie o flujo de un campo solenoidal sobre cualquier superficie cerrada es siempre cero. Los campos solenoidales no tienen ni puntos fuentes ($div(\vec{F})>0$) ni puntos sumideros ($div(\vec{F})<0$).
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Campo senoidal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Campo senoidal}
+	Un campo vectorial $\vect{F}$ se dice \textbf{solenoidal} si:
+	\begin{align}
+		div(\vect{F})\equiv0 \text{ ,para todo punto del dominio.}
+	\end{align} 
+	La integral de superficie o flujo de un campo solenoidal sobre cualquier superficie cerrada es siempre cero. Los campos solenoidales no tienen ni puntos fuentes ($div(\vec{F}) > 0$) ni puntos sumideros ($div(\vec{F}) < 0$).
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Un campo vectorial $\vect{F}$ se dice \textbf{irrotacional} si:
-			\begin{align}
-				\text{rot}(\vect{F})\equiv 0
-			\end{align}
-			Para todo punto del dominio. Un campo es irrotacional si y sólo si su matriz jacobiana es simétrica en un dominio convexo. Esto quiere decir que el campo es conservativo, y por lo tanto admite función potencial, por lo que la integral de línea sobre cualquier curva cerrada es cero siempre.
-		\end{minipage}
-		};
-	\node[fancytitle, right=10pt] at (box.north west) {Campo irrotacional};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Campo irrotacional}
+	Un campo vectorial $\vect{F}$ se dice \textbf{irrotacional} si:
+	\begin{align}
+		\text{rot}(\vect{F})\equiv 0
+	\end{align}
+	Para todo punto del dominio. Un campo es irrotacional si y sólo si su matriz jacobiana es simétrica en un dominio convexo. Esto quiere decir que el campo es conservativo, y por lo tanto admite función potencial, por lo que la integral de línea sobre cualquier curva cerrada es cero siempre.
+\end{definicion*}
 
 \subsection{Rotor de un campo vectorial}
-\begin{minipage}{0.25\textwidth}
+\begin{minipage}{0.28\textwidth}
 	\begin{figure}[H]
-		\includegraphics[scale=0.3]{rotor}\caption{{\footnotesize El rotor de un \\campo (en \textcolor{green}{verde})}}
+		\centering
+		\includegraphics[scale=0.3]{rotor}
+		\caption{El rotor de un campo (en \textcolor{green}{verde})}
 	\end{figure}
 \end{minipage}
 \begin{minipage}{0.7\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.9\textwidth}
-				Sea $\vect{F}: U \subseteq R^3 \to R^3$, $\vect{F}=(F_1,F_2,F_3)$ diferenciable, definido en $U$. Se define el \emph{rotor} (o \textbf{rotacional}) de $\vect{F}$ en el punto $p \in U$, como:
-				\begin{small}
-					\begin{align}
-						rot(\vec{F})=\left|\begin{array}{ccc} \hat{i} & \hat{j} & \hat{k} \\\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
-						F_{1} & F_{2} & F_{3}\end{array}\right|=\left(\frac{\partial F_{3}}{\partial y}-\frac{\partial F_{2}}{\partial z},\frac{\partial F_{1}}{\partial z}-\frac{\partial F_{3}}{\partial x},\frac{\partial F_{2}}{\partial x}-\frac{\partial F_{1}}{\partial y}\right)
-					\end{align}
-				\end{small}
-				
-				Geométricamente, el rotacional de $\vect{F}$ es un vector que apunta al eje de rotación, y su longitud corresponde a la velocidad de rotación.\\
-				
-				Un resultado importante es que una condición necesaria para que el campo $\vect{F}: U \subseteq R^3 \to R^3$ sea conservativo es que sea irrotacional: $rot\left(\vect{F}(p)\right)=0\:\forall p \in U$.\\
-				
-				Entonces se tiene: $\vect{F}$ conservativo $\Longrightarrow$ $\vect{F}$ irrotacional. La recíproca se da solamente en el caso de que $U$ sea un conjunto simplemente conexo.\\
-				
-				\underbar{Nota}: El concepto de rotacional se puede aplicar también a campos de $R^2$. Sea $\vect{F}=(P,Q)$, se define el rotacional de $\vect{F}$ como$\text{rtc}(\vect{F})=Q^\prime_x-P^\prime_y$. Nótese que este es un valor escalar.
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Rotor};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Rotor}
+		Sea $\vect{F}: U \subseteq R^3 \to R^3$, $\vect{F}=(F_1,F_2,F_3)$ diferenciable, definido en $U$. Se define el \emph{rotor} (o \textbf{rotacional}) de $\vect{F}$ en el punto $p \in U$, como:
+		\begin{small}
+			\begin{align}
+				rot(\vec{F})=\left|\begin{array}{ccc} \hat{i} & \hat{j} & \hat{k} \\\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+				F_{1} & F_{2} & F_{3}\end{array}\right|=\left(\frac{\partial F_{3}}{\partial y}-\frac{\partial F_{2}}{\partial z},\frac{\partial F_{1}}{\partial z}-\frac{\partial F_{3}}{\partial x},\frac{\partial F_{2}}{\partial x}-\frac{\partial F_{1}}{\partial y}\right)
+			\end{align}
+		\end{small}
+		
+		Geométricamente, el rotacional de $\vect{F}$ es un vector que apunta al eje de rotación, y su longitud corresponde a la velocidad de rotación.\\
+		
+		Un resultado importante es que una condición necesaria para que el campo $\vect{F}: U \subseteq R^3 \to R^3$ sea conservativo es que sea irrotacional: $rot\left(\vect{F}(p)\right)=0\:\forall p \in U$.\\
+		
+		Entonces se tiene: $\vect{F}$ conservativo $\Longrightarrow$ $\vect{F}$ irrotacional. La recíproca se da solamente en el caso de que $U$ sea un conjunto simplemente conexo.\\
+		
+		\underbar{Nota}: El concepto de rotacional se puede aplicar también a campos de $R^2$. Sea $\vect{F} = (P,Q)$, se define el rotacional de $\vect{F}$ como$\text{rtc}(\vect{F})=Q^\prime_x-P^\prime_y$. Nótese que este es un valor escalar.
+	\end{definicion*}
 \end{minipage}
 
 \subsection{Divergencia de un campo vectorial}
-\begin{minipage}{0.27\textwidth}
+\begin{minipage}{0.28\textwidth}
 	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{divergencia_0}\caption{{\small Divergencia positiva}}
-		\end{center}
+		\centering
+		\includegraphics[scale=0.4]{divergencia_0}
+		\caption{Divergencia positiva}
 	\end{figure}
 \end{minipage}
 \begin{minipage}{0.7\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.9\textwidth}
-				Sea $\vect{F}:U \subseteq R^n \to R^n,\,\vect{F}\left(\bar{x}\right)=(F_1,F_2,\ldots,F_n)$ un campo diferenciable definido en el abierto $U$ de $R^n$.\\
-				
-				Se llama \textbf{divergencia} de $\vect{F}$ a:
-				\begin{align}
-					div(\vect{F})=\frac{\partial F_1}{\partial x_1}+\frac{\partial F_2}{\partial x_2}+\ldots+\frac{\partial F_n}{\partial x_n}
-				\end{align}
-				Si el campo vectorial $\vect{F}$ representa el flujo de un líquido, entonces la divergencia de $\vect{F}$ representa la expansión o compresión del fluido. Es una medida del \emph{flujo} por unidad de área del líquido a través del punto $p$.
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Divergencia};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Divergencia}
+		Sea $\vect{F}:U \subseteq R^n \to R^n,\,\vect{F}\left(\bar{x}\right)=(F_1,F_2,\ldots,F_n)$ un campo diferenciable definido en el abierto $U$ de $R^n$.\\
+		
+		Se llama \textbf{divergencia} de $\vect{F}$ a:
+		\begin{align}
+			div(\vect{F}) = \frac{\partial F_1}{\partial x_1} + \frac{\partial F_2}{\partial x_2} + \ldots + \frac{\partial F_n}{\partial x_n}
+		\end{align}
+		Si el campo vectorial $\vect{F}$ representa el flujo de un líquido, entonces la divergencia de $\vect{F}$ representa la expansión o compresión del fluido. Es una medida del \emph{flujo} por unidad de área del líquido a través del punto $p$.
+	\end{definicion*}
 \end{minipage}
 
 \subsection{Teorema de Green}
-\begin{minipage}{0.65\textwidth}
-	\begin{tikzpicture}
-		\node[teorema](box){
-			\begin{minipage}{0.9\textwidth}
-				\textbf{Hipótesis:}
-				\begin{enumerate}
-					\item $\vect{F} \in C^1$ en todo punto de $D$ y de $\partial D$
-					\item $D$ es una región compacta de $R^2$
-					\item $\partial D$ es una curva cerrada, suave a trozos, recorrida en sentido positivo
-				\end{enumerate}
+\begin{minipage}{0.75\textwidth}
+	\begin{teorema*}[0.9\textwidth]{Teorema de Green}
+		\textbf{Hipótesis:}
+		\begin{enumerate}
+			\item $\vect{F} \in C^1$ en todo punto de $D$ y de $\partial D$
+			\item $D$ es una región compacta de $R^2$
+			\item $\partial D$ es una curva cerrada, suave a trozos, recorrida en sentido positivo
+		\end{enumerate}
 
-				\textbf{Teorema}: Sea $\vect{F}: U \subset R^2 \rightarrow R^2$, $\vect{F}(x,y)=(P,Q)$ un campo de clase $\mathcal{C}^1$ definido en $U$. Sea $D \subset U$ una región plana con su frontera una curva cerrada positivamente orientada (contrario a las agujas del reloj).Entonces:
-				\begin{align}
-					\oint_{\partial D^{+}}\vect{F} \cdot d\vect{l}=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\: dxdy
-				\end{align}
+		\textbf{Teorema}: Sea $\vect{F}: U \subset R^2 \rightarrow R^2$, $\vect{F}(x,y)=(P,Q)$ un campo de clase $\mathcal{C}^1$ definido en $U$. Sea $D \subset U$ una región plana con su frontera una curva cerrada positivamente orientada (contrario a las agujas del reloj).Entonces:
+		\begin{align}
+			\oint_{\partial D^{+}} \vect{F} \cdot d\vect{l} = \iint_{D} \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)\: dxdy
+		\end{align}
 
-				\underbar{Una aplicación}: Si $\vect{F}=(P,Q)$ es tal que $Q^\prime_{x}-P^\prime_{y}=1$, entonces\\
-				$\oint_{\partial D^+}\vect{F} \cdot d\vect{s}=\iint_{D}\, dxdy=$ área de $D$.
-			\end{minipage}
-			};
-		\node[fancytitle, right=10pt] at (box.north west) {Teorema de Green};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+		\underbar{Una aplicación}: Si $\vect{F}=(P,Q)$ es tal que $Q^\prime_{x}-P^\prime_{y}=1$, entonces\\
+		$\oint_{\partial D^+}\vect{F} \cdot d\vect{s}=\iint_{D}\, dxdy=$ área de $D$.
+	\end{teorema*}
 \end{minipage}
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.2\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale=0.2]{green}
 	\end{figure}
 \end{minipage}
 
 \subsection{Teorema del rotor (Stokes)}
-\begin{minipage}{0.65\textwidth}
-	\begin{tikzpicture}
-		\node[teorema](box){
-			\begin{minipage}{0.9\textwidth}
-				\textbf{Hipótesis:}
-				\begin{enumerate}
-					\item $\vect{F}\in C^1$ en todo punto de $S$ y de $\partial S$
-					\item $S$ es una superficie abierta, suave a trozos, simple, parametrizada por una función de clase $C^2$
-					\item $\partial S$ es una curva cerrada simple, suave a trozos, y está recorrida en sentido positivo respecto a la superficie
-				\end{enumerate}
+\begin{minipage}{0.75\textwidth}
+	\begin{teorema*}[0.9\textwidth]{Teorema del rotor (Stokes)}
+		\textbf{Hipótesis:}
+		\begin{enumerate}
+			\item $\vect{F}\in C^1$ en todo punto de $S$ y de $\partial S$
+			\item $S$ es una superficie abierta, suave a trozos, simple, parametrizada por una función de clase $C^2$
+			\item $\partial S$ es una curva cerrada simple, suave a trozos, y está recorrida en sentido positivo respecto a la superficie
+		\end{enumerate}
 
-				\textbf{Teorema}: Sea $S$ una superficie simple orientable, parametrizada por $\phi: D \subset R^3 \to R^3$ de clase $\mathcal{C}^2$, la cual proporciona la orientación de $S$, y sea $\partial S$ su frontera recorrida positivamente. Sea $\vect{F}: U \subseteq R^3 \to R^3$ un campo vectorial de clase $\mathcal{C}^1$ definido en $U$ que contiene a $D$. Entonces:
-				\begin{align}
-					\oint_{\partial S^{+}}\vect{F} \cdot d\vect{l} & =\iint_{S}\text{rot}(\vect{F}) \cdot d\vect{s}=\iint_{S}\text{rot}\vect{F}(\phi(u,v)) \cdot n_{\phi(u,v)}\: dudv
-				\end{align}
-				El teorema del rotor es una generalización del teorema de Green. Es importante destacar que para el cálculo de la circulación de una curva $C$ podemos elegir cualquier superficie $S$ que tenga como borde a $C$, y obviamente nos conviene elegir la superficie más \emph{sencilla} posible.\\
-				
-				\emph{Ejemplo}: Si $C$ es un círculo, $S$ podría ser una circunferencia.
-			\end{minipage}
-			};
-		\node[fancytitle, right=10pt] at (box.north west) {Teorema del rotor (Stokes)};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+		\textbf{Teorema}: Sea $S$ una superficie simple orientable, parametrizada por $\phi: D \subset R^3 \to R^3$ de clase $\mathcal{C}^2$, la cual proporciona la orientación de $S$, y sea $\partial S$ su frontera recorrida positivamente. Sea $\vect{F}: U \subseteq R^3 \to R^3$ un campo vectorial de clase $\mathcal{C}^1$ definido en $U$ que contiene a $D$. Entonces:
+		\begin{align}
+			\oint_{\partial S^{+}} \vect{F} \cdot d\vect{l} & = \iint_{S} \text{rot}(\vect{F}) \cdot d\vect{s} = \iint_{S} \text{rot} \vect{F}(\phi(u,v)) \cdot n_{\phi(u,v)}\: dudv
+		\end{align}
+		El teorema del rotor es una generalización del teorema de Green. Es importante destacar que para el cálculo de la circulación de una curva $C$ podemos elegir cualquier superficie $S$ que tenga como borde a $C$, y obviamente nos conviene elegir la superficie más \emph{sencilla} posible.\\
+		
+		\emph{Ejemplo}: Si $C$ es un círculo, $S$ podría ser una circunferencia.
+	\end{teorema*}
 \end{minipage}
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.2\textwidth}
 	\begin{figure}[H]
-		\includegraphics[scale=0.22]{stokes}
+		\includegraphics[scale=0.2]{stokes}
 	\end{figure}
 \end{minipage}
 
 \subsection{Teorema de la divergencia (Gauss)}
-\begin{minipage}{0.65\textwidth}
-	\begin{tikzpicture}
-		\node[teorema](box){
-			\begin{minipage}{0.9\textwidth}
-				\textbf{Hipótesis:}
-				\begin{enumerate}
-					\item $\vect{F} \in C^1$ en todo punto de $W$ y de $\partial W$
-					\item $W$ un cuerpo compacto de $R^3$
-					\item $\partial W$ suave a trozos y orientable, con sus normales hacia afuera
-				\end{enumerate}
+\begin{minipage}{0.75\textwidth}
+	\begin{teorema*}[0.9\textwidth]{Teorema de la divergencia (Gauss)}
+		\textbf{Hipótesis:}
+		\begin{enumerate}
+			\item $\vect{F} \in C^1$ en todo punto de $W$ y de $\partial W$
+			\item $W$ un cuerpo compacto de $R^3$
+			\item $\partial W$ suave a trozos y orientable, con sus normales hacia afuera
+		\end{enumerate}
 
-				\textbf{Teorema}: Sea $W$ un cuerpo de $R^3$ y sea $\partial W$ la frontera de $W$, una superficie orientada con sus vectores normales apuntando hacia el exterior del sólido. Si $\vect{F}: U \subset R^3 \rightarrow R^3$,	$\vect{F}(x,y,z)=(F_1,F_2,F_3)$ es un campo vectorial de clase $\mathcal{C}^1$ definido en el abierto $U$ que contiene a $W$, entonces:
-				\begin{align}
-					\iint_{\partial W}\vect{F}\cdot d\vect{s}=\iiint_{W}div(\vect{F})\: dxdydz
-				\end{align}
-				El integrando de la integral triple puede pensarse como la expansión de un fluido. El teorema de la divergencia dice que la expansión total de un fluido que está dentro de un cuerpo $W$ es igual al flujo total del fluido que sale por la frontera del cuerpo $W$.
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Teorema de la divergencia (Gauss)};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+		\textbf{Teorema}: Sea $W$ un cuerpo de $R^3$ y sea $\partial W$ la frontera de $W$, una superficie orientada con sus vectores normales apuntando hacia el exterior del sólido. Si $\vect{F}: U \subset R^3 \rightarrow R^3$, $\vect{F}(x,y,z)=(F_1,F_2,F_3)$ es un campo vectorial de clase $\mathcal{C}^1$ definido en el abierto $U$ que contiene a $W$, entonces:
+		\begin{align}
+			\iint_{\partial W}\vect{F}\cdot d\vect{s}=\iiint_{W}div(\vect{F})\: dxdydz
+		\end{align}
+		El integrando de la integral triple puede pensarse como la expansión de un fluido. El teorema de la divergencia dice que la expansión total de un fluido que está dentro de un cuerpo $W$ es igual al flujo total del fluido que sale por la frontera del cuerpo $W$.
+	\end{teorema*}
 \end{minipage}
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.2\textwidth}
 	\begin{figure}[H]
 		\includegraphics[scale=0.21]{gauss}
 	\end{figure}
