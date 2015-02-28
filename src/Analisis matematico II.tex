@@ -1000,58 +1000,43 @@ $Jf(0,0)=\left[
 	\end{align}
 \end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Si $z=f(x,y)$ es una función $\mathcal{C}^{k+1}$, en un punto $(x_0,y_0)$ se puede aproximar $f(x,y)$ en un entorno de $(x_0,y_0)$ por un polinomio de grado $k$. El polinomio de grado 2 de una función $z=f(x,y)$ con $f\in C^{3}$ en el punto $(x_0,y_0)$ es:
-			{\tiny
-			\begin{align}
-				P_{2}(x,y)=f(p)+\frac{\partial f}{\partial x}(p)(x-x_0)+\frac{\partial f}{\partial y}(p)(y-y_0)+\frac{1}{2!}\left[\left(\frac{\partial^2 f}{\partial x^2}\right)(x-x_0)^2+2\left(\frac{\partial^2 f}{\partial y\partial x}\right)(x-x_0)(y-y_0)+\left(\frac{\partial^2 f}{\partial y^2}\right)(y-y_0)^2\right]
-			\end{align}}
-			
-			\underbar{Nota}: En $(x_0,y_0)$ se cumple que $f(x_0,y_0)=P(x_0,y_0)$, y además $\frac{\partial^k f}{\partial y^k}(x_0,y_0)=\frac{\partial^k P}{\partial y^k}(x_0,y_0)$ (i.e. las derivadas de $f$ en el punto son iguales a las derivadas de $P$ en el punto). En un punto $(x_1,y_1)$ cualquiera de un 	entorno de $(x_0,y_0)$ se cumple que $f(x_1,y_1) \approx P(x_1,y_1)$, y no se puede decir nada acerca de las derivadas.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Polinomio de Taylor de segundo orden};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Polinomio de Taylor de segundo orden}
+	Si $z=f(x,y)$ es una función $\mathcal{C}^{k+1}$, en un punto $(x_0,y_0)$ se puede aproximar $f(x,y)$ en un entorno de $(x_0,y_0)$ por un polinomio de grado $k$. El polinomio de grado 2 de una función $z=f(x,y)$ con $f\in C^{3}$ en el punto $(x_0,y_0)$ es:
+	{\tiny
+	\begin{align}
+		P_{2}(x,y)=f(p)+\frac{\partial f}{\partial x}(p)(x-x_0)+\frac{\partial f}{\partial y}(p)(y-y_0)+\frac{1}{2!}\left[\left(\frac{\partial^2 f}{\partial x^2}\right)(x-x_0)^2+2\left(\frac{\partial^2 f}{\partial y\partial x}\right)(x-x_0)(y-y_0)+\left(\frac{\partial^2 f}{\partial y^2}\right)(y-y_0)^2\right]
+	\end{align}}
+	
+	\underbar{Nota}: En $(x_0,y_0)$ se cumple que $f(x_0,y_0)=P(x_0,y_0)$, y además $\frac{\partial^k f}{\partial y^k}(x_0,y_0)=\frac{\partial^k P}{\partial y^k}(x_0,y_0)$ (i.e. las derivadas de $f$ en el punto son iguales a las derivadas de $P$ en el punto). En un punto $(x_1,y_1)$ cualquiera de un 	entorno de $(x_0,y_0)$ se cumple que $f(x_1,y_1) \approx P(x_1,y_1)$, y no se puede decir nada acerca de las derivadas.
+\end{definicion*}
 
 \subsection{Condiciones suficientes para la existencia de extremos locales}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto $U$ que tiene en $\vect{x}\in U$ un punto crítico. Supongamos que en un entorno de $\vect{x}$ las derivadas parciales de $f$ de segundo orden son continuas. Sea $H(\vect{x})$ el hessiano de $f$ en $\vect{x}$. Entonces:
-			\begin{enumerate}
-				\item Si todas las submatrices angulares del hessiano tienen determinantes positivos, entonces $f$ tiene un mínimo local en $\vect{x}$.
-				\item Si las submatrices angulares del hessiano tienen determinantes de signo alternado (comenzando con un valor negativo, o sea $\frac{\partial^n f}{\partial x_1^n}<0$), entonces $f$ tiene un máximo local en $\vect{x}$
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de existencia de extremos locales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de existencia de extremos locales}
+	Sea $f:U\subseteq R^n \to R$ una función definida en el conjunto abierto $U$ que tiene en $\vect{x}\in U$ un punto crítico. Supongamos que en un entorno de $\vect{x}$ las derivadas parciales de $f$ de segundo orden son continuas. Sea $H(\vect{x})$ el hessiano de $f$ en $\vect{x}$. Entonces:
+	\begin{enumerate}
+		\item Si todas las submatrices angulares del hessiano tienen determinantes positivos, entonces $f$ tiene un mínimo local en $\vect{x}$.
+		\item Si las submatrices angulares del hessiano tienen determinantes de signo alternado (comenzando con un valor negativo, o sea $\frac{\partial^n f}{\partial x_1^n}<0$), entonces $f$ tiene un máximo local en $\vect{x}$
+	\end{enumerate}
+\end{teorema*}
 
 \subsection{Extremos condicionados}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:U\subseteq R^n \to R$ una función de clase $\mathcal{C}^{1}$ definida en $U$. Sean $g_1,g_2,\ldots,g_m:U \subseteq R^n \to R$,	\textit{m} funciones de clase $\mathcal{C}^{1}$ en U ($m>n$).\\
-			
-			Sea $S=\{x\in U:g_i (x)=0,i=1,2,\ldots,m\}$. Sea $x_0 \in S$ un punto de extremo condicionado de $f$.\\
-			
-			Suponga que el determinante	$\left|\frac{\partial g_i}{\partial x_j}(x_0)\right|\ne0$ para un conjunto de $m$ variables $x_j$, tomadas del conjunto	de $n$ variables $\{ x_1,x_2,\ldots,x_n\} $ de $g_i$. Entonces existen $m$ números reales $\lambda_1,\lambda_2,\ldots,\lambda_m$tales que se cumple:
-			
-			\begin{align}
-				\nabla f(x_0)+\sum_{k=1}^{m}\lambda_k \cdot \nabla g_k (x_0)=0
-			\end{align}
-			A los números $\lambda_{k},k=1,2,\ldots,m$ se les llama \textbf{multiplicadores de Lagrange}.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de extremos condicionados con multiplicadores de Lagrange};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de extremos condicionados con multiplicadores de Lagrange}
+	Sea $f: U \subseteq R^n \to R$ una función de clase $\mathcal{C}^{1}$ definida en $U$. Sean $g_1,g_2,\ldots,g_m: U \subseteq R^n \to R$,	\textit{m} funciones de clase $\mathcal{C}^{1}$ en U ($m>n$).\\
+	
+	Sea $S=\{x\in U:g_i (x)=0,i=1,2,\ldots,m\}$. Sea $x_0 \in S$ un punto de extremo condicionado de $f$.\\
+	
+	Suponga que el determinante $\left|\frac{\partial g_i}{\partial x_j}(x_0)\right|\ne0$ para un conjunto de $m$ variables $x_j$, tomadas del conjunto	de $n$ variables $\{ x_1,x_2,\ldots,x_n\} $ de $g_i$. Entonces existen $m$ números reales $\lambda_1,\lambda_2,\ldots,\lambda_m$tales que se cumple:
+	
+	\begin{align}
+		\nabla f(x_0)+\sum_{k=1}^{m}\lambda_k \cdot \nabla g_k (x_0)=0
+	\end{align}
+	A los números $\lambda_{k},k=1,2,\ldots,m$ se les llama \textbf{multiplicadores de Lagrange}.
+\end{teorema*}
 
-\textbf{Ejemplo 1}: Hallar los extremos de la función $f(x,y,z)=xyz$ sujeta a las restricciones $\left\{\begin{array}{c}	x^{2}+y^{2}+z^{2}=1 \\ x+y+z=0\end{array}\right.$\\
+\textbf{Ejemplo 1}: Hallar los extremos de la función $f(x,y,z)=xyz$ sujeta a las restricciones $\left\{\begin{array}{c} x^{2} + y^{2} + z^{2} = 1 \\ x + y + z = 0\end{array}\right.$\\
 
 \begin{enumerate}
-	\item Formamos la función de Lagrange: $F(x,y,z,\lambda_1,\lambda_2)=xyz+\lambda_1 (x^2+y^2+z^2-1)+\lambda_2(x+y+z)$
+	\item Formamos la función de Lagrange: $F(x,y,z,\lambda_1,\lambda_2) = xyz + \lambda_1(x^2 + y^2 + z^2 - 1) + \lambda_2(x + y + z)$
 	\item Consideramos entonces el sistema:
 		$\begin{cases}
 			\frac{\partial F}{\partial x}=yz+2\lambda_1 x+\lambda_2=0\\
@@ -1074,20 +1059,15 @@ $Jf(0,0)=\left[
 \end{enumerate}
 
 \subsection{Extremos absolutos en regiones compactas}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:K\subset R^n \to R$ una función real definida en el conjunto compacto $K$ de $R^n$. Si $f$ es continua, existen puntos $x_0,x_1 \in K$ tales que $f(x_0) \ge f(x) \forall x \in K$ y $f(x_1) \le f(x) \forall x \in K.$\\
-			
-			Si además $f$ es diferenciable, se puede demostrar que los extremos absolutos de $f$ ocurren:
-			\begin{enumerate}
-				\item En la frontera de $K$, ó
-				\item En puntos interiores de $K$, donde las derivadas parciales de $f$ se deben anular.
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de extremos en regiones compactas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de extremos en regiones compactas}
+	Sea $f:K\subset R^n \to R$ una función real definida en el conjunto compacto $K$ de $R^n$. Si $f$ es continua, existen puntos $x_0,x_1 \in K$ tales que $f(x_0) \ge f(x) \forall x \in K$ y $f(x_1) \le f(x) \forall x \in K.$\\
+	
+	Si además $f$ es diferenciable, se puede demostrar que los extremos absolutos de $f$ ocurren:
+	\begin{enumerate}
+		\item En la frontera de $K$, ó
+		\item En puntos interiores de $K$, donde las derivadas parciales de $f$ se deben anular.
+	\end{enumerate}
+\end{teorema*}
 
 \textbf{Ejemplo}: Se quiere extremar la función $f(x,y)=x^{2}+3y^{2}$ en la región $K=\{\vect{x}\in R^2:(x-1)^2+y^2 \leq4\}$.\\
 
@@ -1105,345 +1085,203 @@ $Jf(0,0)=\left[
 \newpage
 \section{Curvas en el espacio}
 \subsection{Introducción. Límites y continuidad.}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una \textbf{función vectorial} de una variable real es una función del tipo $f:I\subseteq R \to R^n$, la cual a cada número real $t \in I$ le asocia un único valor $f(t)$ en el espacio $R^n$.\\
-			Así, podemos escribir $f(t)=(x_1(t),x_2(t),\ldots,x_n(t)) \in R^n$ donde $x_i:I\subseteq R \to R$ con $i=1,2,\ldots,n$ son funciones reales de la variable real $t$, llamadas funciones coordenadas de la función $f$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Funciones vectoriales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Funciones vectoriales}
+	Una \textbf{función vectorial} de una variable real es una función del tipo $f:I\subseteq R \to R^n$, la cual a cada número real $t \in I$ le asocia un único valor $f(t)$ en el espacio $R^n$.\\
+	Así, podemos escribir $f(t)=(x_1(t),x_2(t),\ldots,x_n(t)) \in R^n$ donde $x_i:I\subseteq R \to R$ con $i=1,2,\ldots,n$ son funciones reales de la variable real $t$, llamadas funciones coordenadas de la función $f$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^n$ una función definida en el intervalo abierto I de $R$ y sea $t_0$ un punto de $I$ o un punto frontera de $I$.\\
-			
-			Se dice que el límite de la función $f$ cuando $t$ tiende a $t_0$ es $L \in R^n$, lo cual se escribe como $\lim_{t\to t_0}f(t)=L$ si dado cualquier $\epsilon>0$ existe un $\delta>0$ tal que $t \in I,\:0<|t-t_0|<\delta \Rightarrow |f(t)-L|<\epsilon$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Límite de funciones vectoriales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Límite de funciones vectoriales}
+	Sea $f:I\subseteq R \to R^n$ una función definida en el intervalo abierto I de $R$ y sea $t_0$ un punto de $I$ o un punto frontera de $I$.\\
+	
+	Se dice que el límite de la función $f$ cuando $t$ tiende a $t_0$ es $L \in R^n$, lo cual se escribe como $\lim_{t \to t_0}f(t)=L$ si dado cualquier $\epsilon>0$ existe un $\delta>0$ tal que $t \in I,\:0<|t-t_0|<\delta \Rightarrow |f(t)-L|<\epsilon$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^n$ como en la definición anterior. Entonces:
-			\begin{align}
-				\lim_{t \to t_0}f(t)=L=(\ell_1,\ell_2,\ldots,\ell_n) \in R^n \longleftrightarrow \lim_{t\to t_0}x_i (t)=\ell_i \\
-				\text{donde } f(t)=(x_1(t),x_2(t),\ldots,x_n(t))
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema para el límite de funciones vectoriales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema para el límite de funciones vectoriales}
+	Sea $f:I\subseteq R \to R^n$ como en la definición anterior. Entonces:
+	\begin{align}
+		\lim_{t \to t_0}f(t) = L = (\ell_1,\ell_2,\ldots,\ell_n) \in R^n \longleftrightarrow \lim_{t \to t_0}x_i (t) = \ell_i \\
+		\text{donde } f(t)=(x_1(t),x_2(t),\ldots,x_n(t))
+	\end{align}
+\end{teorema*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^n$ una función definida en el subconjunto abierto $I$ de $R$ y sea $t_0 \in I$. Se dice que $f$ es continua en $t_0$ si $\lim_{t \to t_0}f(t)=f(t_0)$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Continuidad};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Continuidad}
+	Sea $f:I\subseteq R \to R^n$ una función definida en el subconjunto abierto $I$ de $R$ y sea $t_0 \in I$. Se dice que $f$ es continua en $t_0$ si $\lim_{t \to t_0}f(t)=f(t_0)$
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^n$ una función definida en el intervalo abierto $I$ de $R$, digamos que $f(t)=(x_1(t),x_2(t),\ldots,x_n(t))$.\\
-			
-			Sea $t_0 \in I$, La función $f$ es continua en $t_0$ si y sólo si sus funciones coordenadas $x_i:I\subseteq R \to R$ lo son.
-		\end{minipage}
-		};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de continuidad de funciones vectoriales};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de continuidad de funciones vectoriales}
+	Sea $f: I \subseteq R \to R^n$ una función definida en el intervalo abierto $I$ de $R$, digamos que $f(t) = (x_1(t),x_2(t),\ldots,x_n(t))$.\\
+	
+	Sea $t_0 \in I$, La función $f$ es continua en $t_0$ si y sólo si sus funciones coordenadas $x_i: I \subseteq R \to R$ lo son.
+\end{teorema*}
 
 \subsection{Caminos en $R^{n}$. Consideraciones y ejemplos preliminares}
 \begin{minipage}{0.5\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.8\textwidth}
-				Una función $f:I\subseteq R \to R^n$ continua, definida en el intervalo $I$ de $R$, se llama \textbf{camino} o \textbf{trayectoria} en el espacio $R^n$.\\
-				
-				Si la función está definida en el intervalo cerrado $I=[a,b]$, diremos que el punto $f(a) \in R^n$ es el \textit{punto inicial} del camino, y $f(b) \in R^n$ es el \textit{punto final} de él. Si $f(a)=f(b)$, diremos que el camino $f$ es \textbf{cerrado}.\\
-				
-				Si la función $f$ es inyectiva en $I$, diremos que $f$ es un \textit{camino simple}. Si se tiene que $f(a)=f(b)$ y la función $f$ restringida al intervalo $[a,b)$ es inyectiva, diremos que $f$ es un \textit{camino} \textbf{cerrado simple}.\\
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Trayectorias};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Trayectorias}
+		Una función $f:I\subseteq R \to R^n$ continua, definida en el intervalo $I$ de $R$, se llama \textbf{camino} o \textbf{trayectoria} en el espacio $R^n$.\\
+		
+		Si la función está definida en el intervalo cerrado $I=[a,b]$, diremos que el punto $f(a) \in R^n$ es el \textit{punto inicial} del camino, y $f(b) \in R^n$ es el \textit{punto final} de él. Si $f(a)=f(b)$, diremos que el camino $f$ es \textbf{cerrado}.\\
+		
+		Si la función $f$ es inyectiva en $I$, diremos que $f$ es un \textit{camino simple}. Si se tiene que $f(a) = f(b)$ y la función $f$ restringida al intervalo $[a,b)$ es inyectiva, diremos que $f$ es un \textit{camino} \textbf{cerrado simple}.\\
+	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{curva}\caption{{\footnotesize Hélice de ecuación \\ $\vec{\lambda}(t)=(4cos(t),4sin(t),t)$.}}
-		\end{center}
+		\centering
+		\includegraphics[scale=0.4]{curva}
+		\caption{{\footnotesize Hélice de ecuación \\ $\vec{\lambda}(t)=(4cos(t),4sin(t),t)$.}}
 	\end{figure}
 \end{minipage}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Se llama traza del camino $f:I\subseteq R \to R^n$ al conjunto de las imágenes de $f$, es decir: traza de $f=\{f(t) \in R^n|t \in I\} \subset R^n$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Traza};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Traza}
+	Se llama traza del camino $f: I \subseteq R \to R^n$ al conjunto de las imágenes de $f$, es decir: traza de $f = \{f(t) \in R^n|t \in I\} \subset R^n$
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Designaremos con la palabra curva (en $R^n$) a la traza de un camino $f:I\subseteq R \to R^n$. Si el camino $f: [a,b] \to R^2,\, f(t)=(x_{t},y_{t})$ es simple, podremos decir que la curva $\{f(t) \in R^2:t\in[a,b]$\} es una \textit{curva simple}.\\
-			
-			Una curva es \textit{plana} si hay un plano $S$ tal que $f(t)\in S\:\forall t\in I$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Curva};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Curva}
+	Designaremos con la palabra curva (en $R^n$) a la traza de un camino $f: I \subseteq R \to R^n$. Si el camino $f: [a,b] \to R^2,\, f(t) = (x_{t},y_{t})$ es simple, podremos decir que la curva $\{f(t) \in R^2:t \in [a,b]$\} es una \textit{curva simple}.\\
+	
+	Una curva es \textit{plana} si hay un plano $S$ tal que $f(t)\in S\:\forall t\in I$
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Curva que no posee puntos angulosos. Una curva $C$ representada por $\lambda:I\rightarrow R^{n}$ $\lambda(t)=(\lambda_1,\ldots\lambda_n)$ es suave si sus derivadas son continuas en el intervalo $I$ y no son simultáneamente nulas, excepto posiblemente en los puntos terminales del intervalo.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Curva suave};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Curva suave}
+	Curva que no posee puntos angulosos. Una curva $C$ representada por $\lambda: I \rightarrow R^{n}$ $\lambda(t) = (\lambda_1,\ldots\lambda_n)$ es suave si sus derivadas son continuas en el intervalo $I$ y no son simultáneamente nulas, excepto posiblemente en los puntos terminales del intervalo.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una curva $C$ es suave a trozos si es suave en todo intervalo de alguna partición de $I$. O sea que el intervalo puede dividirse en un número finito de subintervalos, en cada uno de los cuales $C$ es suave.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Curva suave a trozos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Curva suave a trozos}
+	Una curva $C$ es suave a trozos si es suave en todo intervalo de alguna partición de $I$. O sea que el intervalo puede dividirse en un número finito de subintervalos, en cada uno de los cuales $C$ es suave.
+\end{definicion*}
 
 \subsection{Diferenciabilidad. Curvas regulares}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^n$ un camino definido en el intervalo abierto I de $R$. Sea $t_0 \in I$. Se define la derivada de $f$ en $t_0$, denotada por $f^\prime(t_0)$ o $\frac{\partial f}{\partial t}(t_0)$ como el límite $f^\prime (t_0)=\lim_{h \to 0}\frac{f(t_0+h)-f(t_0)}{h}$ cuando éste existe. En tal caso se dice que el camino $f$ es diferenciable en $t_0$.\\
-			
-			Si la función es diferenciable en todos los puntos $t_0 \in I$, decimos que $f$ es diferenciable en $I$. Tener en cuenta que la derivada $f^\prime (t_0)$ es un vector de $R^n$, y además que éste es tangente a la curva en $t_0$, y que apunta en dirección al recorrido de la curva.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Derivada de curvas regulares};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Derivada de curvas regulares}
+	Sea $f:I\subseteq R \to R^n$ un camino definido en el intervalo abierto I de $R$. Sea $t_0 \in I$. Se define la derivada de $f$ en $t_0$, denotada por $f^\prime(t_0)$ o $\frac{\partial f}{\partial t}(t_0)$ como el límite $f^\prime (t_0)=\lim_{h \to 0}\frac{f(t_0+h)-f(t_0)}{h}$ cuando éste existe. En tal caso se dice que el camino $f$ es diferenciable en $t_0$.\\
+	
+	Si la función es diferenciable en todos los puntos $t_0 \in I$, decimos que $f$ es diferenciable en $I$. Tener en cuenta que la derivada $f^\prime (t_0)$ es un vector de $R^n$, y además que éste es tangente a la curva en $t_0$, y que apunta en dirección al recorrido de la curva.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^n$ un camino diferenciable. Al vector $f^\prime(t)$ se le llama \textbf{vector velocidad} del camino en el punto $f(t) \in R^n$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Vector velocidad de curvas regulares};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Vector velocidad de curvas regulares}
+	Sea $f: I \subseteq R \to R^n$ un camino diferenciable. Al vector $f^\prime(t)$ se le llama \textbf{vector velocidad} del camino en el punto $f(t) \in R^n$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^3$ un camino de clase $\mathcal{C}^{1}$. $f$ es un \textbf{camino regular} si $f^\prime (t) \ne\vect{0}\:\forall t \in I.$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Camino regular de curvas regulares};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Camino regular de curvas regulares}
+	Sea $f: I \subseteq R \to R^3$ un camino de clase $\mathcal{C}^{1}$. $f$ es un \textbf{camino regular} si $f^\prime (t) \ne\vect{0}\:\forall t \in I.$
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:I\subseteq R \to R^3$ un camino regular. \textbf{La recta tangente} a la curva en $f(t_0)$ es la recta en $R^3$ que pasa por $f(t_0)$ y tiene como 	vector director a uno paralelo a $f^\prime(t_0)$. Es decir:
-			\begin{align}
-				L:\:(x,y,z)=k(f^\prime_x(t_0),f^\prime_y(t_0),f^\prime_z(t_0))+(x(t_0),y(t_0),z(t_0))\mbox{ con \ensuremath{k\in R}}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Recta tangente de curvas regulares};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Recta tangente de curvas regulares}
+	Sea $f:I\subseteq R \to R^3$ un camino regular. \textbf{La recta tangente} a la curva en $f(t_0)$ es la recta en $R^3$ que pasa por $f(t_0)$ y tiene como vector director a uno paralelo a $f^\prime(t_0)$. Es decir:
+	\begin{align}
+		L:\:(x,y,z)=k(f^\prime_x(t_0),f^\prime_y(t_0),f^\prime_z(t_0))+(x(t_0),y(t_0),z(t_0))\mbox{ con \ensuremath{k\in R}}
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Para el camino $f:I\subseteq R \to R^3$ el \textbf{plano normal} a la curva correspondiente en $f(t_0)$ es el plano en $R^3$ que pasa por $f(t_0)$ y tiene por vector normal al vector $f^\prime(t_0)$. Este plano tiene como ecuación:
-			\begin{align}
-				\frac{\partial f}{\partial x}(t_0)(x-x(t_0))+\frac{\partial f}{\partial y}(t_0)(y-y(t_0))+\frac{\partial f}{\partial z}(t_0)(z-z(t_0))=0
-			\end{align} 
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Plano normal de curvas regulares};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Plano normal de curvas regulares}
+	Para el camino $f:I\subseteq R \to R^3$ el \textbf{plano normal} a la curva correspondiente en $f(t_0)$ es el plano en $R^3$ que pasa por $f(t_0)$ y tiene por vector normal al vector $f^\prime(t_0)$. Este plano tiene como ecuación:
+	\begin{align}
+		\frac{\partial f}{\partial x}(t_0)(x-x(t_0))+\frac{\partial f}{\partial y}(t_0)(y-y(t_0))+\frac{\partial f}{\partial z}(t_0)(z-z(t_0))=0
+	\end{align}
+\end{definicion*}
 
 \subsection{Reparametrizaciones}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:[a,b] \to R^n$ un camino regular. Sea $k$ una constante positiva.\\
-			
-			Para recorrer la curva descrita por $f$, $k$ veces más rápido, podemos tomar la función $\varphi:[0,\frac{b-a}{k}]\to[a,b]$ dada por $\varphi(s)=ks+a$. La reparametrización será:
-			\begin{align}
-				\vect{f}:[0,\frac{b-a}{k}] \to R^n \text{ , } \vect{f}(s)=(f\circ\varphi)(s)=f(ks+a)
-			\end{align}
-			
-			Si $k$ es negativa, la reparametrización recorre $f$ con una velocidad en módulo $k$ veces mayor, pero en sentido inverso al de $f$.\\
-			
-			Si $k=-1$, el camino $\vect{f}:[0,b-a]\to R^n$ dado por $\vect{f}(s)=f(b-s)$ recorre la curva descripta por $f$ con la misma velocidad (en módulo) de $f$, pero en sentido inverso al de $f$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Reparametrizaciones};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Reparametrizaciones}
+	Sea $f:[a,b] \to R^n$ un camino regular. Sea $k$ una constante positiva.\\
+	
+	Para recorrer la curva descrita por $f$, $k$ veces más rápido, podemos tomar la función $\varphi:[0,\frac{b-a}{k}]\to[a,b]$ dada por $\varphi(s)=ks+a$. La reparametrización será:
+	\begin{align}
+		\vect{f}:[0,\frac{b-a}{k}] \to R^n \text{ , } \vect{f}(s)=(f\circ\varphi)(s)=f(ks+a)
+	\end{align}
+	
+	Si $k$ es negativa, la reparametrización recorre $f$ con una velocidad en módulo $k$ veces mayor, pero en sentido inverso al de $f$.\\
+	
+	Si $k=-1$, el camino $\vect{f}:[0,b-a]\to R^n$ dado por $\vect{f}(s)=f(b-s)$ recorre la curva descripta por $f$ con la misma velocidad (en módulo) de $f$, pero en sentido inverso al de $f$.
+\end{definicion*}
 
 \subsection{Longitud de un camino}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Llamamos \textbf{rapidez de un camino} $f:I\subseteq R \to R^n$ de clase $\mathcal{C}^{1}$ en $f(t_0)$ al número no negativo: $\left\Vert f^\prime(t_0)\right\Vert$
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Rapidez de un camino};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Rapidez de un camino}
+	Llamamos \textbf{rapidez de un camino} $f:I\subseteq R \to R^n$ de clase $\mathcal{C}^{1}$ en $f(t_0)$ al número no negativo: $\left\Vert f^\prime(t_0)\right\Vert$
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea $f:[a,b] \to R^n$ un camino de clase $\mathcal{C}^{1}$. La longitud de $f$ entre $t=a$ y $t=b$, denotada por $\ell(f)$, se define como:
-			\begin{align}
-				\ell(f)=\int_{a}^{b}\left\Vert f'(t)\right\Vert \: dt
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Longitud de un camino};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Longitud de un camino}
+	Sea $f:[a,b] \to R^n$ un camino de clase $\mathcal{C}^{1}$. La longitud de $f$ entre $t=a$ y $t=b$, denotada por $\ell(f)$, se define como:
+	\begin{align}
+		\ell(f)=\int_{a}^{b}\left\Vert f'(t)\right\Vert \: dt
+	\end{align}
+\end{definicion*}
 
 \newpage
 \section{Ecuaciones diferenciales}
 \subsection{Introducción y definiciones}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una ecuación se llama \emph{ecuación	diferencial} si contiene derivadas o diferenciales de una o más variables dependientes de una o más variables independientes.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuación diferencial};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Ecuación diferencial}
+	Una ecuación se llama \emph{ecuación diferencial} si contiene derivadas o diferenciales de una o más variables dependientes de una o más variables independientes.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Son las ecuaciones diferenciales en las que figuran derivadas de diferentes órdenes de la función desconocida $y(x)$, que depende solo de una variable independiente.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuación diferencial ordinaria};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Ecuación diferencial ordinaria}
+	Son las ecuaciones diferenciales en las que figuran derivadas de diferentes órdenes de la función desconocida $y(x)$, que depende solo de una variable independiente.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Se llama \emph{orden} de una ecuación diferencial al de la derivada de mayor orden que figura en dicha ecuación.\\
+\begin{definicion*}{Orden de una ecuación diferencial}
+	Se llama \emph{orden} de una ecuación diferencial al de la derivada de mayor orden que figura en dicha ecuación.\\
 			
-			\emph{Ejemplo}: el orden de la ecuación $y^{\prime\prime}+y^\prime=x^2$ es 2
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Orden de una ecuación diferencial};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\emph{Ejemplo}: el orden de la ecuación $y^{\prime\prime}+y^\prime=x^2$ es 2.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una ecuación diferencial es \emph{lineal} cuando es lineal en $y(x)$ y en sus derivadas. Es decir que los términos que contienen la función incógnita y sus derivadas $y^\prime,y^{\prime\prime},...y^{(n)}$ aparecen como combinación lineal de $y,y^\prime,...y^{(n)}.$ Su forma general es:
-			\begin{align}
-				a_1(x)y+a_2(x)y^\prime+\ldots+a_n(x)y^{(n)}=f(x)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuación diferencial lineal};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Ecuación diferencial lineal}
+	Una ecuación diferencial es \emph{lineal} cuando es lineal en $y(x)$ y en sus derivadas. Es decir que los términos que contienen la función incógnita y sus derivadas $y^\prime,y^{\prime\prime},...y^{(n)}$ aparecen como combinación lineal de $y,y^\prime,...y^{(n)}.$ Su forma general es:
+	\begin{align}
+		a_1(x)y+a_2(x)y^\prime+\ldots+a_n(x)y^{(n)}=f(x)
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Es el problema de encontrar una solución de la ecuación diferencial $y^\prime=f(x,y)$ sujeto a una condición inicial $y(x_0)=y_0$. Para que la solución a este problema sea única, debe verificarse que haya tantas condiciones iniciales como el orden de la ecuación diferencial.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Problemas de valor inicial};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Problemas de valor inicial}
+	Es el problema de encontrar una solución de la ecuación diferencial $y^\prime=f(x,y)$ sujeto a una condición inicial $y(x_0)=y_0$. Para que la solución a este problema sea única, debe verificarse que haya tantas condiciones iniciales como el orden de la ecuación diferencial.
+\end{definicion*}
 
 \subsection{Ecuaciones de variables separables}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una ecuación diferencial separable se puede escribir de la forma $N(y)y^\prime=M(x)$.Esta ecuación se puede reescribir como:
-			\begin{align}
-				N(y)dy=M(x)dx
-			\end{align}
-			
-			e integrando ambos miembros se obtiene una solución.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales de variables separables};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Ecuaciones diferenciales de variables separables}
+	Una ecuación diferencial separable se puede escribir de la forma $N(y)y^\prime=M(x)$.Esta ecuación se puede reescribir como:
+	\begin{align}
+		N(y)dy=M(x)dx
+	\end{align}
+	e integrando ambos miembros se obtiene una solución.
+\end{definicion*}
 
 \subsection{Ecuaciones homogéneas}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Son de la forma $y^\prime=f(x,y)$, donde $f(x,y)=f(tx,ty)$. Este tipo de ecuaciones se pueden resolver haciendo el cambio de variables $y=zx$, donde $z=z(x)$. Entonces reemplazamos $y^\prime$ por $z+xz^\prime$ y resolvemos.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales homogéneas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Ecuaciones diferenciales homogéneas}
+	Son de la forma $y^\prime=f(x,y)$, donde $f(x,y)=f(tx,ty)$. Este tipo de ecuaciones se pueden resolver haciendo el cambio de variables $y=zx$, donde $z=z(x)$. Entonces reemplazamos $y^\prime$ por $z+xz^\prime$ y resolvemos.
+\end{definicion*}
 
 \subsection{Ecuaciones lineales de 1er orden}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Sea la ecuación $y^\prime+p(x)y=q(x)$. La solución general de esta ecuación diferencial se obtiene multiplicando toda la ecuación por el factor integrante de Lagrange:
-			\begin{align}
-				u(x)=e^{\int p(x)dx}
-			\end{align}
-			Entonces la ecuación a resolver es $(u(x)y)^\prime=u(x)q(x)$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales lineales de orden 1};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Ecuaciones diferenciales lineales de orden 1}
+	Sea la ecuación $y^\prime+p(x)y=q(x)$. La solución general de esta ecuación diferencial se obtiene multiplicando toda la ecuación por el factor integrante de Lagrange:
+	\begin{align}
+		u(x)=e^{\int p(x)dx}
+	\end{align}
+	Entonces la ecuación a resolver es $(u(x)y)^\prime=u(x)q(x)$.
+\end{definicion*}
 
 \subsection{Ecuaciones diferenciales exactas}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Una ecuación diferencial $P(x,y)dx+Q(x,y)dy=0$ se dice ser \emph{exacta} si exista una función $f(x,y)$ tal que la diferencial total de esta función (es decir, $df(x,y)=\frac{\partial f}{\partial x}(x,y)dx+\frac{\partial f}{\partial y}(x,y)dy$) sea:
-			\begin{align}
-				df(x,y)=P(x,y)dx+Q(x,y)dy
-			\end{align}
-			
-			En el caso de que la ecuación diferencial sea exacta, la ecuación se puede escribir como $df(x,y)=0$, de modo que la familia de curvas en el plano $f(x,y)=c$ es la solución general.\\
-			
-			Se puede asociar la ecuación diferencial al campo vectorial $\vect{F}(x,y)=(P_{(x,y)},Q_{(x,y)})$, con lo que la propiedad de exactitud de la ecuación es equivalente a la propiedad del campo $\vect{F}$ de ser conservativo.\\
+\begin{definicion*}{Ecuaciones diferenciales exactas}
+	Una ecuación diferencial $P(x,y)dx+Q(x,y)dy=0$ se dice ser \emph{exacta} si exista una función $f(x,y)$ tal que la diferencial total de esta función (es decir, $df(x,y)=\frac{\partial f}{\partial x}(x,y)dx+\frac{\partial f}{\partial y}(x,y)dy$) sea:
+	\begin{align}
+		df(x,y)=P(x,y)dx+Q(x,y)dy
+	\end{align}
+	
+	En el caso de que la ecuación diferencial sea exacta, la ecuación se puede escribir como $df(x,y)=0$, de modo que la familia de curvas en el plano $f(x,y)=c$ es la solución general.\\
+	
+	Se puede asociar la ecuación diferencial al campo vectorial $\vect{F}(x,y)=(P_{(x,y)},Q_{(x,y)})$, con lo que la propiedad de exactitud de la ecuación es equivalente a la propiedad del campo $\vect{F}$ de ser conservativo.\\
 
-			Es decir, la ecuación es exacta si y solo si:
-			\begin{align}
-				\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Ecuaciones diferenciales exactas};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	Es decir, la ecuación es exacta si y solo si:
+	\begin{align}
+		\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.80\textwidth}
-			Algunas ecuaciones diferenciales no exactas se pueden convertir en exactas multiplicándolas por un factor adecuado. En general, para la ecuación $P(x,y)dx+Q(x,y)dy=0$ se dice que la función no nula $\mu:U\subseteq R^2 \to R$, de clase $\mathcal{C}^{k}$, es un factor de integración si la ecuación:
-			\begin{align}
-				\mu P(x,y)dx+\mu Q(x,y)dy=0
-			\end{align}
-			En general, la función $\mu$ suele ser $\mu=\mu(x)$ o $\mu=\mu(y)$, aunque también existen $\mu=\mu(x,y)$ para ecuaciones más complicadas.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Factor integrante};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Factor integrante}
+	Algunas ecuaciones diferenciales no exactas se pueden convertir en exactas multiplicándolas por un factor adecuado. En general, para la ecuación $P(x,y)dx+Q(x,y)dy=0$ se dice que la función no nula $\mu:U\subseteq R^2 \to R$, de clase $\mathcal{C}^{k}$, es un factor de integración si la ecuación:
+	\begin{align}
+		\mu P(x,y)dx+\mu Q(x,y)dy=0
+	\end{align}
+	En general, la función $\mu$ suele ser $\mu=\mu(x)$ o $\mu=\mu(y)$, aunque también existen $\mu=\mu(x,y)$ para ecuaciones más complicadas.
+\end{definicion*}
 
-\vspace{1.5cm}
+\vspace{1cm}
 
 \emph{Ejemplo}: Sea la ecuación $\underbrace{(3yx^2)}_{P}dx+\underbrace{(x^3+sen(y))}_{Q}dy=0$.\\
 
@@ -1467,31 +1305,27 @@ Entonces la solución general de la ecuación es $\phi=yx^3-cos(y)=c$.
 
 \subsection{Trayectorias ortogonales}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.8\textwidth}
-				Dos familias uniparamétricas de curvas $F_1(x,y,c_1)=0$ y $F_2(x,y,c_2)=0$ se dicen que son \emph{trayectorias ortogonales} si todas las curvas de una familia cortan perpendicularmente a todas las curvas de la otra familia.\\
+	\begin{definicion*}{Trayectorias ortogonales}
+		Dos familias uniparamétricas de curvas $F_1(x,y,c_1)=0$ y $F_2(x,y,c_2)=0$ se dicen que son \emph{trayectorias ortogonales} si todas las curvas de una familia cortan perpendicularmente a todas las curvas de la otra familia.\\
 		
-				En otras palabras, en cada punto de intersección de ambas curvas la recta tangente al punto de una curva es ortogonal a la tangente de la otra curva.\\
+		En otras palabras, en cada punto de intersección de ambas curvas la recta tangente al punto de una curva es ortogonal a la tangente de la otra curva.\\
 		
-				El procedimiento para hallar la familia de curvas $F_2$ ortogonales a una familia $F_1:\, y=f(x,c)$ es el siguiente:
+		El procedimiento para hallar la familia de curvas $F_2$ ortogonales a una familia $F_1:\, y=f(x,c)$ es el siguiente:
+		\begin{enumerate}
+			\item Derivar la expresión de $F_1$ respecto de $x$, obteniendo $F_1^\prime:\, y^\prime=\frac{\partial f}{\partial x}$
+			\item Despejar $c$ de $F_1^\prime$, y reemplazarlo en $F_1$
+			\item En la nueva expresión obtenida para $F_1$ reemplazar $y^\prime$ por $-\frac{1}{y^\prime}$
+			\item Resolver esta nueva ecuación diferencial.
+		\end{enumerate}
 		
-				\begin{enumerate}
-					\item Derivar la expresión de $F_1$ respecto de $x$, obteniendo $F_1^\prime:\, y^\prime=\frac{\partial f}{\partial x}$
-					\item Despejar $c$ de $F_1^\prime$, y reemplazarlo en $F_1$
-					\item En la nueva expresión obtenida para $F_1$ reemplazar $y^\prime$ por $-\frac{1}{y^\prime}$
-					\item Resolver esta nueva ecuación diferencial.
-				\end{enumerate}
-				
-				\underbar{Nota}: {\footnotesize Cuando la familia $F_1$ viene dada de forma implícita (ejemplo: $x^2+y^2=c$) el método es el mismo, pero se saltea	el paso 2.}
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Trayectorias ortogonales};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+		\underbar{Nota}: {\footnotesize Cuando la familia $F_1$ viene dada de forma implícita (ejemplo: $x^2+y^2=c$) el método es el mismo, pero se saltea	el paso 2.}
+	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 	\begin{figure}[H]
-		\includegraphics[scale=0.25]{curvas_ortogonales}\caption{{\scriptsize Círculos concéntricos (\textcolor{red}{rojo}) y \\ rectas que pasan por el origen (\textcolor{blue}{azul})}}
+		\centering
+		\includegraphics[scale=0.25]{curvas_ortogonales}
+		\caption{{\scriptsize Círculos concéntricos (\textcolor{red}{rojo}) y \\ rectas que pasan por el origen (\textcolor{blue}{azul})}}
 	\end{figure}
 \end{minipage}
 
@@ -1499,469 +1333,350 @@ Entonces la solución general de la ecuación es $\phi=yx^3-cos(y)=c$.
 \section{Integrales de línea}
 \subsection{Campos vectoriales}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.8\textwidth}
-				Una función del tipo $\vect{F}: U \subseteq R^n \to R^n$ se llama campo vectorial (en $R^n$). Este campo asocia a cada punto $x$ de $U \subseteq R^n$ el vector $\vect{F}(x)$ de $R^n$.\\
-				
-				Se dice que el campo vectorial $\vect{F}=(F_1,F_2,\ldots,F_n)$ es continuo (diferenciable, o de clase $\mathcal{C}^{k}$) si todas las funciones coordenadas son continuas (diferenciables, o de clase $\mathcal{C}^{k}$).
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Campo vectorial};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{definicion*}{Campo vectorial}
+		Una función del tipo $\vect{F}: U \subseteq R^n \to R^n$ se llama campo vectorial (en $R^n$). Este campo asocia a cada punto $x$ de $U \subseteq R^n$ el vector $\vect{F}(x)$ de $R^n$.\\
+		
+		Se dice que el campo vectorial $\vect{F}=(F_1,F_2,\ldots,F_n)$ es continuo (diferenciable, o de clase $\mathcal{C}^{k}$) si todas las funciones coordenadas son continuas (diferenciables, o de clase $\mathcal{C}^{k}$).
+	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\includegraphics[scale=0.3]{lineas_de_campo}\caption{{\scriptsize Línea de campo (\textcolor{blue}{azul}) \\ y línea equipotencial (\textcolor{red}{rosa})}}
+		\centering
+		\includegraphics[scale=0.3]{lineas_de_campo}
+		\caption{{\scriptsize Línea de campo (\textcolor{blue}{azul}) \\ y línea equipotencial (\textcolor{red}{rosa})}}
 	\end{figure}
 \end{minipage}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Para tener imágenes geométricas de campos en $R^2$, es útil considerar las \textbf{líneas de campo}. Para un campo $\vect{F}: R^2 \to R^2$, una línea de campo es una curva en $R^2$ cuya propiedad es que en cada punto de ella su tangente va en dirección al campo $\vect{F}$, es decir que $\vect{F}(\lambda(t))=\lambda^\prime(t)$.\\
-			
-			En general, para un campo $\vect{F}: R^n \to R^n$, las líneas de campo satisfacen que $\frac{dx_1}{F_1}=\frac{dx_2}{F_2}=\ldots=\frac{dx_n}{F_n}$.
-			
-			\underbar{Propiedad}: Las líneas de campo de un campo vectorial $\vect{F}$ son perpendiculares a las líneas equipotenciales (i.e. las curvas de nivel de la función potencial de $\vect{F}$).
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Líneas de campo};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Líneas de campo}
+	Para tener imágenes geométricas de campos en $R^2$, es útil considerar las \textbf{líneas de campo}. Para un campo $\vect{F}: R^2 \to R^2$, una línea de campo es una curva en $R^2$ cuya propiedad es que en cada punto de ella su tangente va en dirección al campo $\vect{F}$, es decir que $\vect{F}(\lambda(t))=\lambda^\prime(t)$.\\
+	
+	En general, para un campo $\vect{F}: R^n \to R^n$, las líneas de campo satisfacen que $\frac{dx_1}{F_1} = \frac{dx_2}{F_2} = \ldots = \frac{dx_n}{F_n}$.
+	
+	\underbar{Propiedad}: Las líneas de campo de un campo vectorial $\vect{F}$ son perpendiculares a las líneas equipotenciales (i.e. las curvas de nivel de la función potencial de $\vect{F}$).
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $f: U \subseteq R^n \to R$ diferenciable, podemos construir con ella el \textbf{campo vectorial gradiente} de $f$, $\nabla f: U \subseteq R^n \to R^n$, que asocia a cada punto $x \in U$ el vector $\nabla f(x) \in R^n$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Campo de gradiente};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Campo de gradiente}
+	Sea $f: U \subseteq R^n \to R$ diferenciable, podemos construir con ella el \textbf{campo vectorial gradiente} de $f$, $\nabla f: U \subseteq R^n \to R^n$, que asocia a cada punto $x \in U$ el vector $\nabla f(x) \in R^n$.
+\end{definicion*}
 
 \subsection{Integrales de línea sobre campo vectorial}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[definicion](box){
-			\begin{minipage}{0.8\textwidth}
-				Sea $\vect{F}:U \subseteq R^n \to R^n,\:\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo vectorial continuo, y sea $\lambda:[a,b] \to R^n,\lambda=(\lambda_1,\lambda_2,\ldots,\lambda_n)$ un camino de clase $\mathcal{C}^1$ tal que $\lambda ([a,b])\subset U$. La integral de línea del campo $\vect{F}$ a lo largo del camino $C$, o la \textbf{circulación} del campo $\vect{F}$ alrededor de (o lo largo de $\lambda$), se define como:
-				\begin{align}
-					\int_{\lambda} \vect{F} \cdot d\vec{l}=\int_{a}^{b} \vect{F}\left(\lambda(t)\right) \cdot \lambda^\prime(t)\: dt
-				\end{align}
-				
-				Cuando el camino $\lambda$ es cerrado, se suele usar la notación $\oint_{\lambda} \vect{F} \cdot d\vec{l}$.
+	\begin{definicion*}{Integral de línea (circulación)}
+		Sea $\vect{F}:U \subseteq R^n \to R^n,\:\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo vectorial continuo, y sea $\lambda:[a,b] \to R^n,\lambda=(\lambda_1,\lambda_2,\ldots,\lambda_n)$ un camino de clase $\mathcal{C}^1$ tal que $\lambda ([a,b])\subset U$. La integral de línea del campo $\vect{F}$ a lo largo del camino $C$, o la \textbf{circulación} del campo $\vect{F}$ alrededor de (o lo largo de $\lambda$), se define como:
+		\begin{align}
+			\int_{\lambda} \vect{F} \cdot d\vec{l}=\int_{a}^{b} \vect{F}\left(\lambda(t)\right) \cdot \lambda^\prime(t)\: dt
+		\end{align}
+		
+		Cuando el camino $\lambda$ es cerrado, se suele usar la notación $\oint_{\lambda} \vect{F} \cdot d\vec{l}$.
 
-				\underbar{Una aplicación}: Si $\vect{F}$ es la fuerza que actúa sobre una partícula moviéndose a lo largo de la curva, entonces la integral sería la cantidad total de trabajo que realiza esa fuerza sobre la partícula.
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Integral de línea (circulación)};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+		\underbar{Una aplicación}: Si $\vect{F}$ es la fuerza que actúa sobre una partícula moviéndose a lo largo de la curva, entonces la integral sería la cantidad total de trabajo que realiza esa fuerza sobre la partícula.
+	\end{definicion*}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\includegraphics[scale=0.4]{integral_de_linea_de_campo_vectorial.png}\caption{Circulación de un campo a través de una hélice}
+		\centering
+		\includegraphics[scale=0.4]{integral_de_linea_de_campo_vectorial.png}
+		\caption{Circulación de un campo a través de una hélice}
 	\end{figure}
 \end{minipage}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			\underbar{Propiedades}:
-				\begin{enumerate}
-					\item $\int_{-\lambda}F\cdot d\lambda=-\int_{\lambda}F\cdot d\lambda$
-					\item Una integral de línea es invariante por reparametrizaciones del camino sobre el que se integra el campo $F$.
-					\item Si $F,G: U \subseteq R^n \to R^n$ son dos campos continuos y $\lambda:[a,b] \to R^n$, $\lambda \left([a,b]\right) \subset U$, un camino de clase $\mathcal{C}^1$, entonces $\int_{\lambda} \left(F+kG\right) \cdot d\lambda=\int_{\lambda}F \cdot d\lambda+k\int_{\lambda}G \cdot d\lambda$
-					\item Si $\lambda=\lambda_1+\lambda_2$ entonces $\int_{\lambda}F \cdot d\lambda=\int_{\lambda_1}F \cdot d\lambda+\int_{\lambda_2}F\cdot d\lambda$
-					\item Si $\mu$ es una reparametrización de $\lambda$ que conserva la orientación entonces $\int_{\mu}F \cdot d\mu=\int_{\lambda}F \cdot d\lambda$
-					\item Si $\mu$ es una reparametrización de $\lambda$ que invierte la orientación entonces $\int_{\mu}F \cdot d\mu=-\int_{\lambda}F \cdot d\lambda$
-				\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de la Integral de línea};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Propiedades de la Integral de línea}
+	\underbar{Propiedades}:
+	\begin{enumerate}
+		\item $\int_{-\lambda}F\cdot d\lambda=-\int_{\lambda}F\cdot d\lambda$
+		\item Una integral de línea es invariante por reparametrizaciones del camino sobre el que se integra el campo $F$.
+		\item Si $F,G: U \subseteq R^n \to R^n$ son dos campos continuos y $\lambda:[a,b] \to R^n$, $\lambda \left([a,b]\right) \subset U$, un camino de clase $\mathcal{C}^1$, entonces $\int_{\lambda} \left(F+kG\right) \cdot d\lambda=\int_{\lambda}F \cdot d\lambda+k\int_{\lambda}G \cdot d\lambda$
+		\item Si $\lambda=\lambda_1+\lambda_2$ entonces $\int_{\lambda}F \cdot d\lambda=\int_{\lambda_1}F \cdot d\lambda+\int_{\lambda_2}F\cdot d\lambda$
+		\item Si $\mu$ es una reparametrización de $\lambda$ que conserva la orientación entonces $\int_{\mu}F \cdot d\mu=\int_{\lambda}F \cdot d\lambda$
+		\item Si $\mu$ es una reparametrización de $\lambda$ que invierte la orientación entonces $\int_{\mu}F \cdot d\mu=-\int_{\lambda}F \cdot d\lambda$
+	\end{enumerate}
+\end{corolario*}
 
 \subsection{Independencia del camino, campos conservativos y funciones potenciales}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.8\textwidth}
-			Condición necesaria pero no suficiente para que un campo sea conservativo:\\
-			
-			Sea $\vect{F}:U\subseteq R^n \to R^n$, $\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo de clase $\mathcal{C}^{k}(k\ge1)$ definido en el conjunto abierto $U \subseteq R^n$. Si $\vect{F}$ es conservativo entonces $\frac{\partial F_i}{\partial x_j}(x)=\frac{\partial F_j}{\partial x_i}(x)$ para $x \in U$, $1\le i<j\le n.$ Es decir que la matriz jacobiana de $\vec{F}$ debe ser simétrica.\\
+\begin{teorema*}{Condiciones para de campos conservativos}
+	Condición necesaria pero no suficiente para que un campo sea conservativo:\\
+	
+	Sea $\vect{F}:U\subseteq R^n \to R^n$, $\vect{F}=(F_1,F_2,\ldots,F_n)$ un campo de clase $\mathcal{C}^{k}(k\ge1)$ definido en el conjunto abierto $U \subseteq R^n$. Si $\vect{F}$ es conservativo entonces $\frac{\partial F_i}{\partial x_j}(x)=\frac{\partial F_j}{\partial x_i}(x)$ para $x \in U$, $1\le i<j\le n.$ Es decir que la matriz jacobiana de $\vec{F}$ debe ser simétrica.\\
 
-			\textit{Nota}: Si la matriz es simétrica, el campo \underline{puede o no} ser conservativo. Si no lo es, podemos concluir que no es conservativo.
+	\textit{Nota}: Si la matriz es simétrica, el campo \underline{puede o no} ser conservativo. Si no lo es, podemos concluir que no es conservativo.
 
-			\textit{Propiedad}: Si la matriz jacobiana de $\vect{F}$ es continua y simétrica en un $U$ simplemente conexo, entonces existe función potencial.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Condiciones para de campos conservativos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\textit{Propiedad}: Si la matriz jacobiana de $\vect{F}$ es continua y simétrica en un $U$ simplemente conexo, entonces existe función potencial.
+\end{teorema*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $\vect{F}: U \subseteq R^n \to R^n$ un campo de clase $\mathcal{C}^{k}\:(k\ge0)$ definido en el conjunto abierto $U\subseteq R^n$. Las afirmaciones siguientes son equivalentes (esto es, o son todas verdaderas o todas falsas):
-			
-			\begin{enumerate}
-				\item $F$ es el \emph{campo gradiente} de una función $\phi:U \subseteq R^n \to R$ de clase $\mathcal{C}^{k+1}$, es decir, $\vect{F}=\nabla\phi$
-				\item La integral $\int_{\lambda} \vect{F}\: d\lambda$ a lo largo de un camino $\lambda: [a,b] \to R^n$ seccionalmente $\mathcal{C}^1$ depende solamente del punto inicial $\lambda(a)$ y final $\lambda(b)$ del camino $\lambda$: $\int_{\lambda} \vec{F} \cdot d\lambda=\phi(b)-\phi(a)$
-				\item La integral $\int_{\lambda}\vect{F}\: d\lambda$ a lo largo de un camino $\lambda:[a,b] \to R^n$ cerrado seccionalmente $\mathcal{C}^1$ es cero.
-				\item El campo $\vect{F}$ es \textit{conservativo}.
-				\item La función $\phi: U \subseteq R^n \to R$ de clase $\mathcal{C}^{k+1}$ es la \textit{función potencial}.
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de campos conservativos};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Propiedades de campos conservativos}
+	Sea $\vect{F}: U \subseteq R^n \to R^n$ un campo de clase $\mathcal{C}^{k}\:(k\ge0)$ definido en el conjunto abierto $U\subseteq R^n$. Las afirmaciones siguientes son equivalentes (esto es, o son todas verdaderas o todas falsas):
+	\begin{enumerate}
+		\item $F$ es el \emph{campo gradiente} de una función $\phi:U \subseteq R^n \to R$ de clase $\mathcal{C}^{k+1}$, es decir, $\vect{F}=\nabla\phi$
+		\item La integral $\int_{\lambda} \vect{F}\: d\lambda$ a lo largo de un camino $\lambda: [a,b] \to R^n$ seccionalmente $\mathcal{C}^1$ depende solamente del punto inicial $\lambda(a)$ y final $\lambda(b)$ del camino $\lambda$: $\int_{\lambda} \vec{F} \cdot d\lambda=\phi(b)-\phi(a)$
+		\item La integral $\int_{\lambda}\vect{F}\: d\lambda$ a lo largo de un camino $\lambda:[a,b] \to R^n$ cerrado seccionalmente $\mathcal{C}^1$ es cero.
+		\item El campo $\vect{F}$ es \textit{conservativo}.
+		\item La función $\phi: U \subseteq R^n \to R$ de clase $\mathcal{C}^{k+1}$ es la \textit{función potencial}.
+	\end{enumerate}
+\end{corolario*}
 
 \subsection{Integrales de línea de campo escalar}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $f: U \subseteq R^n \to R$ una función real continua definida en el abierto $U \subseteq R^n$, y sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda\left([a,b]\right)\subset U$.\\
+\begin{definicion*}{Integral de línea}
+	Sea $f: U \subseteq R^n \to R$ una función real continua definida en el abierto $U \subseteq R^n$, y sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda\left([a,b]\right)\subset U$.\\
 
-			La integral de línea respecto a la longitud de arco de la función $f$ a lo largo del camino $\lambda$ es:
-				\begin{align}
-					\int_{\lambda}\, f\: dl=\int_{a}^{b}f\left(\lambda(t)\right) \cdot \left\Vert \lambda^\prime(t) \right\Vert dt
-				\end{align}
-			Donde $dl=\left\Vert \lambda^\prime(t) \right\Vert dt$ es la diferencial de la longitud de arco del camino $\lambda$.\\
+	La integral de línea respecto a la longitud de arco de la función $f$ a lo largo del camino $\lambda$ es:
+	\begin{align}
+		\int_{\lambda}\, f\: dl=\int_{a}^{b}f\left(\lambda(t)\right) \cdot \left\Vert \lambda^\prime(t) \right\Vert dt
+	\end{align}
+	Donde $dl=\left\Vert \lambda^\prime(t) \right\Vert dt$ es la diferencial de la longitud de arco del camino $\lambda$.\\
 
-			\underbar{Una aplicación}: Conociendo la densidad lineal de un alambre en el espacio, digamos que dada por la función $\rho=\rho(x,y,z)$ (en gr/cm), y el camino $C:[a,b] \to R^3$ en cuya imagen \emph{se encuentra el alambre}, entonces su masa total se calcula como $M=\int_{C} \rho\: dl$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Integral de línea};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	\underbar{Una aplicación}: Conociendo la densidad lineal de un alambre en el espacio, digamos que dada por la función $\rho=\rho(x,y,z)$ (en gr/cm), y el camino $C:[a,b] \to R^3$ en cuya imagen \emph{se encuentra el alambre}, entonces su masa total se calcula como $M=\int_{C} \rho\: dl$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			\begin{enumerate}
-				\item Si $f,g: U \subseteq R^n \to R$ son dos funciones continuas definidas en el abierto $U \subseteq R^n$ y $C:[a,b] \to R^n$ es un camino seccionalmente $\mathcal{C}^1$, entonces:
-					\begin{align}
-						\int_{C} (f+kg) \cdot ds=\int_{C}f \cdot ds+k\int_{C}g \cdot ds
-					\end{align}
-				\item Sea $f: U \subseteq R^n \to R$ una función continua definida en el abierto $U \subseteq R^n$. Sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda \left([a,b]\right) \subset U$, y sea $\mu:[c,d] \to R^n$ una reparametrización de $\lambda$. Entonces $\int_{\lambda}f\: ds=\int_{\mu}f\: ds$.
-			\end{enumerate}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de Integraesl de línea};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Propiedades de Integraesl de línea}
+	\begin{enumerate}
+		\item Si $f,g: U \subseteq R^n \to R$ son dos funciones continuas definidas en el abierto $U \subseteq R^n$ y $C:[a,b] \to R^n$ es un camino seccionalmente $\mathcal{C}^1$, entonces:
+			\begin{align}
+				\int_{C} (f+kg) \cdot ds=\int_{C}f \cdot ds+k\int_{C}g \cdot ds
+			\end{align}
+		\item Sea $f: U \subseteq R^n \to R$ una función continua definida en el abierto $U \subseteq R^n$. Sea $\lambda:[a,b] \to R^n$ un camino de clase $\mathcal{C}^1$ tal que $\lambda \left([a,b]\right) \subset U$, y sea $\mu:[c,d] \to R^n$ una reparametrización de $\lambda$. Entonces $\int_{\lambda}f\: ds=\int_{\mu}f\: ds$.
+	\end{enumerate}
+\end{corolario*}
 
 \subsection{La perspectiva de la física}
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $\vect{F}: U \subseteq R^2$ (o $R^3$) $ \to R^2$ (o $R^3$) un campo de clase $\mathcal{C}^{k}$, $k\ge0$, y sea $\lambda:[a,b] \to R^2$ (o $R^3$) un camino seccionalmente $\mathcal{C}^1$ cuya imagen está contenida en $U$. El trabajo que hay que realizar para llevar un cuerpo de masa $m$ del punto $p=\lambda(a)$ al punto $q=\lambda(b)$ por el camino $\lambda$ a través del campo $\vect{F}$ es:\\
-			\begin{align}
-				W_{pq}=\int_{\lambda} \vect{F} \cdot d\lambda=\int_{a}^{b} \vect{F} \left(\lambda(t)\right) \cdot \lambda^\prime(t)dt=m\int_{a}^{b}\lambda^{\prime\prime}(t) \cdot \lambda^\prime (t)dt=\frac{1}{2}m\left|\lambda^\prime(b)\right|^2-\frac{1}{2}m\left|\lambda^\prime(a)\right|^2
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Trabajo};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Trabajo}
+	Sea $\vect{F}: U \subseteq R^2$ (o $R^3$) $ \to R^2$ (o $R^3$) un campo de clase $\mathcal{C}^{k}$, $k\ge0$, y sea $\lambda:[a,b] \to R^2$ (o $R^3$) un camino seccionalmente $\mathcal{C}^1$ cuya imagen está contenida en $U$. El trabajo que hay que realizar para llevar un cuerpo de masa $m$ del punto $p=\lambda(a)$ al punto $q=\lambda(b)$ por el camino $\lambda$ a través del campo $\vect{F}$ es:\\
+	\begin{align}
+		W_{pq}=\int_{\lambda} \vect{F} \cdot d\lambda=\int_{a}^{b} \vect{F} \left(\lambda(t)\right) \cdot \lambda^\prime(t)dt=m\int_{a}^{b}\lambda^{\prime\prime}(t) \cdot \lambda^\prime (t)dt=\frac{1}{2}m\left|\lambda^\prime(b)\right|^2-\frac{1}{2}m\left|\lambda^\prime(a)\right|^2
+	\end{align}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea una función continua $f: U \subseteq R^n \rightarrow R$ definida en el abierto $U$ de $R^n$, y un camino de clase $\mathcal{C}^1 \text{ } \lambda:[a,b] \rightarrow R^n \text{ , } \lambda([a,b])\subset U$, definimos el valor medio de la función $f$ sobre el camino $\lambda$, como:
-			\begin{align}
-				\bar{f}_{\lambda}=\frac{1}{L_{\lambda}} \cdot \int_{\lambda}\, f\, dl=\frac{1}{\int_{a}^{b}\left\Vert \lambda^\prime(t)\right\Vert dt} \cdot \int_{a}^{b}f(\lambda(t)) \cdot \left\Vert \lambda^\prime(t)\right\Vert dt
-			\end{align}
-			
-			El valor $\bar{f}$ es un tipo de promedio de los valores que toma la función a lo largo del camino $\lambda$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema del valor medio};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Teorema del valor medio}
+	Sea una función continua $f: U \subseteq R^n \rightarrow R$ definida en el abierto $U$ de $R^n$, y un camino de clase $\mathcal{C}^1 \text{ } \lambda:[a,b] \rightarrow R^n \text{ , } \lambda([a,b])\subset U$, definimos el valor medio de la función $f$ sobre el camino $\lambda$, como:
+	\begin{align}
+		\bar{f}_{\lambda}=\frac{1}{L_{\lambda}} \cdot \int_{\lambda}\, f\, dl=\frac{1}{\int_{a}^{b}\left\Vert \lambda^\prime(t)\right\Vert dt} \cdot \int_{a}^{b}f(\lambda(t)) \cdot \left\Vert \lambda^\prime(t)\right\Vert dt
+	\end{align}
+	
+	El valor $\bar{f}$ es un tipo de promedio de los valores que toma la función a lo largo del camino $\lambda$.
+\end{corolario*}
 
 \newpage
 \section{Integrales múltiples}
 \subsection{Integrales dobles}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $f: Q \subset R^2 \to R$ una función escalonada definida en el rectángulo Q de $R^2$. Digamos que $Q$ está dividido en $nm$ subrectángulos $Q_{ij}$.\\
-			
-			Se define la integral doble de la función $f(x,y)$ sobre el rectángulo $Q$, como: 
-			\begin{align}
-				\iint_{Q} f(x,y)\: dxdy=\sum_{i=1}^{n} \sum_{j=1}^{m} c_{ij} (x_i-x_{i-1}) (y_j-y_{j-1})
-			\end{align}
-			Notar que si $f(x,y)=k$ para $(x,y) \in Q=[a,b] \times [c,d]$ se tiene $\iint_{Q} f(x,y)dxdy=k\cdot(\acute{a}rea\: de\: Q)$.\\
-			
-			Si $k>0$, el valor de la integral representa el volumen de un paralepípedo rectangular con base Q y altura $k$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Integral doble};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Integral doble}
+	Sea $f: Q \subset R^2 \to R$ una función escalonada definida en el rectángulo Q de $R^2$. Digamos que $Q$ está dividido en $nm$ subrectángulos $Q_{ij}$.\\
+	
+	Se define la integral doble de la función $f(x,y)$ sobre el rectángulo $Q$, como: 
+	\begin{align}
+		\iint_{Q} f(x,y)\: dxdy=\sum_{i=1}^{n} \sum_{j=1}^{m} c_{ij} (x_i-x_{i-1}) (y_j-y_{j-1})
+	\end{align}
+	Notar que si $f(x,y)=k$ para $(x,y) \in Q=[a,b] \times [c,d]$ se tiene $\iint_{Q} f(x,y)dxdy=k\cdot(\acute{a}rea\: de\: Q)$.\\
+	
+	Si $k>0$, el valor de la integral representa el volumen de un paralepípedo rectangular con base Q y altura $k$.
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.8\textwidth}
-			Si la función $f: Q \subset R^2 \to R$ definida en el rectángulo $Q=[a,b] \times [c,d]$ es continua, entonces es integrable, y la integral doble de ella sobre $Q$ se puede calcular como:
-			\begin{align}
-				\iint_{Q} f(x,y)\: dxdy=\int_{c}^{d} \left(\int_{a}^{b} f(x,y)dx\right)dy=\int_{a}^{b}\left(\int_{c}^{d} f(x,y)\, dy\right)\, dx
-			\end{align}
-			De forma geométrica, la integral doble de la función $f(x,y)$ sobre $Q$ es el volumen del paralepípedo cuya tapa es la gráfica de la función $f(x,y)$ sobre $Q$. Consideremos el cuerpo $\Omega$ que queda limitado entre la gráfica de $f(x,y)$, el plano $xy$ y el área limitada por $Q$. Entonces se tiene que:
-			\begin{align}
-				\iint_{Q}f(x,y)\, dxdy=\text{ volumen de }\Omega
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema para Integral doble};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema para Integral doble}
+	Si la función $f: Q \subset R^2 \to R$ definida en el rectángulo $Q=[a,b] \times [c,d]$ es continua, entonces es integrable, y la integral doble de ella sobre $Q$ se puede calcular como:
+	\begin{align}
+		\iint_{Q} f(x,y)\: dxdy=\int_{c}^{d} \left(\int_{a}^{b} f(x,y)dx\right)dy=\int_{a}^{b}\left(\int_{c}^{d} f(x,y)\, dy\right)\, dx
+	\end{align}
+	De forma geométrica, la integral doble de la función $f(x,y)$ sobre $Q$ es el volumen del paralepípedo cuya tapa es la gráfica de la función $f(x,y)$ sobre $Q$. Consideremos el cuerpo $\Omega$ que queda limitado entre la gráfica de $f(x,y)$, el plano $xy$ y el área limitada por $Q$. Entonces se tiene que:
+	\begin{align}
+		\iint_{Q}f(x,y)\, dxdy=\text{ volumen de }\Omega
+	\end{align}
+\end{teorema*}
 
 \subsection{Integrales dobles de funciones sobre regiones más generales}
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			\textbf{Regiones del tipo (I)} son regiones limitadas:\\
-				\begin{tabular}{>{\centering}p{5cm}>{\raggedright}b{11cm}}
-					\noindent \centering{}\includegraphics[scale=0.4]{tipo1} & \begin{enumerate}
-					\item por la recta vertical $x=a$ por la izquierda,
-					\item por la recta vertical $x=b$ por la derecha,
-					\item por la gráfica de la función de $x$, $y=g_1(x)$ por debajo,
-					\item por la gráfica de la función de $x$, $y=g_2(x)$ por encima.
-				\end{enumerate}
-				\tabularnewline
-			\end{tabular}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Regiones tipo I};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Regiones tipo I}
+	\textbf{Regiones del tipo (I)} son regiones limitadas:
+	
+	\begin{minipage}{0.3\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{tipo1}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.7\textwidth}
+		\begin{enumerate}
+			\item por la recta vertical $x=a$ por la izquierda,
+			\item por la recta vertical $x=b$ por la derecha,
+			\item por la gráfica de la función de $x$, $y=g_1(x)$ por debajo,
+			\item por la gráfica de la función de $x$, $y=g_2(x)$ por encima.
+		\end{enumerate}
+	\end{minipage}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			\textbf{Regiones del tipo (II)} son regiones limitadas:\\
-				\begin{tabular}{>{\centering}m{5cm}>{\raggedright}m{11cm}}
-					\noindent \centering{}\includegraphics[scale=0.4]{tipo2} & \begin{enumerate}
-					\item por la recta horizontal $y=c$ por debajo,
-					\item por la recta horizontal $y=d$ por encima,
-					\item por la gráfica de la función de $y$, $x=h_1(y)$ por la izquierda,
-					\item por la gráfica de la función de $y$, $x=h_2(y)$ por la derecha.
-				\end{enumerate}
-				\tabularnewline
-			\end{tabular}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Regiones tipo II};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{definicion*}{Regiones tipo II}
+	\textbf{Regiones del tipo (II)} son regiones limitadas:
+	
+	\begin{minipage}{0.25\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{tipo2}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{0.75\textwidth}
+		\begin{enumerate}
+			\item por la recta horizontal $y=c$ por debajo,
+			\item por la recta horizontal $y=d$ por encima,
+			\item por la gráfica de la función de $y$, $x=h_1(y)$ por la izquierda,
+			\item por la gráfica de la función de $y$, $x=h_2(y)$ por la derecha.
+		\end{enumerate}
+	\end{minipage}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[definicion](box){
-		\begin{minipage}{0.8\textwidth}
-			\textbf{Regiones del tipo (III)}: Son aquellas regiones que debemos dividir para verlas como la unión de varias regiones de tipo (I) o tipo (II).\\
+\begin{definicion*}{Regiones tipo III}
+	\textbf{Regiones del tipo (III)}: Son aquellas regiones que debemos dividir para verlas como la unión de varias regiones de tipo (I) o tipo (II).\\
 
-			Sea $f:R \subset R^2 \to R$. Si la región R es de tipo (I), es decir, si $R=\{(x,y):\, a\le x\le b,\,\phi_1(x)\le y\le \phi_2(x)\}$ entonces la integral doble de $f(x,y)$ sobre $R$ se puede calcular como: 
-			\begin{align}
-				\iint_{R} (x,y)\, dxdy=\int_{a}^{b} \left(\int_{\phi_1(x)}^{\phi_2(x)}f(x,y)\, dy\right)dx.
-			\end{align}
+	Sea $f: R \subset R^2 \to R$. Si la región R es de tipo (I), es decir, si $R = \{(x,y):\, a \le x \le b,\,\phi_1(x) \le y\le \phi_2(x)\}$ entonces la integral doble de $f(x,y)$ sobre $R$ se puede calcular como: 
+	\begin{align}
+		\iint_{R} (x,y)\, dxdy=\int_{a}^{b} \left(\int_{\phi_1(x)}^{\phi_2(x)}f(x,y)\, dy\right)dx.
+	\end{align}
 
-			Si la región $R$ es de tipo (II), es decir, si $R=\{(x,y):\,\psi_1(y)\le x\le\psi_2(y),\, c\le y\le d\}$, entonces la integral doble de $f(x,y)$ sobre $R$ se puede calcular como: 
-			\begin{align}
-				\iint_{R} f(x,y)dxdy=\int_{c}^{d}\left(\int_{\psi_1(y)}^{\psi_2(y)} f(x,y)dx\right)dy.
-			\end{align}	
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Regiones tipo III};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+	Si la región $R$ es de tipo (II), es decir, si $R=\{(x,y):\,\psi_1(y)\le x\le\psi_2(y),\, c\le y\le d\}$, entonces la integral doble de $f(x,y)$ sobre $R$ se puede calcular como: 
+	\begin{align}
+		\iint_{R} f(x,y)dxdy=\int_{c}^{d}\left(\int_{\psi_1(y)}^{\psi_2(y)} f(x,y)dx\right)dy.
+	\end{align}
+\end{definicion*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			Si la región $R$ está subdividida en dos subregiones $R_1$ y $R_2$ (es decir, $R=R_1 \cup R_2$), entonces:
-			\begin{align}
-				\iint_{R} f(x,y)\, dxdy=\iint_{R_1} f(x,y)\, dxdy+\iint_{R_2} f(x,y)\, dxdy
-			\end{align}
-		\end{minipage}
-		};
-	\node[fancytitle, right=10pt] at (box.north west) {Propiedades de integrales dobles};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Propiedades de integrales dobles}
+	Si la región $R$ está subdividida en dos subregiones $R_1$ y $R_2$ (es decir, $R=R_1 \cup R_2$), entonces:
+	\begin{align}
+		\iint_{R} f(x,y)\, dxdy=\iint_{R_1} f(x,y)\, dxdy+\iint_{R_2} f(x,y)\, dxdy
+	\end{align}
+\end{corolario*}
 
 \subsection{Cambio de variable en integrales dobles}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $f: R \subset R^2 \to R$ una función continua de las variables $x,y$ definida en la región $R \subset R^2$.\\
-			Sea $F:R^\prime \subset R^2 \to R$, $F(u,v)=(\phi_{(u,v)},\psi_{(u,v)})$ una función que manda de manera inyectiva los puntos $(u,v)\in R^\prime$ en los puntos $(x,y)\in R$ del plano $xy$. Si $F \in \mathcal{C}^1$ y la derivada $F^\prime(u,v)$ es una matriz inversible para todo $(u,v) \in R^\prime$, entonces la fórmula de cambio de variables en integrales dobles es:
-			\begin{align}
-				\iint_{R}f(x,y)\, dxdy=\iint_{R^\prime}f\left(\phi(u,v),\psi(u,v)\right) \cdot \left|\frac{\partial(\phi,\psi)}{\partial(u,v)}\right|dudv
-			\end{align}
-			En general, cuando en la región de integración se presentan anillos circulares, y/o cuando en la función a integrar aparezca de alguna forma las expresiones $\left(x^2+y^2\right),\frac{y}{x}$ puede resultar conveniente intentar el cálculo de la integral haciendo previamente el cambio a coordenadas polares:
-			$\begin{cases}
-				x=rcos(\theta)\\
-				y=rsin(\theta)
-			\end{cases}$.
-			En este caso, el jacobiano de la transformación que aparece en la fórmula de cambio de variables es $\frac{\partial (x,y)}{\partial (r,\theta)}=r$.
-			Entonces la fórmula es:
-			\begin{align}
-				\iint_{R}f(x,y)\: dxdy=\iint_{R'}f\left(rcos(\theta),rsin(\theta)\right)\cdot r\: drd\theta
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de cambio de variable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema de cambio de variable}
+	Sea $f: R \subset R^2 \to R$ una función continua de las variables $x,y$ definida en la región $R \subset R^2$.\\
+	Sea $F:R^\prime \subset R^2 \to R$, $F(u,v)=(\phi_{(u,v)},\psi_{(u,v)})$ una función que manda de manera inyectiva los puntos $(u,v)\in R^\prime$ en los puntos $(x,y)\in R$ del plano $xy$. Si $F \in \mathcal{C}^1$ y la derivada $F^\prime(u,v)$ es una matriz inversible para todo $(u,v) \in R^\prime$, entonces la fórmula de cambio de variables en integrales dobles es:
+	\begin{align}
+		\iint_{R}f(x,y)\, dxdy=\iint_{R^\prime}f\left(\phi(u,v),\psi(u,v)\right) \cdot \left|\frac{\partial(\phi,\psi)}{\partial(u,v)}\right|dudv
+	\end{align}
+	En general, cuando en la región de integración se presentan anillos circulares, y/o cuando en la función a integrar aparezca de alguna forma las expresiones $\left(x^2+y^2\right),\frac{y}{x}$ puede resultar conveniente intentar el cálculo de la integral haciendo previamente el cambio a coordenadas polares:
+	$\begin{cases}
+		x=rcos(\theta)\\
+		y=rsin(\theta)
+	\end{cases}$.
+	En este caso, el jacobiano de la transformación que aparece en la fórmula de cambio de variables es $\frac{\partial (x,y)}{\partial (r,\theta)}=r$.
+	Entonces la fórmula es:
+	\begin{align}
+		\iint_{R}f(x,y)\: dxdy=\iint_{R'}f\left(rcos(\theta),rsin(\theta)\right)\cdot r\: drd\theta
+	\end{align}
+\end{teorema*}
 
 \subsection{Aplicaciones de las integrales dobles}
 \begin{minipage}{0.6\textwidth}
-	\begin{tikzpicture}
-		\node[corolario](box){
-			\begin{minipage}{0.8\textwidth}
-				El volumen $V$ encerrado entre una superficie $z=f(x,y)$ ($>0$) y una región $R$ en el plano $xy$ es:
-				\begin{align}
-					V=\iint_{R}f\left(x,y\right)\: dxdy
-				\end{align}
-			\end{minipage}};
-		\node[fancytitle, right=10pt] at (box.north west) {Cálculo de volumen};
-		\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-	\end{tikzpicture}
+	\begin{corolario*}{Cálculo de volumen}
+		El volumen $V$ encerrado entre una superficie $z=f(x,y)$ ($>0$) y una región $R$ en el plano $xy$ es:
+		\begin{align}
+			V=\iint_{R}f\left(x,y\right)\: dxdy
+		\end{align}
+	\end{corolario*}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\begin{figure}[H]
-		\includegraphics[scale=0.3]{integral_doble_es_volumen.png}\caption{Volumen bajo la\\ gráfica de $f(x,y)$}
+		\centering
+		\includegraphics[scale=0.3]{integral_doble_es_volumen.png}
+		\caption{Volumen bajo la\\ gráfica de $f(x,y)$}
 	\end{figure}
 \end{minipage}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			El área de una región plana $R$ en el plano $xy$ viene dada por una integral doble:
-			\begin{align}
-				area (R)=\iint_{R}\: dxdy
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Cálculo de área};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Cálculo de área}
+	El área de una región plana $R$ en el plano $xy$ viene dada por una integral doble:
+	\begin{align}
+		area (R)=\iint_{R}\: dxdy
+	\end{align}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $\rho(x,y)$ la función de densidad (igual a masa por unidad de área) de una distribución de masa en el plano $xy$. Entonces la masa total de un trozo plano $R$ es:
-			\begin{align}
-				M=\iint_{R}\rho\left(x,y\right)\: dxdy
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Cálculo de masa total};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Cálculo de masa total}
+	Sea $\rho(x,y)$ la función de densidad (igual a masa por unidad de área) de una distribución de masa en el plano $xy$. Entonces la masa total de un trozo plano $R$ es:
+	\begin{align}
+		M=\iint_{R}\rho\left(x,y\right)\: dxdy
+	\end{align}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			\begin{center}
-				Momentos estáticos =$\left\{ \begin{array}{c}
-				M_{x}=\iint_{R}y\cdot\rho\left(x,y\right)\: dxdy\\
-				M_{y}=\iint_{R}x\cdot\rho\left(x,y\right)\: dxdy\end{array}\right.$
-				\begin{align}
-					CM=\left(\overline{x},\overline{y}\right)=\left(\frac{M_{x}}{M},\frac{M_{y}}{M}\right)
-				\end{align}
-				\par
-			\end{center}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Centro de masa y momentos de figuras planas.};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Centro de masa y momentos de figuras planas}
+	\begin{center}
+		Momentos estáticos =$\left\{ \begin{array}{c}
+		M_{x}=\iint_{R}y\cdot\rho\left(x,y\right)\: dxdy\\
+		M_{y}=\iint_{R}x\cdot\rho\left(x,y\right)\: dxdy\end{array}\right.$
+		\begin{align}
+			CM=\left(\overline{x},\overline{y}\right)=\left(\frac{M_{x}}{M},\frac{M_{y}}{M}\right)
+		\end{align}
+		\par
+	\end{center}
+\end{corolario*}
 
 \subsection{Integrales triples}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $f: Q \subset R^3 \to R$ una función continua definida en el rectángulo $Q=[a,b] \times [c,d] \times [e,g]$ de $R^3$. Entonces $f$ es integrable en $Q$ y:
-			\begin{align}
-				\iiint_{Q} f(x,y,z)\: dxdydz=\int_{a}^{b}\int_{c}^{d}\left(\int_{e}^{g}f\left(x,y,z\right)\, dz\right)dydx
-			\end{align}
-			Las regiones que se pueden presentar serán, en general, subconjuntos de $R^3$ limitados por gráficas de funciones de dos variables.\\
-			De modo más preciso, si $R$ es una región del plano $xy$, definamos	$\Omega$ como:
-			\begin{align}
-				\Omega=\{\bar{x}\in R^3:(x,y)\in R\:\wedge\:\phi_{1}(x,y)\leq z\leq\phi_{2}(x,y)\}
-			\end{align}
-			Donde $\phi_1,\phi_2$ son funciones continuas definidas en la región $R$ de $R^2$. Más aún, esta integral se calcula como:
-			\begin{align}
-				\iiint_{\Omega}f(x,y,z)\, dxdydz=\iint_{R}\left[\int_{\phi_1}^{\phi_2}f(x,y,z)\, dz\right]dxdy
-			\end{align}
-			La integral triple de $f(x,y,z)$ sobre $\Omega$ es la integral doble de una función $\xi(x,y)$ sobre la región $R$, la cual se puede ver como \emph{la proyección de la región $\Omega$ sobre el plano $xy$}. Esta proyección se obtiene expresando el cuerpo en función de las variables $x,y$. También se pueden considerar regiones $R$ en el plano $xz$ e $yz$.
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema para integrales triples};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{teorema*}{Teorema para integrales triples}
+	Sea $f: Q \subset R^3 \to R$ una función continua definida en el rectángulo $Q=[a,b] \times [c,d] \times [e,g]$ de $R^3$. Entonces $f$ es integrable en $Q$ y:
+	\begin{align}
+		\iiint_{Q} f(x,y,z)\: dxdydz=\int_{a}^{b}\int_{c}^{d}\left(\int_{e}^{g}f\left(x,y,z\right)\, dz\right)dydx
+	\end{align}
+	Las regiones que se pueden presentar serán, en general, subconjuntos de $R^3$ limitados por gráficas de funciones de dos variables.\\
+	De modo más preciso, si $R$ es una región del plano $xy$, definamos	$\Omega$ como:
+	\begin{align}
+		\Omega=\{\bar{x}\in R^3:(x,y)\in R\:\wedge\:\phi_{1}(x,y)\leq z\leq\phi_{2}(x,y)\}
+	\end{align}
+	Donde $\phi_1,\phi_2$ son funciones continuas definidas en la región $R$ de $R^2$. Más aún, esta integral se calcula como:
+	\begin{align}
+		\iiint_{\Omega}f(x,y,z)\, dxdydz=\iint_{R}\left[\int_{\phi_1}^{\phi_2}f(x,y,z)\, dz\right]dxdy
+	\end{align}
+	La integral triple de $f(x,y,z)$ sobre $\Omega$ es la integral doble de una función $\xi(x,y)$ sobre la región $R$, la cual se puede ver como \emph{la proyección de la región $\Omega$ sobre el plano $xy$}. Esta proyección se obtiene expresando el cuerpo en función de las variables $x,y$. También se pueden considerar regiones $R$ en el plano $xz$ e $yz$.
+\end{teorema*}
 
 \subsection{Cambio de variable en integrales triples}
-\begin{tikzpicture}
-	\node[teorema](box){
-		\begin{minipage}{0.8\textwidth}
-			Consideremos una función de transformación de coordenadas $F:\Omega^\prime \subset R^3 \to R^3$ del tipo $F(u,v,w)=(x,y,z)=\left(x_{(u,v,w)},y_{(u,v,w)},z_{(u,v,w)}\right).$	La fórmula de cambio de cambio de variables en integrales triples es:
+\begin{teorema*}[0.9\textwidth]{Teorema de cambio de variable}
+	Consideremos una función de transformación de coordenadas $F:\Omega^\prime \subset R^3 \to R^3$ del tipo $F(u,v,w)=(x,y,z)=\left(x_{(u,v,w)},y_{(u,v,w)},z_{(u,v,w)}\right).$	La fórmula de cambio de cambio de variables en integrales triples es:
+	\begin{align}
+		\iiint_{\Omega}f(x,y,z)\: dxdydz=\iiint_{\Omega'}f\left(F(u,v,w)\right)\left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right|dudvdw
+	\end{align}
+	\begin{itemize}
+		\item \textbf{Coordenadas cilíndricas}: Son útiles cuando aparecen cilindros o planos:
 			\begin{align}
-				\iiint_{\Omega}f(x,y,z)\: dxdydz=\iiint_{\Omega'}f\left(F(u,v,w)\right)\left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right|dudvdw
+				\iiint_{\Omega} f \left(x,y,z\right)\: dxdydz = \iiint_{\Omega'} f \left(rcos(\theta), rsin(\theta), z\right) \cdot r\: drd\theta dz
 			\end{align}
-			\begin{itemize}
-				\item \textbf{Coordenadas cilíndricas}: Son útiles cuando aparecen cilindros o planos:
-					\begin{align}
-						\iiint_{\Omega}f\left(x,y,z\right)\: dxdydz=\iiint_{\Omega'}f\left(rcos(\theta),rsin(\theta),z\right)\cdot r\: drd\theta dz
-					\end{align}
-				\item \textbf{Coordenadas cilíndricas generalizadas}:
-					\begin{align}
-						\iiint_{\Omega}f\left(x,y,z\right)\: dxdydz=\iiint_{\Omega'}f\left(a\cdot rcos(\theta),b\cdot rsin(\theta),c\widetilde{z}\right)\cdot abcr\: drd\theta dz
-					\end{align}
-				\item \textbf{Coordenadas esféricas}:
-					\begin{small}
-						\begin{align}
-						\iiint_{\Omega}f\left(x,y,z\right)\: dxdydz=\iiint_{\Omega'}f\left(rcos(\theta)sin(\phi),rsin(\theta)sin(\phi),rcos(\phi)\right)\cdot r^{2}sin(\phi)\: drd\theta d\phi
-						\end{align}
-					\end{small}
-				\item \textbf{Coordenadas esféricas generalizadas}:
-					\begin{footnotesize}
-						\begin{align}
-							\iiint_{\Omega}f(x,y,z)\: dxdydz=\iiint_{\Omega'}f(a\cdot rcos(\theta)sin(\phi),b\cdot sin(\theta)sin(\phi),c\cdot rcos(\phi))\cdot abcr^{2}sin(\phi)\: drd\theta d\phi
-						\end{align}
-					\end{footnotesize}
-			\end{itemize}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Teorema de cambio de variable};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+		\item \textbf{Coordenadas cilíndricas generalizadas}:
+			\begin{align}
+				\iiint_{\Omega} f \left(x,y,z\right)\: dxdydz = \iiint_{\Omega'} f \left(a \cdot rcos(\theta), b \cdot rsin(\theta), c\widetilde{z}\right) \cdot abcr\: drd\theta dz
+			\end{align}
+		\item \textbf{Coordenadas esféricas}:
+			\begin{small}
+				\begin{align}
+				\iiint_{\Omega} f \left(x,y,z\right)\: dxdydz = \iiint_{\Omega'} f \left(rcos(\theta) sin(\phi), rsin(\theta) sin(\phi), rcos(\phi)\right) \cdot r^{2}sin(\phi)\: drd\theta d\phi
+				\end{align}
+			\end{small}
+		\item \textbf{Coordenadas esféricas generalizadas}:
+			\begin{footnotesize}
+				\begin{align}
+					\iiint_{\Omega} f(x,y,z)\: dxdydz = \iiint_{\Omega'} f (a \cdot rcos(\theta) sin(\phi),b \cdot sin(\theta) sin(\phi), c \cdot rcos(\phi)) \cdot abcr^{2}sin(\phi)\: drd\theta d\phi
+				\end{align}
+			\end{footnotesize}
+	\end{itemize}
+\end{teorema*}
 
 \subsection{Aplicaciones de las integrales triples}
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			El volumen $V$ de un cuerpo de superficie $f(x,y,z)$ es:
-			\begin{align}
-				V=\iiint_{\Omega}\, dxdydz
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Cálculo de volúmenes en el espacio};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Cálculo de volúmenes en el espacio}
+	El volumen $V$ de un cuerpo de superficie $f(x,y,z)$ es:
+	\begin{align}
+		V=\iiint_{\Omega}\, dxdydz
+	\end{align}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			Sea $d(x,y,z)$ la función densidad, y $\Omega \in R^3$. Entonces:
-			\begin{align}
-				M=\iiint_{\Omega}d(x,y,z)\: dxdydz=\mbox{masa de \ensuremath{\Omega}}
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Cálculo de masa de cuerpos en el espacio};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Cálculo de masa de cuerpos en el espacio}
+	Sea $d(x,y,z)$ la función densidad, y $\Omega \in R^3$. Entonces:
+	\begin{align}
+		M=\iiint_{\Omega}d(x,y,z)\: dxdydz=\mbox{masa de \ensuremath{\Omega}}
+	\end{align}
+\end{corolario*}
 
-\begin{tikzpicture}
-	\node[corolario](box){
-		\begin{minipage}{0.8\textwidth}
-			\begin{align}
-				\text{Momentos estáticos:}
-				=\begin{cases}
-				M_{xy}=\iiint_{\Omega}z\cdot d(x,y,z)\, dxdydz\\
-				M_{xz}=\iiint_{\Omega}y\cdot d(x,y,z)\, dxdydz\\
-				M_{yz}=\iiint_{\Omega}x\cdot d(x,y,z)\, dxdydz\end{cases}
-			\end{align}
-			\begin{align}
-				\text{Centro de masa}=(\bar{x},\bar{y},\bar{z})=\left(\frac{M_{yz}}{M},\frac{M_{xz}}{M},\frac{M_{xy}}{M}\right)
-			\end{align}
-		\end{minipage}};
-	\node[fancytitle, right=10pt] at (box.north west) {Cálculo de centros de masa y momentos de cuerpos en el espacio};
-	\node[fancytitle, rounded corners] at (box.south) {$\aleph$};
-\end{tikzpicture}
+\begin{corolario*}{Cálculo de centros de masa y momentos de cuerpos en el espacio}
+	\begin{align}
+		\text{Momentos estáticos:}
+		=\begin{cases}
+		M_{xy}=\iiint_{\Omega}z\cdot d(x,y,z)\, dxdydz\\
+		M_{xz}=\iiint_{\Omega}y\cdot d(x,y,z)\, dxdydz\\
+		M_{yz}=\iiint_{\Omega}x\cdot d(x,y,z)\, dxdydz\end{cases}
+	\end{align}
+	\begin{align}
+		\text{Centro de masa}=(\bar{x},\bar{y},\bar{z})=\left(\frac{M_{yz}}{M},\frac{M_{xz}}{M},\frac{M_{xy}}{M}\right)
+	\end{align}
+\end{corolario*}
 
 \newpage
 \section{Integrales de superficie}
